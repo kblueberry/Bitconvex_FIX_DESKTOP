@@ -2,7 +2,7 @@
 
 .content-wrapper {
   flex: 1;
-  padding: rem(96) 0;
+  padding: var(--adaptive-section-py) 0;
   position: relative;
 }
 
@@ -35,6 +35,18 @@
   padding: rem(10px);
   border-radius: rem(8px);
   background: var(--color-black);
+}
+
+.icon-wrapper > img {
+  --icon-ratio: 112px;
+  width: var(--icon-ratio);
+  height: var(--icon-ratio);
+}
+
+@media (max-width: 1200px) {
+  .icon-wrapper > img {
+    --icon-ratio: 54px;
+  }
 }
 
 .blue-text {
