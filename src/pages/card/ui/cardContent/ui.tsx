@@ -1,11 +1,13 @@
+import { useResize } from "@/hooks/useResize";
 import { Button, Divider, Group, Image, Space, Stack, Text } from "@mantine/core";
 import { motion } from "framer-motion";
+
 import { BlackCircleBg } from "@/shared/ui/icon/BlackCircleBg";
 import { FlashIcon } from "@/shared/ui/icon/FlashIcon";
 import { ListNumberOne } from "@/shared/ui/icon/ListNumberOne";
 import { ListNumberTwo } from "@/shared/ui/icon/ListNumberTwo";
+
 import classes from "./styles.module.css";
-import { useResize } from "@/hooks/useResize";
 
 const steps = [
   {
@@ -30,7 +32,7 @@ const steps = [
 ];
 
 export const CardContent = () => {
-  const {isAdaptive: md} = useResize(1200);
+  const { isAdaptive: md } = useResize(1200);
   return (
     <>
       <Group className={classes.sectionContainer}>
@@ -56,17 +58,7 @@ export const CardContent = () => {
               <Space />
               Referral Program
             </Text>
-            {md && (
-              <Image
-                draggable={false}
-                src={`${import.meta.env.BASE_URL}assets/card.png`}
-                className={classes.cardImage}
-                alt="bitconvex-card"
-                style={{
-                  height: 400,
-                }}
-              />
-            )}
+            {md && <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/card.svg`} className={classes.cardImage} alt="bitconvex-card" />}
           </motion.div>
           <motion.div
             variants={{
@@ -85,14 +77,8 @@ export const CardContent = () => {
             transition={{ duration: 1, delay: 0.15 }}
           >
             <Group className={classes.box}>
-              <Text className={classes.cardDescriptionText}>
-                Invite a friend to open the card and receive bonuses together.
-              </Text>
-              <Button
-                className={classes.button}
-                rightSection={<FlashIcon />}
-                variant="radial-gradient"
-              >
+              <Text className={classes.cardDescriptionText}>Invite a friend to open the card and receive bonuses together.</Text>
+              <Button className={classes.button} rightSection={<FlashIcon />} variant="radial-gradient">
                 starting soon
               </Button>
             </Group>
@@ -116,10 +102,7 @@ export const CardContent = () => {
             transition={{ duration: 1 }}
             className={classes.cardImageWrapper}
           >
-            <Image
-                draggable={false}
-                src={`${import.meta.env.BASE_URL}assets/card.png`} alt="bitconvex-card" className={classes.cardImage}
-              />
+            <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/card.svg`} alt="bitconvex-card" className={classes.cardImage} />
           </motion.div>
         )}
       </Group>
@@ -140,11 +123,7 @@ export const CardContent = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <Image
-            draggable={false}
-            src={`${import.meta.env.BASE_URL}assets/gift.png`} alt="bitconvex-card"
-            className={classes.giftImage}
-          />
+          <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/gift.png`} alt="bitconvex-card" className={classes.giftImage} />
         </motion.div>
         <Stack className={classes.giftMainWrapper}>
           <motion.div
@@ -163,9 +142,7 @@ export const CardContent = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Text
-              className={classes.giftTitle}
-              component="h2">
+            <Text className={classes.giftTitle} component="h2">
               Sharing is Caring
             </Text>
           </motion.div>
@@ -207,7 +184,7 @@ export const CardContent = () => {
           >
             <Divider c="white" opacity={0.12} />
           </motion.div>
-          <Stack gap={'clamp(2rem, 3vw, 3rem)'}>
+          <Stack gap={"clamp(2rem, 3vw, 3rem)"}>
             <motion.div
               variants={{
                 hidden: {
@@ -224,10 +201,7 @@ export const CardContent = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.45 }}
             >
-              <Text
-                className={classes.giftListTitle}
-                fz={{0: 20, md: 32}}
-              >
+              <Text className={classes.giftListTitle} fz={{ 0: 20, md: 32 }}>
                 Earn money together with your friend.
               </Text>
             </motion.div>
@@ -248,13 +222,11 @@ export const CardContent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 1.1 }}
               >
-                <Group gap={'clamp(1rem, 2vw, 2rem)'} align="center" wrap="nowrap">
+                <Group gap={"clamp(1rem, 2vw, 2rem)"} align="center" wrap="nowrap">
                   <div className={classes.giftListNumberWrapper}>
                     <ListNumberOne />
                   </div>
-                  <Text
-                  fz={{0: 16, md: 20}}
-                  className={classes.giftListText}>
+                  <Text fz={{ 0: 16, md: 20 }} className={classes.giftListText}>
                     Receive 20 USDT when your referral applies for a BitConvex Card and successfully conducts their inaugural
                     <br /> transaction with it.
                   </Text>
@@ -276,12 +248,11 @@ export const CardContent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 1.3 }}
               >
-                <Group
-                  gap={'clamp(1rem, 2vw, 2rem)'} align="center" wrap="nowrap">
+                <Group gap={"clamp(1rem, 2vw, 2rem)"} align="center" wrap="nowrap">
                   <div className={classes.giftListNumberWrapper}>
                     <ListNumberTwo />
                   </div>
-                  <Text fz={{0: 16, md: 20}} className={classes.giftListText}>
+                  <Text fz={{ 0: 16, md: 20 }} className={classes.giftListText}>
                     Get 10 USDT upon completing your initial transaction with the BitConvex Card.
                   </Text>
                 </Group>
@@ -290,7 +261,7 @@ export const CardContent = () => {
           </Stack>
         </Stack>
       </Group>
-      <Stack className={classes.sectionContainer} ta={{0: 'left', md: 'center'}} style={{gap: 'clamp(2rem, 4vw, 4rem)'}}>
+      <Stack className={classes.sectionContainer} ta={{ 0: "left", md: "center" }} style={{ gap: "clamp(2rem, 4vw, 4rem)" }}>
         <motion.div
           variants={{
             hidden: {
@@ -307,11 +278,11 @@ export const CardContent = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Text fz={{0: 40, md: 54}} className={classes.bonusesTitle}>
-              Get bonuses in three simple steps.
+          <Text fz={{ 0: 40, md: 54 }} className={classes.bonusesTitle}>
+            Get bonuses in three simple steps.
           </Text>
         </motion.div>
-        <Group className={classes.grid} gap={'clamp(1.5rem, 4vw, 4rem)'} wrap="nowrap">
+        <Group className={classes.grid} gap={"clamp(1.5rem, 4vw, 4rem)"} wrap="nowrap">
           {steps.map(({ title, description, step }, i) => (
             <motion.div
               key={step}

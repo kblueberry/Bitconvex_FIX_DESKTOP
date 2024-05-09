@@ -38,8 +38,7 @@
   position: absolute;
   top: -210px;
   left: -348px;
-  width: auto;
-  zoom: 0.98;
+  zoom: 1;
 }
 .button {
   height: 125px;
@@ -240,7 +239,7 @@
     top: 50%;
     left: 50%;
     transform-origin: left top;
-    transform: scale(.75) translate(-50%, -50%);
+    transform: scale(0.75) translate(-50%, -50%);
   }
 }
 
