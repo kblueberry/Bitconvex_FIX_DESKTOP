@@ -1,5 +1,7 @@
-import { Flex, Group, Image, Stack, Text, Title} from "@mantine/core";
+import { Flex, Group, Image, Stack, Text, Title } from "@mantine/core";
+
 import { Container, Footer, Header, Wrapper } from "@/shared/ui";
+
 import classes from "./styles.module.css";
 
 export function Page() {
@@ -11,7 +13,7 @@ export function Page() {
 
       <Stack className={classes.contentWrapper}>
         <Container>
-          <Stack gap={'clamp(1.5rem, 4vw, 2rem)'}>
+          <Stack gap={"clamp(1.5rem, 4vw, 2rem)"}>
             <Image
               draggable={false}
               src={`${import.meta.env.BASE_URL}assets/light/terms-of-service/2.png`}
@@ -25,7 +27,7 @@ export function Page() {
               className={classes.lightThree}
             />
 
-            <Group gap={'clamp(1rem, 2vw, 2rem)'}>
+            <Group gap={"clamp(1rem, 2vw, 2rem)"}>
               <Flex justify="center" align="center" className={classes.iconWrapper}>
                 <img
                   draggable="false"
@@ -36,22 +38,22 @@ export function Page() {
                 />
               </Flex>
 
-              <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-                <Title c="white" order={2} fz={{0: 40, md: 54}}>
+              <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+                <Title c="white" order={2} fz={{ 0: 40, md: 54 }}>
                   Terms of Service
                 </Title>
-                <Text fz={{0: 16, md: 20}} className={classes.blueText}>
+                <Text fz={{ 0: 16, md: 20 }} className={classes.blueText}>
                   Updated: 05-19-2021
                 </Text>
               </Stack>
             </Group>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 1. TERMS OF USE
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   1.1
                 </Text>{" "}
@@ -63,7 +65,7 @@ export function Page() {
                 Services.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   1.2
                 </Text>{" "}
@@ -79,7 +81,7 @@ export function Page() {
                 access to parts or all of this Website. The Company reserves the right, but not the duty, to correct any errors or omissions in any
                 portion of this Website at any time and without notice.
               </Text>
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   1.3
                 </Text>{" "}
@@ -91,12 +93,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 2. RISK WARNING.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   2.1
                 </Text>{" "}
@@ -106,7 +108,7 @@ export function Page() {
                 cryptocurrency can change rapidly, decrease, and potentially even fall to zero.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   2.2
                 </Text>{" "}
@@ -118,7 +120,7 @@ export function Page() {
                 rate of exchange in the currency in which the investments are denominated. You may not necessarily get back the amount you invested.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   2.3
                 </Text>{" "}
@@ -129,7 +131,7 @@ export function Page() {
                 of the cryptocurrencies at a possible crisis.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   2.4
                 </Text>{" "}
@@ -137,7 +139,7 @@ export function Page() {
                 issues, collapse of infrastructure and many other possible threats.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   2.5
                 </Text>{" "}
@@ -147,7 +149,7 @@ export function Page() {
                 BitConvex have not foreseen or named in this Terms of Use.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   2.6
                 </Text>{" "}
@@ -156,7 +158,7 @@ export function Page() {
                 decision solely. BitConvex will not be liable for any loss you might face.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   2.7
                 </Text>{" "}
@@ -166,26 +168,26 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 3. REGISTRATION AND ACCOUNT OBLIGATIONS.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.1
                 </Text>{" "}
                 You must be 18 years old or older to register and use our service.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.2
                 </Text>{" "}
                 Only one registration per person is allowed. You must keep your registration information up to date.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.3
                 </Text>{" "}
@@ -193,7 +195,7 @@ export function Page() {
                 short notice. You must keep your password confidential.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.4
                 </Text>{" "}
@@ -201,7 +203,7 @@ export function Page() {
                 use your account or (4) use anyone else's account.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.5
                 </Text>{" "}
@@ -209,7 +211,7 @@ export function Page() {
                 access to, or be using, your password or account, you must inform us as soon as possible by using online support.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.6
                 </Text>{" "}
@@ -217,7 +219,7 @@ export function Page() {
                 certain reasons.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.7
                 </Text>{" "}
@@ -226,7 +228,7 @@ export function Page() {
                 you have failed to comply with any of the provisions of these terms and conditions until proven wrong by the user.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.8
                 </Text>{" "}
@@ -234,7 +236,7 @@ export function Page() {
                 Account, and (ii) to which you may push Funds from your BitConvex Account.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.9
                 </Text>{" "}
@@ -243,14 +245,14 @@ export function Page() {
                 institutions.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.10
                 </Text>{" "}
                 "Funds" means Digital Asset and/or Legal Tender.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.11
                 </Text>{" "}
@@ -258,21 +260,21 @@ export function Page() {
                 Assets via the Services, and does not include any Digital Asset.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.12
                 </Text>{" "}
                 "BitConvex Account" means a user account accessible via the Services where Funds may be stored by Payward on behalf of a user.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.13
                 </Text>{" "}
                 "Digital Asset" means bitcoins, eth and other digital assets that may be purchased, sold or traded via the Services.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.14
                 </Text>{" "}
@@ -285,7 +287,7 @@ export function Page() {
                 Services if any applicable laws in your country prohibit you from doing so in accordance with these Terms.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   3.15
                 </Text>{" "}
@@ -303,12 +305,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 4. IDENTITY VERIFICATION.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   4.1
                 </Text>{" "}
@@ -328,7 +330,7 @@ export function Page() {
                 BitConvex may be retained by us, including following the closure of your BitConvex Account.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   4.2
                 </Text>{" "}
@@ -339,7 +341,7 @@ export function Page() {
                 account and make withdrawal without your permission.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   4.3
                 </Text>{" "}
@@ -348,7 +350,7 @@ export function Page() {
                 have provided, false information or refuse to provide information we require for Identity Verification and/or EDD.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   4.4
                 </Text>{" "}
@@ -365,12 +367,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 5. EXCHANGE.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   5.1
                 </Text>{" "}
@@ -380,7 +382,7 @@ export function Page() {
                 BitConvex Exchange.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   5.2
                 </Text>{" "}
@@ -390,7 +392,7 @@ export function Page() {
                 without prior notice.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   5.3
                 </Text>{" "}
@@ -403,12 +405,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 6. TRANSACTIONS.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   6.1
                 </Text>{" "}
@@ -421,7 +423,7 @@ export function Page() {
                 immediately if you become aware of any event referred to in this paragraph happening or being likely to happen.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   6.2
                 </Text>{" "}
@@ -431,7 +433,7 @@ export function Page() {
                 be liable to pay us the full amount of that loss.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   6.3
                 </Text>{" "}
@@ -439,7 +441,7 @@ export function Page() {
                 we are holding on your behalf pending further investigation.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   6.4
                 </Text>{" "}
@@ -450,14 +452,14 @@ export function Page() {
                 notified of the total amount due.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   6.5
                 </Text>{" "}
                 We will not pay you any profit arising from the termination of a transaction in any circumstances.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   6.6
                 </Text>{" "}
@@ -466,7 +468,7 @@ export function Page() {
                 full payment is received by us from you.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   6.7
                 </Text>{" "}
@@ -475,12 +477,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 7. FEES.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   7.1
                 </Text>{" "}
@@ -491,7 +493,7 @@ export function Page() {
                 out in USDT coins.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   7.2
                 </Text>{" "}
@@ -501,7 +503,7 @@ export function Page() {
                 provider.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   7.3
                 </Text>{" "}
@@ -509,7 +511,7 @@ export function Page() {
                 applicable Fees owed in connection with trades you complete via the Services.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   7.4
                 </Text>{" "}
@@ -517,7 +519,7 @@ export function Page() {
                 insurances if required).
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   7.5
                 </Text>{" "}
@@ -527,7 +529,7 @@ export function Page() {
                 applicable law, to cover Payward's collection-related costs.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   7.6
                 </Text>{" "}
@@ -537,12 +539,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 8. SECURITY.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   8.1
                 </Text>{" "}
@@ -555,7 +557,7 @@ export function Page() {
                 or devices associated with your BitConvex Account;
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   8.2
                 </Text>{" "}
@@ -566,7 +568,7 @@ export function Page() {
                 you to act upon any notice or alert that we send to you.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   8.3
                 </Text>{" "}
@@ -576,7 +578,7 @@ export function Page() {
                 that SMS, email services and search engines are vulnerable to spoofing and phishing attacks.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   8.4
                 </Text>{" "}
@@ -587,7 +589,7 @@ export function Page() {
                 BitConvex Account and accept all risks of any unauthorised or authorised access to your BitConvex Account.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   8.5
                 </Text>{" "}
@@ -597,7 +599,7 @@ export function Page() {
                 our partners from blockchain.com).
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   8.6
                 </Text>{" "}
@@ -606,7 +608,7 @@ export function Page() {
                 BitConvex Account and that you shall have no control of, access to, or the ability to use, such Private Keys
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   8.7
                 </Text>{" "}
@@ -617,12 +619,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 9. SERVICE AVAILABILITY.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   9.1
                 </Text>{" "}
@@ -634,12 +636,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 10. TRANSACTIONS ON CRYPTOCURRENCY NETWORKS.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   10.1
                 </Text>{" "}
@@ -649,7 +651,7 @@ export function Page() {
                 transactions on a cryptocurrency network, other than confirming to you that the network has completed the transaction.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   10.2
                 </Text>{" "}
@@ -665,7 +667,7 @@ export function Page() {
                 substantially delayed, by the cryptocurrency network used to process the transaction.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   10.3
                 </Text>{" "}
@@ -679,12 +681,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 11. SPECIAL CONDITION.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   11.1
                 </Text>{" "}
@@ -694,7 +696,7 @@ export function Page() {
                 any
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   11.2
                 </Text>{" "}
@@ -715,12 +717,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 12. PREMIUM ACCOUNT.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   12.1
                 </Text>{" "}
@@ -728,14 +730,14 @@ export function Page() {
                 system.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   12.2
                 </Text>{" "}
                 Users with balance more then 0.01 BTC must activate premium status.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   12.3
                 </Text>{" "}
@@ -744,7 +746,7 @@ export function Page() {
                 trading.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   12.4
                 </Text>{" "}
@@ -753,12 +755,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 13. CLOSURE OF YOUR ACCOUNT.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   13.1
                 </Text>{" "}
@@ -768,7 +770,7 @@ export function Page() {
                 you from loss and BitConvex will not action a closure request until they are satisfied.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   13.2
                 </Text>{" "}
@@ -778,7 +780,7 @@ export function Page() {
                 servers, and also reserves the right to retain any information that is required for legal or operational reasons;
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   13.3
                 </Text>{" "}
@@ -790,12 +792,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 14. RISK WARNING.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   14.1
                 </Text>{" "}
@@ -811,7 +813,7 @@ export function Page() {
                 other binding order of a government or regulatory authority; your name appears on a government or international body sanctions list.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   14.2
                 </Text>{" "}
@@ -822,7 +824,7 @@ export function Page() {
                 connection with the restriction, suspension or termination of your BitConvex Account.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   14.3
                 </Text>{" "}
@@ -836,7 +838,7 @@ export function Page() {
                 as a result of the liquidation of your available balance of Supported Cryptocurrency.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   14.4
                 </Text>{" "}
@@ -849,7 +851,7 @@ export function Page() {
                 unless Payward believes you have committed fraud, negligence or other misconduct.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   14.5
                 </Text>{" "}
@@ -859,12 +861,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 15. PROHIBITED ACTIVITIES.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   15.1
                 </Text>{" "}
@@ -884,7 +886,7 @@ export function Page() {
                 gambling sites or mixers; sale or purchase of narcotics or controlled substances; intellectual property infringement.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   15.2
                 </Text>{" "}
@@ -897,7 +899,7 @@ export function Page() {
                 limited to secured and unsecured loans, cash advances, payday lending; investment funds, asset management, or brokerage services.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   15.3
                 </Text>{" "}
@@ -907,12 +909,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 16. DISCLAIMER OF WARRANTIES.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   16.1
                 </Text>{" "}
@@ -922,7 +924,7 @@ export function Page() {
                 offered without any warranty as to merchantability or fitness for any particular purpose.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   16.2
                 </Text>{" "}
@@ -931,12 +933,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 17. LIMUTATION OF LIABILITY.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   17.1
                 </Text>{" "}
@@ -950,7 +952,7 @@ export function Page() {
                 event, communications failure, theft, destruction or unauthorised access to BitConvex’s records, programmes or services.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   17.2
                 </Text>{" "}
@@ -963,12 +965,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 18. DISPUTES.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   18.1
                 </Text>{" "}
@@ -977,7 +979,7 @@ export function Page() {
                 resolution of any Dispute prior to bringing a claim in any court or other body.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   18.2
                 </Text>{" "}
@@ -987,7 +989,7 @@ export function Page() {
                 thereof (together, Disputes), to the non-exclusive jurisdiction of the courts of Malta.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   18.3
                 </Text>{" "}
@@ -998,7 +1000,7 @@ export function Page() {
                 any form of representative or class proceeding.
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   18.4
                 </Text>{" "}
@@ -1007,12 +1009,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 19. TAXES.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   19.1
                 </Text>{" "}
@@ -1021,7 +1023,7 @@ export function Page() {
                 permitted by applicable law, to cover Payward's collection-related costs
               </Text>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   19.2
                 </Text>{" "}
@@ -1029,12 +1031,12 @@ export function Page() {
               </Text>
             </Stack>
 
-            <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-              <Title order={4} className={classes.blueText} fz={{0: 20, md: 24}}>
+            <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+              <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 20. INDEMNITY.
               </Title>
 
-              <Text fz={{0: 16, md: 20}} color="white">
+              <Text variant="text-4" color="white">
                 <Text span className={classes.blueText}>
                   20.1
                 </Text>{" "}
