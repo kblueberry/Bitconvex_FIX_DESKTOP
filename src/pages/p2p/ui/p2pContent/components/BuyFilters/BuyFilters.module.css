@@ -31,7 +31,7 @@
   line-height: 1.2;
 }
 .selectDropdown {
-  background-color: rgb(8, 8, 8);
+  background-color: rgb(8, 8, 8) !important;
   box-shadow: inset 0px 0px 12px 0px rgba(108, 112, 128, 0.04);
   border: none;
 }
