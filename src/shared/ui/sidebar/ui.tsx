@@ -16,6 +16,7 @@ import {
   WorkerPanelIcon,
 } from "@/shared/ui/sidebar/Icons";
 
+import { DownloadAvatar } from "../icon/DownloadAvatar";
 import classes from "./styles.module.css";
 
 const LINKS = [
@@ -60,14 +61,25 @@ const LINKS = [
     label: "Worker Panel",
   },
 ];
-export const Sidebar = ({ children, gap = 32, verticalPadding }: { children: ReactNode; gap?: number | string; verticalPadding?: number | string }) => {
+export const Sidebar = ({
+  children,
+  gap = 32,
+  verticalPadding,
+}: {
+  children: ReactNode;
+  gap?: number | string;
+  verticalPadding?: number | string;
+}) => {
   return (
     <Box className={classes.wrapper} style={{ paddingTop: verticalPadding, paddingBottom: verticalPadding }}>
-      <Flex gap={gap} align={'flex-start'}>
+      <Flex gap={gap} align={"flex-start"}>
         <Flex direction={"column"} gap={rem("32px")} className={classes.box}>
           <Flex align={"center"} gap={rem("16px")}>
             <Center className={classes.avatar}>
               <EmptyIcon />
+              <Button className={clsx(classes.pill, classes.downloadAvatarAction)} variant="linear-gradient">
+                <DownloadAvatar />
+              </Button>
             </Center>
             <Stack gap={rem(8)}>
               <Flex gap={rem(8)} c={"white"}>

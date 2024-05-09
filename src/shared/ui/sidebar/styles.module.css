@@ -45,6 +45,23 @@
   height: rem(96px);
   border-radius: 50%;
   background: #2a2a2d;
+  position: relative;
+}
+.downloadAvatarAction {
+  background: linear-gradient(180deg, #625ff4 0%, #625ff8 100%);
+  position: absolute;
+  top: 75%;
+  left: 0;
+  width: 24px;
+
+  span:nth-child(2) {
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 5%;
+    }
+  }
 }
 .text {
   color: var(--color-grey);
@@ -125,7 +142,7 @@
     align-items: center;
   }
   .box div:nth-child(2) > div {
-    grid-gap: .5rem;
+    grid-gap: 0.5rem;
   }
   .box {
     grid-gap: 1rem !important;
