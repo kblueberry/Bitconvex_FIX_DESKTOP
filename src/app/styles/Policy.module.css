@@ -37,18 +37,6 @@
   background: var(--color-black);
 }
 
-.icon-wrapper > img {
-  --icon-ratio: 112px;
-  width: var(--icon-ratio);
-  height: var(--icon-ratio);
-}
-
-@media (max-width: 1200px) {
-  .icon-wrapper > img {
-    --icon-ratio: 54px;
-  }
-}
-
 .blue-text {
   background-image: var(--gradient-webkit-linear);
   background-image: var(--gradient-linear);

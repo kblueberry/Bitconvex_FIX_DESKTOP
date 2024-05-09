@@ -3,6 +3,7 @@ import { Flex, Group, Image, Stack, Text, Title, rem } from "@mantine/core";
 import { Container, Footer, Header, Wrapper } from "@/shared/ui";
 
 import classes from "../../app/styles/Policy.module.css";
+import amlStyles from "./styles.module.css";
 
 export function Page() {
   return (
@@ -29,7 +30,14 @@ export function Page() {
 
             <Group gap={"clamp(12px, 2vw, 2rem)"}>
               <Flex justify="center" align="center" className={classes.iconWrapper}>
-                <img draggable="false" src={`${import.meta.env.BASE_URL}assets/amlKycPolicyIcon.png`} alt="amlKycPolicy" width="113" height="113" />
+                <img
+                  draggable="false"
+                  className={amlStyles.amlKycPolicyIcon}
+                  src={`${import.meta.env.BASE_URL}assets/amlKycPolicyIcon.png`}
+                  alt="amlKycPolicy"
+                  width="113"
+                  height="113"
+                />
               </Flex>
 
               <Stack gap={"clamp(12px, 2vw, 2rem)"}>
