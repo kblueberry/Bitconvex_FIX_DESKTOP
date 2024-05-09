@@ -1,6 +1,7 @@
 import { ActionIcon, Avatar, Divider, Group, ScrollArea, Stack, Text, TextInput, rem } from "@mantine/core";
 import clsx from "clsx";
 import { useState } from "react";
+
 import { Clip } from "@/shared/ui/icon/Clip";
 import { ReadMessage } from "@/shared/ui/icon/ReadMessage";
 import { SendIcon } from "@/shared/ui/icon/SendIcon";
@@ -8,65 +9,29 @@ import { UnreadMessage } from "@/shared/ui/icon/UnreadMessage";
 
 import classes from "./styles.module.css";
 
-const mokeChats = [
+const mokeChatHistory = [
   {
     id: 1,
     img: `${import.meta.env.BASE_URL}assets/chat-avatar.png`,
-    chatName: "BitConvex 1",
-    chatRole: "Support Admin",
-    date: "28 Dec",
+    date: "2:59pm",
+    role: "Admin",
     isOnline: true,
-    description: "Hey Cak, Could you free now? Can you look and read the brief first…",
-  },
-  {
-    id: 2,
-    img: `${import.meta.env.BASE_URL}assets/chat-avatar.png`,
-    chatName: "BitConvex long name",
-    chatRole: "Support Admin long role",
-    date: "28 Dec",
-    isOnline: false,
-    description: "Hey Cak, Could you free now? Can you look and read the brief first… long description wwwwwwwwwwwwwwwwwwwwwww",
+    isRead: true,
+    messages: ["Hello Linh!", "I really love your work great job"],
   },
   {
     id: 3,
     img: `${import.meta.env.BASE_URL}assets/chat-avatar.png`,
-    chatName: "BitConvex 3",
-    chatRole: "Support Admin",
-    date: "28 Dec",
-    isOnline: true,
-    description: "Hey Cak, Could you free now? Can you look and read the brief first…",
-  },
-  {
-    id: 4,
-    img: `${import.meta.env.BASE_URL}assets/chat-avatar.png`,
-    chatName: "BitConvex 4",
-    chatRole: "Support Admin",
-    date: "28 Dec",
+    date: "4:04pm",
+    role: "User",
     isOnline: false,
-    description: "Hey Cak, Could you free now? Can you look and read the brief first…",
-  },
-  {
-    id: 5,
-    img: `${import.meta.env.BASE_URL}assets/chat-avatar.png`,
-    chatName: "BitConvex 5",
-    chatRole: "Support Admin",
-    date: "28 Dec",
-    isOnline: true,
-    description: "Hey Cak, Could you free now? Can you look and read the brief first…",
-  },
-  {
-    id: 6,
-    img: `${import.meta.env.BASE_URL}assets/chat-avatar.png`,
-    chatName: "BitConvex 6",
-    chatRole: "Support Admin",
-    date: "28 Dec",
-    isOnline: true,
-    description: "Hey Cak, Could you free now? Can you look and read the brief first…",
+    isRead: false,
+    messages: ["Hi Tom", "Thank you, I alos love it"],
   },
 ];
 
 export const Chat = () => {
-  const [activeChat, setActiveChat] = useState<(typeof mokeChats)[number] | null>(null);
+  const [activeChat] = useState<(typeof mokeChatHistory)[number] | null>(null);
   return (
     <Stack className={classes.pageContainer} gap={rem("64px")}>
       <Text className={classes.chatTitle}>Support</Text>

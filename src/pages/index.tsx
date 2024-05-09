@@ -69,6 +69,6 @@ export const Pages = createRoutesView({
     P2PRoute,
     TechnicalAnalysisRoute,
     TradeRoute,
-    TradeFuturesRoute
+    TradeFuturesRoute,
   ],
 });
