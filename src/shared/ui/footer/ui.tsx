@@ -1,22 +1,24 @@
+import { useResize } from "@/hooks/useResize";
 import { Grid, Group, Stack, Text, Title, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
+
 import { routes } from "@/shared/routing";
 import { LogoIcon } from "@/shared/ui";
+
 import classes from "./styles.module.css";
-import { useResize } from "@/hooks/useResize";
 
 export const Footer = ({ width }: { width?: number }) => {
-  const {isAdaptive: md} = useResize(1200);
+  const { isAdaptive: md } = useResize(1200);
   return (
     <Group align="flex-start" justify={"space-between"} gap={rem(32)} className={classes.wrapper}>
       <Group style={{ width }} align="flex-start" justify={"space-between"} gap={rem(32)} className={classes.box}>
-        <Group gap={rem(96)} className={classes.leftSide} align="flex-start" w={{0: '100%', md: 'auto'}}>
+        <Group gap={rem(96)} className={classes.leftSide} align="flex-start" w={{ 0: "100%", md: "auto" }}>
           <Stack gap={rem("32px")} w={rem("400px")} className={classes.footerContent}>
             <Stack gap={rem("16px")}>
               <Link to={routes.home}>
                 <LogoIcon />
               </Link>
-              <Text c="#6C7080" variant="text-4" display={{0: 'none', md: 'block'}}>
+              <Text c="#6C7080" variant="text-4" display={{ 0: "none", md: "block" }}>
                 Your Gateway to the Crypto Frontier. Experience seamless trading, robust security, and a world of digital opportunities. Join the
                 future of finance with BitConvex — where innovation meets investment.
               </Text>
@@ -49,13 +51,13 @@ export const Footer = ({ width }: { width?: number }) => {
                 </svg>
               </a>
             </Group>
-            <Text c="#6C7080" variant="text-5" display={{0: 'none', md: 'block'}}>
+            <Text c="#6C7080" variant="text-5" display={{ 0: "none", md: "block" }}>
               (c) BitConvex 2023
             </Text>
           </Stack>
         </Group>
         <Grid className={classes.footerGrid}>
-        <Stack gap={rem("32px")}>
+          <Stack gap={rem("32px")}>
             <Title c="white" order={4} fz={"20px"}>
               About
             </Title>
@@ -80,69 +82,72 @@ export const Footer = ({ width }: { width?: number }) => {
               </Link>
             </Stack>
           </Stack>
-        <Stack gap={rem(32)}>
-          <Title c="white" fz={"20px"} order={4}>
-            Products
-          </Title>
-          <Stack gap={rem("16px")}>
-            <Link to={routes.trade} className={classes.link}>
-              Trade
-            </Link>
-            <Link to={routes.buyCrypto} className={classes.link}>
-              Buy crypto
-            </Link>
-            <Link to={routes.finance} className={classes.link}>
-              Fast swap
-            </Link>
-            <Link to={routes.staking} className={classes.link}>
-              Staking
-            </Link>
-            <Link to={routes.p2p} className={classes.link}>
-              P2P
-            </Link>
+          <Stack gap={rem(32)}>
+            <Title c="white" fz={"20px"} order={4}>
+              Products
+            </Title>
+            <Stack gap={rem("16px")}>
+              <Link to={routes.trade} className={classes.link}>
+                Spot trading
+              </Link>
+              <Link to={routes.tradeFutures} className={classes.link}>
+                Futures trade
+              </Link>
+              <Link to={routes.buyCrypto} className={classes.link}>
+                Buy crypto
+              </Link>
+              <Link to={routes.finance} className={classes.link}>
+                Fast swap
+              </Link>
+              <Link to={routes.staking} className={classes.link}>
+                Staking
+              </Link>
+              <Link to={routes.p2p} className={classes.link}>
+                P2P
+              </Link>
+            </Stack>
           </Stack>
-        </Stack>
-        <Stack gap={rem(32)}>
-          <Title c="white" fz={"20px"} order={4}>
-            Support
-          </Title>
-          <Stack gap={rem("16px")}>
-            <Link to={routes.live} className={classes.link}>
-              Live Chat
-            </Link>
-            <Link to={routes.faq} className={classes.link}>
-              FAQ
-            </Link>
+          <Stack gap={rem(32)}>
+            <Title c="white" fz={"20px"} order={4}>
+              Support
+            </Title>
+            <Stack gap={rem("16px")}>
+              <Link to={routes.live} className={classes.link}>
+                Live Chat
+              </Link>
+              <Link to={routes.faq} className={classes.link}>
+                FAQ
+              </Link>
+            </Stack>
           </Stack>
-        </Stack>
-        <Stack gap={rem(32)}>
-          <Title c="white" fz={"20px"} order={4}>
-            Market Tools
-          </Title>
-          <Stack gap={rem("16px")}>
-            <Link to={routes.cryptoMarketCap} className={classes.link}>
-              Crypto Market Cap
-            </Link>
-            <Link to={routes.marketScreener} className={classes.link}>
-              Market Screener
-            </Link>
-            <Link to={routes.technicalAnalysis} className={classes.link}>
-              Technical Analysis
-            </Link>
+          <Stack gap={rem(32)}>
+            <Title c="white" fz={"20px"} order={4}>
+              Market Tools
+            </Title>
+            <Stack gap={rem("16px")}>
+              <Link to={routes.cryptoMarketCap} className={classes.link}>
+                Crypto Market Cap
+              </Link>
+              <Link to={routes.marketScreener} className={classes.link}>
+                Market Screener
+              </Link>
+              <Link to={routes.technicalAnalysis} className={classes.link}>
+                Technical Analysis
+              </Link>
+            </Stack>
           </Stack>
-        </Stack>
         </Grid>
       </Group>
       {md && (
         <div
           style={{
             paddingTop: 28,
-            borderTop: '1px solid rgba(255,255,255,.12)',
-            color: 'var(--color-grey)',
-            fontFamily: 'var(--text-font-family)',
+            borderTop: "1px solid rgba(255,255,255,.12)",
+            color: "var(--color-grey)",
+            fontFamily: "var(--text-font-family)",
             fontSize: 14,
-            textAlign: 'center',
-            width: '100%',
+            textAlign: "center",
+            width: "100%",
           }}
         >
           © 2019-{new Date().getFullYear()} BitConvex. All rights reserved.
