@@ -1,0 +1,15 @@
+.banner-button {
+  z-index: 9;
+  position: relative;
+  padding: 0 2rem;
+}
+
+@media only screen and (max-width: 75rem) {
+  .home-button {
+    padding: 0;
+    margin: 0 auto;
+  }
+  .home-button button {
+    padding: 0;
+  }
+}

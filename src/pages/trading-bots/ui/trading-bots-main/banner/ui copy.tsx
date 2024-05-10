@@ -3,11 +3,8 @@ import { Box, Button, Group, Stack, Text, Title, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
 import { motion } from "framer-motion";
 
-import { BannerImage } from "@/pages/trading-bots/ui/trading-bots-main/banner/bannerImage/ui";
-
 import { routes } from "@/shared/routing";
 import { Container, StartTradingIcon } from "@/shared/ui";
-import { StartTradingBtn } from "@/shared/ui/startTradingBtn/ui";
 
 import classes from "./styles.module.css";
 
@@ -45,12 +42,26 @@ export const Banner = () => {
                 <img draggable="false" src={`${import.meta.env.BASE_URL}assets/banner-icon.png`} alt="banner" width="100%" />
               </Box>
             )}
-
             <Stack gap={"clamp(2rem, 4vw, 4rem)"}>
               <Text size={md ? "18px" : "24px"} c="white" className={classes.bannerSubTitle}>
                 Join the Rapidly Expanding Global Crypto Exchange
               </Text>
-              <StartTradingBtn />
+              <Link to={routes.trade} className={classes.homeButton}>
+                <Button
+                  size="extra-large"
+                  style={{
+                    width: md ? "344px" : "400px",
+                    height: md ? "92px" : "124px",
+                    fontSize: md ? "18px" : "20px",
+                    margin: "0 auto",
+                  }}
+                  variant="radial-gradient"
+                  className={classes.bannerButton}
+                  rightSection={<StartTradingIcon />}
+                >
+                  START TRADING
+                </Button>
+              </Link>
             </Stack>
           </Stack>
         </motion.div>

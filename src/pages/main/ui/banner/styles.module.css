@@ -29,13 +29,6 @@
   z-index: 10;
   position: relative;
 }
-
-.banner-button {
-  z-index: 9;
-  position: relative;
-  padding: 0 2rem;
-}
-
 .banner-right-side {
   flex-shrink: 0;
   max-width: 530px;
@@ -59,14 +52,7 @@
   .banner-wrapper {
     flex-direction: column;
   }
-  .home-button {
-    padding: 0;
-    margin: 0 auto;
-  }
-  .home-button button {
-    padding: 0;
-  }
-  .banner-left-side{
+  .banner-left-side {
     align-items: center;
     text-align: center;
   }
