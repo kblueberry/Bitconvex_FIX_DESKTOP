@@ -57,7 +57,7 @@
     border: var(--border1);
     border-radius: 8px;
     background-color: var(--color-black);
-    flex-basis: 344px;
+    width: 400px;
   }
 }
 
@@ -91,6 +91,7 @@
       border: var(--border1);
       border-radius: 8px;
       background-color: var(--color-black);
+      width: 344px;
     }
   }
 }
