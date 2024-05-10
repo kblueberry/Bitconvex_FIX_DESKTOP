@@ -50,10 +50,10 @@ export const Banner = () => {
               <Group align={"center"} justify={"flex-start"} className={classes.tradeActions}>
                 <StartTradingBtn />
                 <div className={classes.activeStatistics}>
-                  <Text variant="text-1">
+                  <Text variant={md ? "text-2" : "text-1"}>
                     <b>Active Strategies:</b> 56.150
                   </Text>
-                  <Text variant="text-1">
+                  <Text variant={md ? "text-2" : "text-1"}>
                     <b>Total cost:</b> $48.692.023
                   </Text>
                 </div>

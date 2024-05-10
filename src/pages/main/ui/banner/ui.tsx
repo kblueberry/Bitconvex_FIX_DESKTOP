@@ -1,12 +1,8 @@
 import { useResize } from "@/hooks/useResize";
-import { Box, Button, Group, Stack, Text, Title, rem } from "@mantine/core";
-import { Link } from "atomic-router-react";
+import { Box, Group, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
-import { BannerImage } from "@/pages/trading-bots/ui/trading-bots-main/banner/bannerImage/ui";
-
-import { routes } from "@/shared/routing";
-import { Container, StartTradingIcon } from "@/shared/ui";
+import { Container } from "@/shared/ui";
 import { StartTradingBtn } from "@/shared/ui/startTradingBtn/ui";
 
 import classes from "./styles.module.css";

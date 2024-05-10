@@ -52,10 +52,12 @@
   gap: 32px;
 
   .activeStatistics {
-    padding: 31px;
+    padding: 25px;
+    height: 124px;
     border: var(--border1);
     border-radius: 8px;
     background-color: var(--color-black);
+    flex-basis: 344px;
   }
 }
 
@@ -77,6 +79,20 @@
   .banner-sub-title {
     max-width: 100%;
   }
+
+  .tradeActions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+
+    .activeStatistics {
+      padding: 25px;
+      height: 96px;
+      border: var(--border1);
+      border-radius: 8px;
+      background-color: var(--color-black);
+    }
+  }
 }
 
 @media only screen and (max-width: 48em) {
@@ -85,6 +101,12 @@
   }
   .banner-right-side {
     max-width: 320px;
+  }
+
+  .tradeActions {
+    .activeStatistics {
+      order: 1;
+    }
   }
 }
 
