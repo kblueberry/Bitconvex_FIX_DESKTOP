@@ -1,54 +1,48 @@
-@import url("@/app/styles/mixin.css");
-.step-wrapper {
-  margin: 64px 0;
-  @media (max-width: 1250px) {
-  }
-}
-
-.buy-with-wrapper {
-  height: 444px;
-  padding: rem(64px);
-  border-radius: 8px;
+.wrapper {
+  flex: 1;
+  padding: var(--adaptive-section-py) 0;
   position: relative;
+}
+
+.container {
+  width: 1340px;
+  margin: 0 auto;
   z-index: 1;
-  border: rem(1px) solid rgba(255, 255, 255, 0.12);
-  background: var(--color-black);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.col {
+  display: flex;
+}
+.rate-link {
+  text-decoration: none;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-  & img {
-    object-fit: cover;
-    z-index: -1;
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
+.rate-wrap {
+  width: 100%;
 }
-.colBuyWith {
-  min-height: rem(297px);
-  justify-content: space-between;
+
+.trade-results {
+  padding: 96px 0;
 }
-.buy-with-title {
-  font-family: "CraftworkGrotesk" !important;
-  font-size: rem(32px);
-  line-height: rem(38);
+
+.tradingTitle {
+  z-index: 10;
   font-weight: 700 !important;
-  color: var(--color-blue) !important;
+  text-align: center;
 }
-.buyWithText {
-  font-size: var(--text-2-fz);
-}
-.btn {
-  font-family: ProximaNova !important;
-  margin-top: rem(16px);
-  width: max-content;
-  padding: 16px 32px;
-  height: rem(54px);
-}
-.text-btn {
-  line-height: 21.92px !important;
 
-  font-size: var(--text-3-fz) !important;
-  color: var(--color-white);
+.tradingTitleColored {
+  font-size: inherit !important;
+  font-style: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  background: var(--gradient-linear);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 12px;
 }
