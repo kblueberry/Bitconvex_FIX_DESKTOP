@@ -45,6 +45,7 @@ export const routes = {
   kyc: createRoute(),
   faq: createRoute(),
   live: createRoute(),
+  tradingBots: createRoute(),
 };
 
 export const controls = createRouterControls();
@@ -186,6 +187,10 @@ export const router = createHistoryRouter({
     {
       path: "/live",
       route: routes.live,
+    },
+    {
+      path: "/trading-bots",
+      route: routes.tradingBots,
     },
   ],
   notFoundRoute: routes.notFound,

@@ -1,5 +1,10 @@
+import { useResize } from "@/hooks/useResize";
 import { Button, Divider, Group, Menu, Stack, Text, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
+import { useState } from "react";
+
+import { ArrowMenuIcon } from "@/pages/staking/ui/icons/ArrowIcon";
+
 import { routes } from "@/shared/routing";
 import {
   ChatIcon,
@@ -12,14 +17,12 @@ import {
   SpotTradingIcon,
   TechnicalAnalysisIcon,
 } from "@/shared/ui";
+
+import arrowRight from "../../../../public/assets/arrowRight.svg";
+import buttonMenuIcon from "../../../../public/assets/buttonMenu.svg";
+import closeIcon from "../../../../public/assets/closeIcon.svg";
+import logo from "../../../../public/assets/logo.svg";
 import classes from "./styles.module.css";
-import { useResize } from "@/hooks/useResize";
-import logo from '../../../../public/assets/logo.svg';
-import closeIcon from '../../../../public/assets/closeIcon.svg';
-import buttonMenuIcon from '../../../../public/assets/buttonMenu.svg';
-import arrowRight from '../../../../public/assets/arrowRight.svg';
-import { useState } from "react";
-import { ArrowMenuIcon } from "@/pages/staking/ui/icons/ArrowIcon";
 
 const LINKS = [
   {
@@ -115,12 +118,16 @@ const LINKS = [
       },
     ],
   },
+  {
+    to: routes.tradingBots,
+    label: "Trading Bots",
+  },
 ];
 
 export const Header = () => {
   const [isMenuActive, setMenuActive] = useState<boolean>(false);
-  const [activeHiddenIndex, setActiveHiddenIndex]= useState<number>();
-  const {isAdaptive: md} = useResize(1200);
+  const [activeHiddenIndex, setActiveHiddenIndex] = useState<number>();
+  const { isAdaptive: md } = useResize(1200);
   const links = LINKS.map((link) => {
     const menuItems = link.links?.flatMap((item, index) => {
       const result = [
@@ -177,38 +184,36 @@ export const Header = () => {
   });
   const handleDropdownClick = (index: number) => {
     index === activeHiddenIndex ? setActiveHiddenIndex(undefined) : setActiveHiddenIndex(index);
-  }
-  return (
-    md ? (
-      <>
-        <div
-          className={classes.mobHeaderRow}
-        >
-          <a href="/">
-            <img src={logo} alt="logo" />
-          </a>
-          <button
-            onClick={() => setMenuActive(true)}
-            className={classes.mobButton}
-          >
-            <img src={buttonMenuIcon} alt="" />
+  };
+  return md ? (
+    <>
+      <div className={classes.mobHeaderRow}>
+        <a href="/">
+          <img src={logo} alt="logo" />
+        </a>
+        <button onClick={() => setMenuActive(true)} className={classes.mobButton}>
+          <img src={buttonMenuIcon} alt="" />
+        </button>
+      </div>
+      <div
+        className="mobMenu"
+        style={{
+          transform: `translate(${isMenuActive ? "0" : "100%"})`,
+          opacity: isMenuActive ? 1 : 0,
+          pointerEvents: isMenuActive ? "auto" : "none",
+        }}
+      >
+        <div className="mobMenuHeader">
+          <div className="mobMenuHeaderText">Menu</div>
+          <button onClick={() => setMenuActive(false)} className="mobMenuClose">
+            <img src={closeIcon} alt="closeIcon" />
           </button>
         </div>
-        <div className="mobMenu"
-          style={{
-            transform: `translate(${isMenuActive ? '0' : '100%'})`,
-            opacity: isMenuActive ? 1 : 0,
-            pointerEvents: isMenuActive ? 'auto' : 'none',
-          }}
+        <div
+          className="no-scroll"
+          style={{ flexGrow: 1, display: "flex", flexDirection: "column", overflowY: "scroll", overflowX: "hidden", width: "calc(100% - 2px)" }}
         >
-          <div className="mobMenuHeader">
-            <div className="mobMenuHeaderText">Menu</div>
-            <button onClick={() => setMenuActive(false)} className="mobMenuClose">
-              <img src={closeIcon} alt="closeIcon" />
-            </button>
-          </div>
-        <div className="no-scroll" style={{flexGrow: 1, display: 'flex', flexDirection: 'column', overflowY: 'scroll', overflowX: 'hidden', width: 'calc(100% - 2px)'}}>
-        <div style={{flex: '1'}}>
+          <div style={{ flex: "1" }}>
             <ul className="mobMenuList">
               {LINKS.map((link, linkIndex) => (
                 <li>
@@ -217,41 +222,39 @@ export const Header = () => {
                       <button
                         onClick={() => handleDropdownClick(linkIndex)}
                         style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'space-between',
-                          width: '100%',
-                          background: 'transparent',
-                          border: 'none',
-                          outline: 'none',
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          width: "100%",
+                          background: "transparent",
+                          border: "none",
+                          outline: "none",
                           padding: 0,
                         }}
                       >
-                        <span className="mobMenuFlex">
-                          {link.label}
-                        </span>
+                        <span className="mobMenuFlex">{link.label}</span>
                         <div
                           style={{
-                            transform: 'rotate(90deg)',
+                            transform: "rotate(90deg)",
                           }}
                         >
-                          <ArrowMenuIcon size={20} fill={linkIndex === activeHiddenIndex ? '#6C7080' : '#625ff4'} />
+                          <ArrowMenuIcon size={20} fill={linkIndex === activeHiddenIndex ? "#6C7080" : "#625ff4"} />
                         </div>
                       </button>
                       <div
                         style={{
-                          display: 'grid',
-                          gridTemplateRows: `${linkIndex === activeHiddenIndex ? '1' : '0'}fr`,
-                          overflow: 'hidden',
-                          transition: 'grid-template-rows 300ms ease',
+                          display: "grid",
+                          gridTemplateRows: `${linkIndex === activeHiddenIndex ? "1" : "0"}fr`,
+                          overflow: "hidden",
+                          transition: "grid-template-rows 300ms ease",
                         }}
                       >
                         <div
                           style={{
-                            paddingTop: linkIndex === activeHiddenIndex ? '16px' : '0px',
-                            display: 'flex',
-                            transition: '300ms ease',
-                            flexDirection: 'column',
+                            paddingTop: linkIndex === activeHiddenIndex ? "16px" : "0px",
+                            display: "flex",
+                            transition: "300ms ease",
+                            flexDirection: "column",
                             gap: 16,
                             minHeight: 0,
                           }}
@@ -260,53 +263,53 @@ export const Header = () => {
                             <Link
                               to={hiddenLink.to}
                               style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'space-between',
-                                color: 'white',
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                color: "white",
                               }}
                             >
                               <div
                                 style={{
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  gap: '12px',
+                                  display: "flex",
+                                  alignItems: "center",
+                                  gap: "12px",
                                   flex: 1,
                                 }}
                               >
                                 <div
                                   style={{
-                                    backgroundColor: 'var(--color-blue)',
+                                    backgroundColor: "var(--color-blue)",
                                     width: 32,
                                     height: 32,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: 4
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    borderRadius: 4,
                                   }}
                                 >
                                   {hiddenLink.icon}
                                 </div>
                                 <div
                                   style={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    gap: '4px',
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: "4px",
                                     flex: 1,
                                   }}
                                 >
                                   <span
                                     style={{
-                                      fontSize: 'clamp(14px, 1.25vw, 1.25rem)',
+                                      fontSize: "clamp(14px, 1.25vw, 1.25rem)",
                                     }}
                                   >
                                     {hiddenLink.label}
                                   </span>
                                   <span
                                     style={{
-                                      fontSize: '12px',
-                                      color: 'var(--color-grey)',
-                                      lineHeight: '100%',
+                                      fontSize: "12px",
+                                      color: "var(--color-grey)",
+                                      lineHeight: "100%",
                                     }}
                                   >
                                     {hiddenLink.subtitle}
@@ -333,24 +336,24 @@ export const Header = () => {
           </div>
           <div className="mobMenuButtons">
             <Button
-            to={routes.auth.signInByEmail}
-            size="xl"
-            color="white"
-            variant="transparent"
-            component={Link}
-            classNames={{ root: classes.signInButtonRoot }}
-          >
-            Sign in
-          </Button>
-          <Button to={routes.auth.signUp} size="xl" variant="radial-gradient" component={Link} classNames={{ root: classes.signUpButtonRoot }}>
-            Sign up
-          </Button>
+              to={routes.auth.signInByEmail}
+              size="xl"
+              color="white"
+              variant="transparent"
+              component={Link}
+              classNames={{ root: classes.signInButtonRoot }}
+            >
+              Sign in
+            </Button>
+            <Button to={routes.auth.signUp} size="xl" variant="radial-gradient" component={Link} classNames={{ root: classes.signUpButtonRoot }}>
+              Sign up
+            </Button>
           </div>
         </div>
-        </div>
-      </>
-    ) : (
-      <header className={classes.header}>
+      </div>
+    </>
+  ) : (
+    <header className={classes.header}>
       <Group gap={rem(64)} py={rem(7)} classNames={{ root: classes.logoLinksRoot }}>
         <Link to={routes.home}>
           <LogoIcon />
@@ -378,6 +381,5 @@ export const Header = () => {
         </Button>
       </Group>
     </header>
-    )
   );
 };

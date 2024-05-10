@@ -33,6 +33,7 @@ import { TechnicalAnalysisRoute } from "./technical-analysis";
 import { TermsOfServiceRoute } from "./terms-of-service";
 import { TradeRoute } from "./trade";
 import { TradeFuturesRoute } from "./trade-futures";
+import { TradingBotsRoute } from "./trading-bots";
 import { TransferRoute } from "./transfer";
 
 export const Pages = createRoutesView({
@@ -70,5 +71,6 @@ export const Pages = createRoutesView({
     TechnicalAnalysisRoute,
     TradeRoute,
     TradeFuturesRoute,
+    TradingBotsRoute,
   ],
 });
