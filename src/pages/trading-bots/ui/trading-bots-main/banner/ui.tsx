@@ -1,17 +1,20 @@
 import { useResize } from "@/hooks/useResize";
-import { Box, Group, Stack, Text, Title, rem } from "@mantine/core";
+import { Group, Stack, Text, Title, rem } from "@mantine/core";
+import clsx from "clsx";
 import { motion } from "framer-motion";
 
 import { Container } from "@/shared/ui";
-import { StartTradingBtn } from "@/shared/ui/startTradingBtn/ui";
+import { StartTradingBtn } from "@/shared/ui/startTradingBtn";
 
+import { BannerImage } from "./bannerImage/ui";
 import classes from "./styles.module.css";
 
 export const Banner = () => {
   const { isAdaptive: md } = useResize(1200);
+
   return (
     <Container>
-      <Group gap={rem(48)} className={classes.bannerWrapper}>
+      <Group gap={rem(32)} className={classes.bannerWrapper}>
         <motion.div
           variants={{
             hidden: {
@@ -29,24 +32,32 @@ export const Banner = () => {
           transition={{ duration: 1 }}
         >
           <Stack gap={"clamp(2rem, 3vw, 3rem)"} className={classes.bannerLeftSide}>
-            <Title c="white" order={1} fz={79} className={classes.bannerTitle}>
-              The World's <br />
-              Premier Crypto <br />
+            <Title c="white" order={1} fz={70} className={classes.bannerTitle}>
+              Trade cryptocurrencies <br />
+              like a pro with <br />
               <Text span className={classes.bannerTitleColoredPart}>
-                Trading Platform
+                automation tools
               </Text>
             </Title>
-            {md && (
-              <Box className={classes.bannerRightSide}>
-                <img draggable="false" src={`${import.meta.env.BASE_URL}assets/banner-icon.png`} alt="banner" width="100%" />
-              </Box>
-            )}
+
+            {md && <BannerImage />}
 
             <Stack gap={"clamp(2rem, 4vw, 4rem)"}>
               <Text size={md ? "18px" : "24px"} c="white" className={classes.bannerSubTitle}>
-                Join the Rapidly Expanding Global Crypto Exchange
+                Discover and replicate popular trading strategies on the largest exchange with unrivaled liquidity. Choose your tariff and start
+                earning money, but don’t forget about risk management.
               </Text>
-              <StartTradingBtn />
+              <Group align={"center"} justify={"flex-start"} className={classes.tradeActions}>
+                <StartTradingBtn />
+                <div className={classes.activeStatistics}>
+                  <Text variant={md ? "text-2" : "text-1"}>
+                    <b>Active Strategies:</b> 56.150
+                  </Text>
+                  <Text variant={md ? "text-2" : "text-1"}>
+                    <b>Total cost:</b> $48.692.023
+                  </Text>
+                </div>
+              </Group>
             </Stack>
           </Stack>
         </motion.div>
@@ -66,10 +77,9 @@ export const Banner = () => {
             whileInView={"visible"}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
+            className={clsx(classes.motionContainer, classes.right)}
           >
-            <Box className={classes.bannerRightSide}>
-              <img draggable="false" src={`${import.meta.env.BASE_URL}assets/banner-icon.png`} alt="banner" width="100%" />
-            </Box>
+            <BannerImage />
           </motion.div>
         )}
       </Group>

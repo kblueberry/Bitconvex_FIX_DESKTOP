@@ -20,7 +20,7 @@ export function Page() {
         <StakingHeader />
         <StakingCalculate />
         <StakingMain />
-        <StakingTable />
+        <StakingTable usedForTradingBot={false} />
       </Container>
       <Footer />
     </Wrapper>

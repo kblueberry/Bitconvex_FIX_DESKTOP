@@ -1,0 +1,54 @@
+.bot-wrapper {
+  border: 3px dashed rgb(255 255 255 / 12%);
+  background: var(--color-black);
+  border-radius: rem(3);
+  padding: 24px 19px;
+  flex: 1;
+
+  &:hover,
+  .active {
+    box-shadow: 0px 0px 16px 0px rgba(255, 255, 255, 0.04) inset;
+    border-color: var(--color-blue);
+  }
+
+  .botTitle {
+    color: var(--color-blue) !important;
+    width: 177px;
+
+    &.long {
+      width: 250px;
+    }
+  }
+}
+
+.botInfoText {
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white);
+  text-align: start;
+}
+
+.botBenefitContainer {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+
+  .botInfoText {
+    line-height: 18.27px;
+  }
+}
+
+@media screen and (max-width: 75em) {
+  .bot-wrapper {
+    .botTitle:not(.long) {
+      width: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 45em) {
+  .bot-wrapper {
+    flex-wrap: nowrap;
+  }
+}

@@ -1853,10 +1853,10 @@ ansi-styles@^6.2.1:
   resolved "https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz"
   integrity sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==
 
-apexcharts@^3.41.0, apexcharts@^3.46.0:
-  version "3.46.0"
-  resolved "https://registry.npmjs.org/apexcharts/-/apexcharts-3.46.0.tgz"
-  integrity sha512-ELAY6vj8JQD7QLktKasTzwm9Wt0qxqfQSo+3QWS7G7I774iK8HCkG1toGsqJH0mkK6PtYBtnSIe66uUcwoCw1w==
+apexcharts@^3.41.0, apexcharts@^3.49.0:
+  version "3.49.0"
+  resolved "https://registry.npmjs.org/apexcharts/-/apexcharts-3.49.0.tgz"
+  integrity sha512-2T9HnbQFLCuYRPndQLmh+bEQFoz0meUbvASaGgiSKDuYhWcLBodJtIpKql2aOtMx4B/sHrWW0dm90HsW4+h2PQ==
   dependencies:
     "@yr/monotone-cubic-spline" "^1.0.3"
     svg.draggable.js "^2.2.2"

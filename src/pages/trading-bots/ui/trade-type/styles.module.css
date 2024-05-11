@@ -1,0 +1,60 @@
+.wrapper {
+  flex: 1;
+  padding: var(--adaptive-section-py) 0;
+  position: relative;
+}
+
+.tradeTypesWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  flex-basis: 75%;
+
+  .tradeType {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    flex-basis: 21%;
+  }
+}
+
+.light-column {
+  top: 6%;
+  right: -2%;
+  width: auto;
+  z-index: -1;
+  position: absolute;
+  transform: translate(0, -39%);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1260px) {
+  .tradeTypesWrapper {
+    gap: 12px;
+
+    .tradeType {
+      flex-basis: 49%;
+    }
+  }
+}
+
+@media screen and (max-width: 45em) {
+  .tradeTypesWrapper {
+    flex-wrap: nowrap;
+
+    .tradeType {
+      flex-shrink: 0;
+      flex-basis: 100%;
+    }
+  }
+
+  .light-six {
+    right: -9%;
+    transform: translate(0, -50%);
+  }
+}

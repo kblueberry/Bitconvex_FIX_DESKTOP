@@ -2,20 +2,19 @@
   flex: 1;
   padding: var(--adaptive-section-py) 0;
   position: relative;
-
 }
 
-.container{
+.container {
   width: 1340px;
   margin: 0 auto;
   z-index: 1;
   padding-left: 10px;
   padding-right: 10px;
 }
-.col{
+.col {
   display: flex;
 }
-.rate-link{
+.rate-link {
   text-decoration: none;
   flex: 1;
   height: 100%;
@@ -23,7 +22,7 @@
   flex-direction: column;
 }
 
-.rate-wrap{
+.rate-wrap {
   width: 100%;
 }
 
@@ -31,7 +30,7 @@
   border: 1px solid rgb(255 255 255 / 12%);
   background: var(--color-black);
   border-radius: rem(8);
-  flex:1;
+  flex: 1;
 }
 
 .rate-header {
@@ -63,19 +62,17 @@
   box-shadow: 0 0 16px 0 rgba(228, 34, 34, 0.32);
 }
 
-.zero-text{
+.zero-text {
   color: var(--color-blue) !important;
 }
 
-.positive-text{
+.positive-text {
   color: var(--color-green) !important;
 }
 
-
-.negative-text{
+.negative-text {
   color: var(--color-red) !important;
 }
-
 
 .rate-content {
   width: 100%;
