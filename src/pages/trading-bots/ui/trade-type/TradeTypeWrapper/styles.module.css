@@ -1,0 +1,29 @@
+@import url("../../../../../app/styles//mixin.css");
+
+.tradeWrapper {
+  border-bottom: 5px solid;
+  padding: 15px 34px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &.inactive {
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+  }
+
+  &.active {
+    border-bottom-color: var(--color-blue);
+    background: linear-gradient(313.06deg, rgba(98, 95, 244, 0.2) 6.43%, rgba(12, 13, 16, 0.2) 99.25%);
+  }
+}
+.tradeTitle {
+  color: var(--color-blue) !important;
+  text-wrap: wrap;
+}
+.tradeInfoText {
+  font-family: var(--text-font-family);
+  @mixin text-2;
+
+  .subTitle {
+    font-weight: 600;
+  }
+}

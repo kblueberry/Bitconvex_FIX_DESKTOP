@@ -22,22 +22,6 @@
   }
 }
 
-.chooseBotTitle {
-  z-index: 10;
-  font-weight: 700 !important;
-  text-align: center;
-  color: var(--color-blue);
-}
-
-.chooseBotTitleWhite {
-  font-size: inherit !important;
-  font-style: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-  color: white !important;
-  padding-left: 12px;
-}
-
 @media screen and (max-width: 1260px) {
   .botsWrapper {
     gap: 12px;

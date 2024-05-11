@@ -1,4 +1,4 @@
-import { Grid, Image, Stack, Text, Title, rem } from "@mantine/core";
+import { Grid, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
 import { BitcoinIcon, Container } from "@/shared/ui";

@@ -1,8 +1,9 @@
-import { Box, Stack, Text, Title, rem } from "@mantine/core";
+import { Box, Stack, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
 import { Container } from "@/shared/ui";
 
+import { HighlightedBlueTitle } from "../shared/HighlightedBlueTitle/ui";
 import { BotInfo } from "./BotInfo/ui";
 import classes from "./styles.module.css";
 
@@ -44,12 +45,7 @@ export const ChooseBot = () => {
     <Stack className={classes.wrapper}>
       <Container>
         <Stack gap={rem(64)}>
-          <Title order={1} fz={54} className={classes.chooseBotTitle}>
-            Choose
-            <Text span className={classes.chooseBotTitleWhite}>
-              Your Bot
-            </Text>
-          </Title>
+          <HighlightedBlueTitle title="Choose" subTitle="Your Bot" />
 
           <Box className={classes.botsWrapper}>
             {BOTS.map((bot, index) => (
