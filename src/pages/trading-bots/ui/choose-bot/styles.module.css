@@ -49,3 +49,14 @@
     }
   }
 }
+
+@media screen and (max-width: 45em) {
+  .botsWrapper {
+    flex-wrap: nowrap;
+
+    .bot {
+      flex-shrink: 0;
+      flex-basis: 100%;
+    }
+  }
+}
