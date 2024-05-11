@@ -1,0 +1,14 @@
+.calculationsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+
+  .slider {
+    width: 300px;
+  }
+}
+.chartTable {
+  gap: 27px;
+}
