@@ -1,11 +1,10 @@
-import { useResize } from "@/hooks/useResize";
 import { Box, Image } from "@mantine/core";
 import "react-circular-progressbar/dist/styles.css";
 
 import { Footer, Header, Wrapper } from "@/shared/ui";
 
 import classes from "./styles.module.css";
-import { ActiveInvestments } from "./ui/active-investments/ui";
+import { ActiveInvestments } from "./ui/active-investments";
 import { CalculateProfit } from "./ui/calculate-profit/ui";
 import { ChooseBot } from "./ui/choose-bot/ui";
 import { TradeType } from "./ui/trade-type/ui";
@@ -13,8 +12,6 @@ import { Banner } from "./ui/trading-bots-main/banner/ui";
 import { TradingResults } from "./ui/trading-results/ui";
 
 export function Page() {
-  const { isAdaptive: md } = useResize(1200);
-
   return (
     <Wrapper>
       <Box pos={"relative"}>
