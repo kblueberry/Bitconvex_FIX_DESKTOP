@@ -10,7 +10,7 @@ export const ActiveInvestments = () => {
   return (
     <Stack className={classes.wrapper} gap={rem(64)}>
       <Container>
-        <StakingTable />
+        <StakingTable usedForTradingBot={true} />
       </Container>
     </Stack>
   );
