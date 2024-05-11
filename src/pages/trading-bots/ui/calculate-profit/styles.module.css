@@ -3,3 +3,9 @@
   padding: var(--adaptive-section-py) 0;
   position: relative;
 }
+
+.mainButton {
+  z-index: 9;
+  position: relative;
+  padding: 0 2rem;
+}
