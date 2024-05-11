@@ -23,6 +23,16 @@
   }
 }
 
+.light-column {
+  top: 6%;
+  right: -2%;
+  width: auto;
+  z-index: -1;
+  position: absolute;
+  transform: translate(0, -39%);
+  pointer-events: none;
+}
+
 @media screen and (max-width: 1260px) {
   .tradeTypesWrapper {
     gap: 12px;
@@ -41,5 +51,10 @@
       flex-shrink: 0;
       flex-basis: 100%;
     }
+  }
+
+  .light-six {
+    right: -9%;
+    transform: translate(0, -50%);
   }
 }

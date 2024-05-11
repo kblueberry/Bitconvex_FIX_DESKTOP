@@ -1,4 +1,4 @@
-import { Box, Flex, Stack, rem } from "@mantine/core";
+import { Box, Flex, Image, Stack, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
 import { Container } from "@/shared/ui/container/ui";
@@ -87,6 +87,12 @@ export const TradeType = () => {
             </Box>
           </Flex>
         </Stack>
+        <Image
+          draggable={false}
+          src={`${import.meta.env.BASE_URL}assets/light/trading-bots/light-column.png`}
+          alt="main-light-6"
+          className={classes.lightColumn}
+        />
       </Container>
     </Stack>
   );

@@ -1,4 +1,4 @@
-import { Grid, Stack, Text, Title, rem } from "@mantine/core";
+import { Grid, Image, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
 import { BitcoinIcon, Container } from "@/shared/ui";
@@ -83,7 +83,7 @@ export const TradingResults = () => {
                 </Grid.Col>
               );
             })}
-            {/* <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/main/4.png`} alt="main-light-4" className={classes.lightFour} /> */}
+            <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/main/4.png`} alt="main-light-4" className={classes.lightFour} />
           </Grid>
         </Stack>
       </Container>

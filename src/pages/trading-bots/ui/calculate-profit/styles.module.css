@@ -9,3 +9,13 @@
   position: relative;
   padding: 0 2rem;
 }
+
+.light-cube {
+  top: 6%;
+  left: 0;
+  width: auto;
+  z-index: -1;
+  position: absolute;
+  transform: translate(0, 6%);
+  pointer-events: none;
+}
