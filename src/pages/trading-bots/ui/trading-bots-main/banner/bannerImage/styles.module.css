@@ -1,0 +1,112 @@
+.banner-right-side {
+  height: 505px;
+
+  .mainRobot {
+    position: absolute;
+    top: 5em;
+    left: -40em;
+    width: 520px;
+  }
+
+  .bitcoinOne {
+    position: absolute;
+    bottom: -6em;
+    left: -15em;
+  }
+
+  .bitcoinTwo {
+    position: absolute;
+    top: 8em;
+    left: -14em;
+  }
+
+  .etheriumTwo {
+    position: absolute;
+    top: 8em;
+    left: -36em;
+  }
+
+  .liteCoin {
+    position: absolute;
+    top: -4em;
+    left: -27em;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .banner-right-side {
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+
+    .mainRobot {
+      z-index: 2;
+    }
+
+    .bitcoinOne {
+      position: absolute;
+      bottom: -6em;
+      left: -9em;
+      z-index: 1;
+    }
+
+    .bitcoinTwo {
+      top: 8em;
+      left: -10em;
+      z-index: 1;
+    }
+
+    .etheriumTwo {
+      top: 9em;
+      left: -28em;
+    }
+
+    .liteCoin {
+      top: -3em;
+      left: -22em;
+    }
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .banner-right-side {
+    .mainRobot {
+      position: absolute;
+      top: 3em;
+      left: -18em;
+      max-width: 453px;
+      z-index: 2;
+    }
+
+    .bitcoinOne {
+      position: absolute;
+      bottom: -1em;
+      left: 4em;
+    }
+
+    .bitcoinTwo {
+      position: absolute;
+      top: 5em;
+      left: 4em;
+    }
+
+    .etheriumTwo {
+      position: absolute;
+      top: 10em;
+      left: -15em;
+    }
+
+    .liteCoin {
+      position: absolute;
+      top: -3em;
+      left: -8em;
+      z-index: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .banner-right-side {
+    max-width: 320px;
+  }
+}
