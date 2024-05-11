@@ -1,5 +1,5 @@
 import { Slider, Stack, Text, rem } from "@mantine/core";
-import ReactApexChart from "react-apexcharts";
+import Chart from "react-apexcharts";
 
 import { chart } from "./Chart";
 import classes from "./styles.module.css";
@@ -41,7 +41,7 @@ export const ProfitChart = () => {
       </div>
       <Stack gap={rem("27px")}>
         <div id="chart" className={classes.chartTable}>
-          <ReactApexChart options={chart.options} series={chart.series} type="line" height={512} />
+          <Chart options={chart.options} series={chart.series} height={512}></Chart>
         </div>
         <div id="html-dist"></div>
       </Stack>

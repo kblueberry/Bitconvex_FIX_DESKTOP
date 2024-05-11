@@ -6,12 +6,11 @@ export const chart = {
   ],
   options: {
     chart: {
-      height: 350,
       type: "line",
       zoom: {
         enabled: false,
       },
-    },
+    } as ApexChart,
     dataLabels: {
       enabled: false,
     },
@@ -19,7 +18,7 @@ export const chart = {
       curve: "straight",
       colors: ["rgba(255, 255, 255, 1)"],
       width: 2,
-    },
+    } as ApexStroke,
     markers: {
       size: 3,
       colors: ["rgba(255, 255, 255, 1)"],
