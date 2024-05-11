@@ -46,3 +46,12 @@
   -webkit-text-fill-color: transparent;
   padding-left: 12px;
 }
+
+.light-four {
+  top: 0;
+  left: 0;
+  width: auto;
+  z-index: -1;
+  position: absolute;
+  transform: translate(0, -15%);
+}

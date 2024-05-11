@@ -83,7 +83,7 @@ export const TradingResults = () => {
                 </Grid.Col>
               );
             })}
-            <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/main/4.png`} alt="main-light-4" className={classes.lightFour} />
+            {/* <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/main/4.png`} alt="main-light-4" className={classes.lightFour} /> */}
           </Grid>
         </Stack>
       </Container>

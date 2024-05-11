@@ -1,54 +1,51 @@
-@import url("@/app/styles/mixin.css");
-.step-wrapper {
-  margin: 64px 0;
-  @media (max-width: 1250px) {
-  }
-}
-
-.buy-with-wrapper {
-  height: 444px;
-  padding: rem(64px);
-  border-radius: 8px;
+.wrapper {
+  flex: 1;
+  padding: var(--adaptive-section-py) 0;
   position: relative;
-  z-index: 1;
-  border: rem(1px) solid rgba(255, 255, 255, 0.12);
-  background: var(--color-black);
+}
 
-  & img {
-    object-fit: cover;
-    z-index: -1;
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+.botsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+
+  .bot {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    /* flex-grow: 1; */
+    /* flex-shrink: 0; */
+    flex-basis: 24%;
   }
 }
-.colBuyWith {
-  min-height: rem(297px);
-  justify-content: space-between;
-}
-.buy-with-title {
-  font-family: "CraftworkGrotesk" !important;
-  font-size: rem(32px);
-  line-height: rem(38);
-  font-weight: 700 !important;
-  color: var(--color-blue) !important;
-}
-.buyWithText {
-  font-size: var(--text-2-fz);
-}
-.btn {
-  font-family: ProximaNova !important;
-  margin-top: rem(16px);
-  width: max-content;
-  padding: 16px 32px;
-  height: rem(54px);
-}
-.text-btn {
-  line-height: 21.92px !important;
 
-  font-size: var(--text-3-fz) !important;
-  color: var(--color-white);
+.chooseBotTitle {
+  z-index: 10;
+  font-weight: 700 !important;
+  text-align: center;
+  color: var(--color-blue);
+}
+
+.chooseBotTitleWhite {
+  font-size: inherit !important;
+  font-style: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  color: white !important;
+  padding-left: 12px;
+}
+
+@media screen and (max-width: 1260px) {
+  .botsWrapper {
+    gap: 12px;
+
+    .bot {
+      flex-basis: 49%;
+    }
+  }
 }
