@@ -41,9 +41,9 @@ const BOTS = [
 
 export const ChooseBot = () => {
   return (
-    <Stack gap={rem("48px")} className={classes.wrapper}>
+    <Stack className={classes.wrapper}>
       <Container>
-        <Stack gap={rem(32)}>
+        <Stack gap={rem(64)}>
           <Title order={1} fz={54} className={classes.chooseBotTitle}>
             Choose
             <Text span className={classes.chooseBotTitleWhite}>
@@ -53,7 +53,6 @@ export const ChooseBot = () => {
 
           <Box className={classes.botsWrapper}>
             {BOTS.map((bot, index) => (
-              // <Box className={classes.bot} key={bot.title}>
               <motion.div
                 className={classes.bot}
                 variants={{
@@ -73,7 +72,6 @@ export const ChooseBot = () => {
               >
                 <BotInfo {...bot} />
               </motion.div>
-              // </Box>
             ))}
           </Box>
         </Stack>

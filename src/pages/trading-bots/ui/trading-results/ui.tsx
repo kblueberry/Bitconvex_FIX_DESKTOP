@@ -47,9 +47,9 @@ const TRADING_RESULTS = [
 
 export const TradingResults = () => {
   return (
-    <Stack gap={rem("48px")} className={classes.wrapper}>
+    <Stack className={classes.wrapper}>
       <Container>
-        <Stack gap={rem(32)}>
+        <Stack gap={rem(64)}>
           <Title c="white" order={1} fz={54} className={classes.tradingTitle}>
             Best trading results in
             <Text span className={classes.tradingTitleColored}>
@@ -57,7 +57,7 @@ export const TradingResults = () => {
             </Text>
           </Title>
 
-          <Grid gutter={{ 0: 16, md: 30 }} align={"stretch"} className={classes.wrapper}>
+          <Grid gutter={{ 0: 16, md: 30 }} align={"stretch"}>
             {TRADING_RESULTS.map((result, i) => {
               return (
                 <Grid.Col key={result.name} span={{ xs: 6, sm: 6, md: 3, lg: 3, xl: 3 }} className={classes.col}>
