@@ -28,6 +28,14 @@
   @mixin textLinearGradient;
 }
 
+.btn {
+  box-shadow:
+    0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset,
+    0px -4px 4px 0px rgba(12, 13, 16, 0.25) inset,
+    0px 0px 1px 8px rgba(255, 255, 255, 0.05),
+    0px 0px 64px 0px rgba(98, 95, 244, 0.48) !important;
+}
+
 .light-left {
   bottom: 0;
   left: 0;
