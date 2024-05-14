@@ -144,6 +144,12 @@
         0px 0px 1px 4px rgba(255, 255, 255, 0.08),
         0px 0px 48px 0px rgba(98, 95, 244, 0.48);
 
+      &[data-with-right-section] {
+        svg path {
+          fill: white !important;
+        }
+      }
+
       &[data-size="xxl"] {
         background:
           var(--gradient-radial),
