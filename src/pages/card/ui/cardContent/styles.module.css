@@ -164,17 +164,25 @@
   text-transform: uppercase;
 }
 
-.stepTitle {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--color-blue);
-  line-height: 1.2;
-}
-.stepDescription {
-  font-size: 16px;
-  line-height: 1.2;
-  color: white;
-  font-family: "ProximaNova";
+.stepDescriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .stepTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-blue);
+    line-height: 1.2;
+  }
+  .stepDescription {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.2;
+    color: white;
+    font-family: "ProximaNova";
+  }
 }
 
 @media (max-width: 1200px) {

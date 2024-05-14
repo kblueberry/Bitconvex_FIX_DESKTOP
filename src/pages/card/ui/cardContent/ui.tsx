@@ -313,7 +313,7 @@ export const CardContent = () => {
                   </div>
                 </div>
               </div>
-              <Stack gap={16}>
+              <Stack gap={16} className={classes.stepDescriptionWrapper}>
                 <Text className={classes.stepTitle}>{title}</Text>
                 <Text className={classes.stepDescription}>{description}</Text>
               </Stack>
