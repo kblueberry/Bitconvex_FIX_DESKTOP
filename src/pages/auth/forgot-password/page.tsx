@@ -1,8 +1,11 @@
 import { Button, Group, Image, Stack, Text, TextInput, Title, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
+import clsx from "clsx";
 import { useUnit } from "effector-react";
+
 import { routes } from "@/shared/routing";
 import { Header, Wrapper } from "@/shared/ui";
+
 import { Footer } from "../components/Footer/Footer";
 import { resetPasswordClicked } from "./model";
 import classes from "./styles.module.css";
@@ -46,12 +49,12 @@ export const Page = () => {
           className={classes.lightRight}
         />
 
-        <Stack align={"center"} gap={'clamp(1.5rem, 3vw, 3rem)'} className={classes.formWrapper}>
-          <Stack gap={'clamp(1rem, 1.75vw, 28px)'}>
-            <Title ta={{0: 'center', md: 'left'}} c="white" order={2} fz={{0: 40, md: 54}}>
+        <Stack align={"center"} gap={"clamp(1.5rem, 3vw, 3rem)"} className={classes.formWrapper}>
+          <Stack gap={"clamp(1rem, 1.75vw, 28px)"}>
+            <Title ta={{ 0: "center", md: "left" }} c="white" order={2} fz={54}>
               Password Recovery
             </Title>
-            <Text ta={"center"} fz={{0: 16, md: 20}} color="white" variant="text-2" className={classes.greyText}>
+            <Text ta={"center"} variant="text-2" className={classes.greyText}>
               Enter your email to recover your password
             </Text>
           </Stack>
@@ -59,7 +62,7 @@ export const Page = () => {
           <Stack gap={rem("32px")} className={classes.form}>
             <Stack gap={rem("16px")} className={classes.zIndex}>
               <label htmlFor="email">
-                <Text fz={{0: 14, md: 16}} color="white" mb={8} lh={"19px"}>
+                <Text variant="text-4" c="white" mb={8} lh={"19.49px"}>
                   Email
                 </Text>
                 <TextInput id="email" size="xxl" placeholder="Your email" />
@@ -69,7 +72,7 @@ export const Page = () => {
             <Button className={classes.btn} type="button" size="xxl" variant="radial-gradient" rightSection={<ResetIcon />} onClick={onFormSubmit}>
               Reset Password
             </Button>
-            <Text c="white" ta="left" color="white" fz={{0: 14, md: 16}}>
+            <Text c="white" ta="left" fz={16}>
               Remember your password?{" "}
               <Text variant="text-4" to={routes.auth.signInByEmail} component={Link} className={classes.blueText}>
                 Sign in again
