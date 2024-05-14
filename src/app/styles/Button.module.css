@@ -441,6 +441,14 @@
 
     @mixin text-btn-full;
     text-transform: uppercase;
+
+    &[data-with-right-section] {
+      &:hover {
+        svg path {
+          fill: white !important;
+        }
+      }
+    }
   }
 
   &[data-size="extra-large"] {
