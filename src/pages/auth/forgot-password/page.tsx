@@ -1,6 +1,5 @@
 import { Button, Group, Image, Stack, Text, TextInput, Title, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
-import clsx from "clsx";
 import { useUnit } from "effector-react";
 
 import { routes } from "@/shared/routing";
