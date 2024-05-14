@@ -413,6 +413,12 @@ div[style*="min-width: 100%"][style*="display: table"] > div > div {
     }
   }
 }
+.mantine-focus-auto {
+  &[aria-haspopup="dialog"] {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
 .mantine-focus-auto:last-child:hover {
   border-color: var(--color-blue) !important;
   svg {
