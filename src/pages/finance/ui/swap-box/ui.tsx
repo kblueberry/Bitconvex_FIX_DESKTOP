@@ -108,16 +108,6 @@ export const SwapBox = () => {
         >
           <ChangeIcon />
         </motion.span>
-        {/*<motion.img*/}
-        {/*  animate={{*/}
-        {/*     rotate: isActive ? 180 : 0*/}
-        {/*  }}*/}
-        {/*  onClick={() => changeValue()}*/}
-        {/*  draggable={false}*/}
-        {/*  src={`${import.meta.env.BASE_URL}assets/fast-swap/swap-icon.png`}*/}
-        {/*  alt="swap"*/}
-        {/*  className={classes.img}*/}
-        {/*/>*/}
         <Stack className={classes.swapWrapper}>
           <Box>
             <Flex justify={"space-between"}>
