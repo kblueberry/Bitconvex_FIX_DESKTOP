@@ -91,6 +91,50 @@
   }
 }
 
+@media screen and (max-width: 75em) {
+  .banner-right-side {
+    .bitcoinOne {
+      position: absolute;
+      bottom: 97px;
+      left: -4px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .bitcoinTwo {
+      position: absolute;
+      bottom: 73px;
+      right: -21px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .bitcoinThree {
+      position: absolute;
+      left: 144px;
+      bottom: 305px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .bitcoinFour {
+      position: absolute;
+      bottom: 250px;
+      right: 6px;
+
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 48em) {
   .banner-title {
     font-size: 3rem !important;
