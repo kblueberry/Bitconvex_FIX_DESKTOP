@@ -34,10 +34,35 @@
   @mixin text-1;
 }
 .banner-right-side {
+  position: relative;
   flex-shrink: 0;
   max-width: 530px;
-  img {
+
+  .mainBannerImg {
     width: 100%;
+  }
+
+  .bitcoinOne {
+    position: absolute;
+    bottom: 149px;
+  }
+
+  .bitcoinTwo {
+    position: absolute;
+    bottom: 99px;
+    right: 10px;
+  }
+
+  .bitcoinThree {
+    position: absolute;
+    left: 212px;
+    bottom: 444px;
+  }
+
+  .bitcoinFour {
+    position: absolute;
+    bottom: 382px;
+    right: 6px;
   }
 }
 
