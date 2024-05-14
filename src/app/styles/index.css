@@ -399,10 +399,18 @@ div[style*="min-width: 100%"][style*="display: table"] > div > div {
   background-color: transparent !important;
 }
 .mantine-focus-auto:last-child {
-  border-color: var(--color-grey) !important;
+  &:not([data-variant="subtle"]) {
+    border-color: var(--color-grey) !important;
 
-  svg {
-    fill: var(--color-grey) !important;
+    svg {
+      fill: var(--color-grey) !important;
+    }
+  }
+
+  &[data-variant="subtle"] {
+    &:hover {
+      border-color: transparent !important;
+    }
   }
 }
 .mantine-focus-auto:last-child:hover {

@@ -1,5 +1,7 @@
 import { Button, Group, Image, PasswordInput, Stack, Text, Title, rem } from "@mantine/core";
+
 import { Header, HidePasswordIcon, ShowPasswordIcon, Wrapper } from "@/shared/ui";
+
 import { Footer } from "../components/Footer/Footer";
 import classes from "./styles.module.css";
 
@@ -19,7 +21,7 @@ const ResetIcon = () => {
 export const Page = () => {
   const onContinue = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.location.href = '/#/auth/sign-in-by-email';
+    window.location.href = "/#/auth/sign-in-by-email";
   };
 
   return (
@@ -40,12 +42,12 @@ export const Page = () => {
           className={classes.lightRight}
         />
 
-        <Stack align={"center"} gap={'clamp(1.5rem, 3vw, 3rem)'} className={classes.formWrapper}>
+        <Stack align={"center"} gap={"clamp(1.5rem, 3vw, 3rem)"} className={classes.formWrapper}>
           <Stack gap={rem("28px")}>
-            <Title c="white" order={2} ta={"center"} fz={{0: 40, md: 54}}>
+            <Title c="white" order={2} ta={"center"} fz={54}>
               Enter your <br /> new password
             </Title>
-            <Text ta={"center"} variant="text-2" fz={{0: 16, md: 20}} color="white" className={classes.greyText}>
+            <Text ta={"center"} variant="text-2" className={classes.greyText}>
               We wish you never forget your password again!
             </Text>
           </Stack>
@@ -53,7 +55,7 @@ export const Page = () => {
           <Stack gap={rem("32px")} className={classes.form}>
             <Stack gap={rem("16px")} className={classes.zIndex}>
               <label htmlFor="pass">
-                <Text fz={{0: 14, md: 16}} color="white" mb={8} lh={"19px"}>
+                <Text variant="text-4" c="white" mb={8}>
                   Password
                 </Text>
                 <PasswordInput
@@ -65,7 +67,7 @@ export const Page = () => {
                 />
               </label>
               <label htmlFor="confirmPass">
-                <Text fz={{0: 14, md: 16}} color="white" mb={8} lh={"19px"}>
+                <Text variant="text-4" c="white" mb={8}>
                   Confirm your password
                 </Text>
                 <PasswordInput
