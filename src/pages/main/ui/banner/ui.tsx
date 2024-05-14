@@ -38,7 +38,91 @@ export const Banner = () => {
             </Title>
             {md && (
               <Box className={classes.bannerRightSide}>
-                <img draggable="false" src={`${import.meta.env.BASE_URL}assets/banner-icon.png`} alt="banner" width="100%" />
+                <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/building.png`} alt="banner" width="100%" />
+
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      x: "100%",
+                    },
+                    visible: {
+                      opacity: 1,
+                      x: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView={"visible"}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.1 }}
+                >
+                  <Box className={classes.bitcoinOne}>
+                    <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/build_coin_1.png`} alt="banner" />
+                  </Box>
+                </motion.div>
+
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      x: "100%",
+                    },
+                    visible: {
+                      opacity: 1,
+                      x: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView={"visible"}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.35 }}
+                >
+                  <Box className={classes.bitcoinTwo}>
+                    <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/build_etherium_2.png`} alt="banner" />
+                  </Box>
+                </motion.div>
+
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      x: "100%",
+                    },
+                    visible: {
+                      opacity: 1,
+                      x: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView={"visible"}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <Box className={classes.bitcoinThree}>
+                    <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/build_monero_2.png`} alt="banner" />
+                  </Box>
+                </motion.div>
+
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      x: "100%",
+                    },
+                    visible: {
+                      opacity: 1,
+                      x: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView={"visible"}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.7 }}
+                >
+                  <Box className={classes.bitcoinFour}>
+                    <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/build_bitcoin_1.png`} alt="banner" />
+                  </Box>
+                </motion.div>
               </Box>
             )}
 
@@ -86,7 +170,96 @@ export const Banner = () => {
             transition={{ duration: 1 }}
           >
             <Box className={classes.bannerRightSide}>
-              <img draggable="false" src={`${import.meta.env.BASE_URL}assets/banner-icon.png`} alt="banner" width="100%" />
+              <img
+                className={classes.mainBannerImg}
+                draggable="false"
+                src={`${import.meta.env.BASE_URL}assets/main/banner/building.png`}
+                alt="banner"
+              />
+
+              <motion.div
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    x: "100%",
+                  },
+                  visible: {
+                    opacity: 1,
+                    x: 0,
+                  },
+                }}
+                initial="hidden"
+                whileInView={"visible"}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.1 }}
+              >
+                <Box className={classes.bitcoinOne}>
+                  <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/build_coin_1.png`} alt="banner" />
+                </Box>
+              </motion.div>
+
+              <motion.div
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    x: "100%",
+                  },
+                  visible: {
+                    opacity: 1,
+                    x: 0,
+                  },
+                }}
+                initial="hidden"
+                whileInView={"visible"}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.25 }}
+              >
+                <Box className={classes.bitcoinTwo}>
+                  <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/build_etherium_2.png`} alt="banner" />
+                </Box>
+              </motion.div>
+
+              <motion.div
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    x: "100%",
+                  },
+                  visible: {
+                    opacity: 1,
+                    x: 0,
+                  },
+                }}
+                initial="hidden"
+                whileInView={"visible"}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.4 }}
+              >
+                <Box className={classes.bitcoinThree}>
+                  <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/build_monero_2.png`} alt="banner" />
+                </Box>
+              </motion.div>
+
+              <motion.div
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    x: "100%",
+                  },
+                  visible: {
+                    opacity: 1,
+                    x: 0,
+                  },
+                }}
+                initial="hidden"
+                whileInView={"visible"}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.6 }}
+              >
+                <Box className={classes.bitcoinFour}>
+                  <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/build_bitcoin_1.png`} alt="banner" />
+                </Box>
+              </motion.div>
             </Box>
           </motion.div>
         )}

@@ -4,4 +4,18 @@
   padding: 0 1rem;
   max-width: calc(1330px + 1rem);
   width: 100%;
+
+  &.tradeContainer {
+    padding: 0;
+    max-width: calc(1450px + 1rem) !important;
+  }
+}
+
+@media screen and (max-width: 1420em) {
+  .container {
+    &.tradeContainer {
+      padding: 0 1rem;
+      max-width: calc(1330px + 1rem);
+    }
+  }
 }

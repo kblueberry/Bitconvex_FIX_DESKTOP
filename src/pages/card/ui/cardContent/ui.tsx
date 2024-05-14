@@ -59,7 +59,12 @@ export const CardContent = () => {
               Referral Program
             </Text>
             {md && (
-              <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/Card_image.png`} className={classes.cardImage} alt="bitconvex-card" />
+              <Image
+                draggable={false}
+                src={`${import.meta.env.BASE_URL}assets/card_without_mask.png`}
+                className={classes.cardImage}
+                alt="bitconvex-card"
+              />
             )}
           </motion.div>
           <motion.div
@@ -104,7 +109,12 @@ export const CardContent = () => {
             transition={{ duration: 1 }}
             className={classes.cardImageWrapper}
           >
-            <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/Card_image.png`} alt="bitconvex-card" className={classes.cardImage} />
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/card_without_mask.png`}
+              alt="bitconvex-card"
+              className={classes.cardImage}
+            />
           </motion.div>
         )}
       </Group>

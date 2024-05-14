@@ -1,6 +1,7 @@
 import { useResize } from "@/hooks/useResize";
 import { Button, Divider, Group, Menu, Stack, Text, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
+import clsx from "clsx";
 import { useState } from "react";
 
 import { ArrowMenuIcon } from "@/pages/staking/ui/icons/ArrowIcon";
@@ -124,7 +125,7 @@ const LINKS = [
   },
 ];
 
-export const Header = () => {
+export const Header = ({ className = "" }: { className?: string }) => {
   const [isMenuActive, setMenuActive] = useState<boolean>(false);
   const [activeHiddenIndex, setActiveHiddenIndex] = useState<number>();
   const { isAdaptive: md } = useResize(1200);
@@ -353,7 +354,7 @@ export const Header = () => {
       </div>
     </>
   ) : (
-    <header className={classes.header}>
+    <header className={clsx(classes.header, classes[className])}>
       <Group gap={rem(64)} py={rem(7)} classNames={{ root: classes.logoLinksRoot }}>
         <Link to={routes.home}>
           <LogoIcon />

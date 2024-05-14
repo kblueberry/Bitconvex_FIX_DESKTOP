@@ -1,21 +1,25 @@
-import { Box, Button, Combobox, Flex, Input, InputBase, rem, Stack, Text, useCombobox } from "@mantine/core";
-import classes from "./styles.module.css";
-import { ChangeIcon, SelectArrowIcon, SwapIcon } from "@/pages/finance/ui";
-import { BitcoinIcon, EthereumIcon, USDCoinIcon } from "@/shared/ui";
-import { useState } from "react";
+import { Box, Button, Combobox, Flex, Input, InputBase, Stack, Text, rem, useCombobox } from "@mantine/core";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
-const coins = [{text:'BTC', icon:<BitcoinIcon width={'24px'}/>},
+import { ChangeIcon, SelectArrowIcon, SwapIcon } from "@/pages/finance/ui";
 
-  {text:'USTD', icon:<USDCoinIcon width={'24px'} />},
-  {text:'ETH', icon:<EthereumIcon width={'24px'} />},
-  {text:'Nano', icon:<EthereumIcon width={'24px'}/>},
-  {text:'USTD', icon:<USDCoinIcon width={'24px'} />},
-  {text:'ETH', icon:<EthereumIcon width={'24px'} />},
-  {text:'Nano', icon:<EthereumIcon width={'24px'}/>},
-]
+import { BitcoinIcon, EthereumIcon, USDCoinIcon } from "@/shared/ui";
 
-export const SwapBox = ( ) => {
+import classes from "./styles.module.css";
+
+const coins = [
+  { text: "BTC", icon: <BitcoinIcon width={"24px"} /> },
+
+  { text: "USTD", icon: <USDCoinIcon width={"24px"} /> },
+  { text: "ETH", icon: <EthereumIcon width={"24px"} /> },
+  { text: "Nano", icon: <EthereumIcon width={"24px"} /> },
+  { text: "USTD", icon: <USDCoinIcon width={"24px"} /> },
+  { text: "ETH", icon: <EthereumIcon width={"24px"} /> },
+  { text: "Nano", icon: <EthereumIcon width={"24px"} /> },
+];
+
+export const SwapBox = () => {
   const combobox1 = useCombobox({
     onDropdownClose: () => combobox1.resetSelectedOption(),
   });
@@ -24,51 +28,38 @@ export const SwapBox = ( ) => {
   });
   const [isActive, setIsActive] = useState(false);
 
-  const [value1, setValue1] = useState('BTC');
-  const [value2, setValue2] = useState('ETH');
+  const [value1, setValue1] = useState("BTC");
+  const [value2, setValue2] = useState("ETH");
   const changeValue = () => {
-    setValue1(value2)
-    setValue2(value1)
-    setIsActive(!isActive)
-  }
-  const FindIcon = coins.find(item => item.text === value1)
-  const FindIcon2 = coins.find(item => item.text === value2)
+    setValue1(value2);
+    setValue2(value1);
+    setIsActive(!isActive);
+  };
+  const FindIcon = coins.find((item) => item.text === value1);
+  const FindIcon2 = coins.find((item) => item.text === value2);
 
   const options = coins.map((item) => (
-    <Combobox.Option  value={item.text} key={item.text}>
-      <Flex align={"center"} miw={'100px'}  h={29}   gap={rem('8px')}>
+    <Combobox.Option value={item.text} key={item.text}>
+      <Flex align={"center"} miw={"100px"} h={29} gap={rem("8px")}>
         {item.icon}
-        <Text fw={600} >{item.text}</Text>
+        <Text fw={600}>{item.text}</Text>
       </Flex>
     </Combobox.Option>
   ));
 
   return (
-    <Stack
-      gap={rem("32px")}
-      align="center"
-    >
-      <Flex
-        className={classes.swapBoxWrapper}
-      >
+    <Stack gap={rem("32px")} align="center">
+      <Flex className={classes.swapBoxWrapper}>
         <Stack className={classes.swapWrapper}>
           <Box>
-            <Flex
-              justify={"space-between"}
-            >
-              <Text
-                className={classes.swapHave}
-              >
-                From
-              </Text>
-              <Text c={'white'} className={classes.value}>
+            <Flex justify={"space-between"}>
+              <Text className={classes.swapHave}>From</Text>
+              <Text c={"white"} className={classes.value}>
                 Balance: 0.12000 BTC
               </Text>
             </Flex>
           </Box>
-          <Flex
-            justify={"space-between"}
-          >
+          <Flex justify={"space-between"}>
             <Combobox
               classNames={{
                 option: classes.option,
@@ -89,7 +80,7 @@ export const SwapBox = ( ) => {
                   pointer
                   onClick={() => combobox1.toggleDropdown()}
                 >
-                  <Flex h={29} w={'118px'} align={"center"} gap={'10px'}>
+                  <Flex h={29} w={"118px"} align={"center"} gap={"10px"}>
                     {FindIcon?.icon}
                     <Text fw={600} className={classes.option}>
                       {value1}
@@ -99,11 +90,11 @@ export const SwapBox = ( ) => {
                 </InputBase>
               </Combobox.Target>
 
-              <Combobox.Dropdown classNames={{ dropdown: classes.dropdown, }}>
+              <Combobox.Dropdown classNames={{ dropdown: classes.dropdown }}>
                 <Combobox.Options classNames={{ options: classes.option }}>{options}</Combobox.Options>
               </Combobox.Dropdown>
             </Combobox>
-            <Input type={'number'} classNames={{ input: classes.amount }} placeholder={'Enter amount'} />
+            <Input type={"number"} classNames={{ input: classes.amount }} placeholder={"Enter amount"} />
           </Flex>
         </Stack>
 
@@ -115,38 +106,18 @@ export const SwapBox = ( ) => {
           draggable={false}
           className={classes.img}
         >
-          <ChangeIcon/>
+          <ChangeIcon />
         </motion.span>
-        {/*<motion.img*/}
-        {/*  animate={{*/}
-        {/*     rotate: isActive ? 180 : 0*/}
-        {/*  }}*/}
-        {/*  onClick={() => changeValue()}*/}
-        {/*  draggable={false}*/}
-        {/*  src={`${import.meta.env.BASE_URL}assets/fast-swap/swap-icon.png`}*/}
-        {/*  alt="swap"*/}
-        {/*  className={classes.img}*/}
-        {/*/>*/}
-        <Stack
-          className={classes.swapWrapper}
-        >
+        <Stack className={classes.swapWrapper}>
           <Box>
-            <Flex
-              justify={"space-between"}
-            >
-              <Text
-                className={classes.swapHave}
-              >
-                To
-              </Text>
+            <Flex justify={"space-between"}>
+              <Text className={classes.swapHave}>To</Text>
               <Text c={"white"} className={classes.value}>
                 Balance: 12.000 USDT
               </Text>
             </Flex>
           </Box>
-          <Flex
-            justify={"space-between"}
-          >
+          <Flex justify={"space-between"}>
             <Combobox
               classNames={{
                 option: classes.option,
@@ -167,7 +138,7 @@ export const SwapBox = ( ) => {
                   pointer
                   onClick={() => combobox2.toggleDropdown()}
                 >
-                  <Flex h={29} w={'118px'} align={"center"} gap={'10px'}>
+                  <Flex h={29} w={"118px"} align={"center"} gap={"10px"}>
                     {FindIcon2?.icon}
                     <Text fw={600} className={classes.option}>
                       {value2}
@@ -177,25 +148,19 @@ export const SwapBox = ( ) => {
                 </InputBase>
               </Combobox.Target>
 
-              <Combobox.Dropdown classNames={{ dropdown: classes.dropdown, }}>
+              <Combobox.Dropdown classNames={{ dropdown: classes.dropdown }}>
                 <Combobox.Options classNames={{ options: classes.option }}>{options}</Combobox.Options>
               </Combobox.Dropdown>
             </Combobox>
-            <Input type={'number'} classNames={{ input: classes.amount }} placeholder={'Enter amount'} />
-
+            <Input type={"number"} classNames={{ input: classes.amount }} placeholder={"Enter amount"} />
           </Flex>
         </Stack>
       </Flex>
 
-      <Button size='xxl' variant='radial-gradient' className={classes.btn} rightSection={<SwapIcon />}>
+      <Button size="xxl" variant="radial-gradient" className={classes.btn} rightSection={<SwapIcon />}>
         SWAP
       </Button>
-      <Text
-        className={classes.exchange}
-      >
-        Exchange rate: 1 BTC ~ 37403.98
-      </Text>
+      <Text className={classes.exchange}>Exchange rate: 1 BTC ~ 37403.98</Text>
     </Stack>
   );
 };
-

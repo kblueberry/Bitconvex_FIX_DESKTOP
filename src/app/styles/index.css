@@ -202,6 +202,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
+body::-webkit-scrollbar {
+  width: 9px !important;
+}
+
 #root {
   min-height: 100%;
   isolation: isolate;

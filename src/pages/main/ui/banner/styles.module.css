@@ -34,10 +34,35 @@
   @mixin text-1;
 }
 .banner-right-side {
+  position: relative;
   flex-shrink: 0;
   max-width: 530px;
-  img {
+
+  .mainBannerImg {
     width: 100%;
+  }
+
+  .bitcoinOne {
+    position: absolute;
+    bottom: 149px;
+  }
+
+  .bitcoinTwo {
+    position: absolute;
+    bottom: 99px;
+    right: 10px;
+  }
+
+  .bitcoinThree {
+    position: absolute;
+    left: 212px;
+    bottom: 444px;
+  }
+
+  .bitcoinFour {
+    position: absolute;
+    bottom: 382px;
+    right: 6px;
   }
 }
 
@@ -63,6 +88,50 @@
   .banner-right-side {
     max-width: 360px;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 75em) {
+  .banner-right-side {
+    .bitcoinOne {
+      position: absolute;
+      bottom: 97px;
+      left: -4px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .bitcoinTwo {
+      position: absolute;
+      bottom: 73px;
+      right: -21px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .bitcoinThree {
+      position: absolute;
+      left: 144px;
+      bottom: 305px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .bitcoinFour {
+      position: absolute;
+      bottom: 250px;
+      right: 6px;
+
+      img {
+        width: 100px;
+      }
+    }
   }
 }
 

@@ -8,6 +8,10 @@
   display: flex;
   justify-content: space-between;
   z-index: 2;
+
+  &.headerTradePage {
+    max-width: 1450px;
+  }
 }
 
 .logo-links-root {
