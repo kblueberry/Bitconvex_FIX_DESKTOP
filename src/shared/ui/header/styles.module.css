@@ -103,9 +103,17 @@
     padding-top: 0 !important;
   }
 
-  &:hover .menu-item-label {
-    color: var(--color-blue);
-    text-shadow: 0 2px 8px rgba(98, 95, 244, 0.64);
+  &:hover {
+    .menu-item-label {
+      color: var(--color-blue);
+      text-shadow: 0 2px 8px rgba(98, 95, 244, 0.64);
+    }
+
+    .menu-item-section {
+      svg path {
+        fill: white !important;
+      }
+    }
   }
 }
 

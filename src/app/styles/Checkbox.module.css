@@ -4,7 +4,7 @@
   --checkbox-radius: 2px;
 
   background-color: transparent;
-  background: var(--_checkbox-bg);
+  background: linear-gradient(180deg, #625ff4 0%, #625ff8 100%);
 
   transition: none;
 
@@ -15,7 +15,6 @@
 
   &[data-indeterminate],
   &:checked {
-
     box-shadow: 0px 2px 16px rgba(98, 95, 244, 0.64);
 
     [data-mantine-color-scheme] & {
@@ -33,5 +32,4 @@
     outline: none;
     outline-offset: 0;
   }
-
 }

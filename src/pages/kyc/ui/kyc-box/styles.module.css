@@ -165,6 +165,10 @@ form .body {
   max-width: 100%;
 }
 
+.documentTypeBtn {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
 @media (max-width: 1400px) {
   .body {
     grid-gap: 1rem;

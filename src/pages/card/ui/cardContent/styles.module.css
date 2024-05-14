@@ -164,17 +164,25 @@
   text-transform: uppercase;
 }
 
-.stepTitle {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--color-blue);
-  line-height: 1.2;
-}
-.stepDescription {
-  font-size: 16px;
-  line-height: 1.2;
-  color: white;
-  font-family: "ProximaNova";
+.stepDescriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .stepTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-blue);
+    line-height: 1.2;
+  }
+  .stepDescription {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.2;
+    color: white;
+    font-family: "ProximaNova";
+  }
 }
 
 @media (max-width: 1200px) {
@@ -245,7 +253,9 @@
 
 @media (max-width: 700px) {
   .card-image {
-    height: 360px !important;
+    height: 29rem !important;
+    width: 30rem !important;
+    margin: 0 auto;
   }
   .stepContainer > div:nth-child(2) {
     flex: 1;
@@ -254,7 +264,9 @@
 
 @media (max-width: 480px) {
   .card-image {
-    height: 236px !important;
+    height: 20rem !important;
+    width: 21rem !important;
+    margin: 0 auto;
   }
   .cardTitle {
     font-size: 32px;

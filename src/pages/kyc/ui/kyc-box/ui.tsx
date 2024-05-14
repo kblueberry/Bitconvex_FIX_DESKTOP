@@ -127,7 +127,7 @@ export const KycBox = () => {
                 onClick={() => setDocumentType(item.text)}
                 size="xl"
                 variant="outline"
-                className={clsx(item.text === documentType && classes.ratesButtonRootActive)}
+                className={clsx(item.text === documentType && classes.ratesButtonRootActive, classes.documentTypeBtn)}
                 classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}
               >
                 {item.text}

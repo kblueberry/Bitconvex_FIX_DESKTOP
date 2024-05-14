@@ -1,6 +1,8 @@
 import { Button, Group, Image, Stack, Text, TextInput, Title, rem } from "@mantine/core";
 import { useUnit } from "effector-react";
+
 import { Header, Wrapper } from "@/shared/ui";
+
 import { Footer } from "../components/Footer/Footer";
 import { resetPasswordCodeClicked } from "./model";
 import classes from "./styles.module.css";
@@ -44,12 +46,12 @@ export const Page = () => {
           className={classes.lightRight}
         />
 
-        <Stack align={"center"} gap={'clamp(1.5rem, 3vw, 3rem)'} className={classes.formWrapper}>
-          <Stack gap={'clamp(1rem, 1.75vw, 28px)'}>
-            <Title ta={{0: 'center', md: 'left'}} c="white" order={2} fz={{0: 40, md: 54}}>
+        <Stack align={"center"} gap={"clamp(1.5rem, 3vw, 3rem)"} className={classes.formWrapper}>
+          <Stack gap={"clamp(1rem, 1.75vw, 28px)"}>
+            <Title ta={{ 0: "center", md: "left" }} c="white" order={2} fz={54}>
               Enter security code
             </Title>
-            <Text ta={"center"} fz={{0: 16, md: 20}} color="white" className={classes.greyText}>
+            <Text ta={"center"} fz={20} className={classes.greyText}>
               We sent it to your email <span className={classes.blueText}>mail@gmail.com</span> <br /> or follow the link from the letter
             </Text>
           </Stack>
@@ -57,14 +59,14 @@ export const Page = () => {
           <Stack gap={rem("32px")} className={classes.form}>
             <Stack gap={rem("16px")} className={classes.zIndex}>
               <label htmlFor="Code">
-                <Text variant="text-4" mb={8} lh={"19px"}>
+                <Text variant="text-4" mb={8}>
                   Code
                 </Text>
                 <TextInput id="Code" size="xxl" placeholder="Enter the security code" />
               </label>
             </Stack>
 
-            <Button size="xxl" className={classes.btn} variant="radial-gradient" rightSection={<  ContinueIcon />} onClick={onFormSubmit}>
+            <Button size="xxl" className={classes.btn} variant="radial-gradient" rightSection={<ContinueIcon />} onClick={onFormSubmit}>
               Continue
             </Button>
           </Stack>

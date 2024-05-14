@@ -213,6 +213,12 @@ export function Page() {
               </Text>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/privacy-notice/2.png`}
+              alt="light-2"
+              className={classes.lightFive}
+            />
             <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
               <Title order={4} fz={{ 0: 20, md: 24 }} className={classes.blueText}>
                 Disposal of Personal Information
@@ -252,6 +258,12 @@ export function Page() {
               </Text>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/privacy-notice/2.png`}
+              alt="light-2"
+              className={classes.lightSeven}
+            />
             <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
               <Title order={4} fz={{ 0: 20, md: 24 }} className={classes.blueText}>
                 Data Protection Supervisory Authority

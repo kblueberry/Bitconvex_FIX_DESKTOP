@@ -97,10 +97,21 @@
   border-radius: 8px;
   background: var(--gradient-linear);
   box-shadow: 0 8px 32px 0 rgba(98, 95, 244, 0.32);
+
+  .welcome-title {
+    font-family: var(--font-sans);
+    font-size: var(--text-title);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: 64.8px;
+  }
 }
 
 .welcome-wrapper > img {
   pointer-events: none;
+}
+
+.welcome-image {
+  width: 627.33px;
 }
 
 .welcome-text-wrapper {
