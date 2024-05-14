@@ -18,7 +18,7 @@ export function Page() {
       <Container className="tradeContainer">
         <TradeContent />
       </Container>
-      <Footer width={1490} />
+      <Footer width={1460} />
     </Wrapper>
   );
 }
