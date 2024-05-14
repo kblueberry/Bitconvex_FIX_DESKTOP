@@ -58,6 +58,13 @@
   border-radius: 8px;
   font-weight: 700;
 }
+
+.expectedProfitWrapper {
+  .expectedProfitTitle {
+    padding-right: 0;
+    flex: 1 0 44%;
+  }
+}
 /* ::-webkit-scrollbar {
   width: rem(8px);
 }

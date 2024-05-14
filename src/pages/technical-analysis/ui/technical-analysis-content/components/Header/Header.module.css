@@ -18,6 +18,8 @@
 
 .headerDescription {
   font-size: 20px;
+  line-height: var(--text-2-lh);
+  font-weight: var(--font-weight-regular);
   color: var(--color-grey);
   font-family: "ProximaNova";
 }
