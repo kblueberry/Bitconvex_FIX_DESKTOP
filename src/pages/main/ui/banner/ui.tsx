@@ -42,14 +42,32 @@ export const Banner = () => {
               </Box>
             )}
 
-            <Stack gap={"clamp(2rem, 4vw, 4rem)"}>
-              <Text size={md ? "18px" : "24px"} c="white" className={classes.bannerSubTitle}>
-                Join the Rapidly Expanding Global Crypto Exchange
-              </Text>
-              <StartTradingBtn />
-            </Stack>
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: "-100%",
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView={"visible"}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.15 }}
+            >
+              <Stack gap={"clamp(2rem, 4vw, 4rem)"}>
+                <Text size={md ? "18px" : "24px"} c="white" className={classes.bannerSubTitle}>
+                  Join the Rapidly Expanding Global Crypto Exchange
+                </Text>
+                <StartTradingBtn />
+              </Stack>
+            </motion.div>
           </Stack>
         </motion.div>
+
         {!md && (
           <motion.div
             variants={{

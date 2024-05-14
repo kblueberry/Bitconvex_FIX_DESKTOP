@@ -58,7 +58,9 @@ export const CardContent = () => {
               <Space />
               Referral Program
             </Text>
-            {md && <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/card.svg`} className={classes.cardImage} alt="bitconvex-card" />}
+            {md && (
+              <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/Card_image.png`} className={classes.cardImage} alt="bitconvex-card" />
+            )}
           </motion.div>
           <motion.div
             variants={{
@@ -102,7 +104,7 @@ export const CardContent = () => {
             transition={{ duration: 1 }}
             className={classes.cardImageWrapper}
           >
-            <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/card.svg`} alt="bitconvex-card" className={classes.cardImage} />
+            <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/Card_image.png`} alt="bitconvex-card" className={classes.cardImage} />
           </motion.div>
         )}
       </Group>
@@ -311,7 +313,7 @@ export const CardContent = () => {
                   </div>
                 </div>
               </div>
-              <Stack gap={16}>
+              <Stack gap={16} className={classes.stepDescriptionWrapper}>
                 <Text className={classes.stepTitle}>{title}</Text>
                 <Text className={classes.stepDescription}>{description}</Text>
               </Stack>

@@ -9,13 +9,18 @@ import classes from "./styles.module.css";
 
 export const Footer = ({ width }: { width?: number }) => {
   const { isAdaptive: md } = useResize(1200);
+
+  const handleDirectionToPage = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Group align="flex-start" justify={"space-between"} gap={rem(32)} className={classes.wrapper}>
       <Group style={{ width }} align="flex-start" justify={"space-between"} gap={rem(32)} className={classes.box}>
         <Group gap={rem(96)} className={classes.leftSide} align="flex-start" w={{ 0: "100%", md: "auto" }}>
           <Stack gap={rem("32px")} w={rem("400px")} className={classes.footerContent}>
             <Stack gap={rem("16px")}>
-              <Link to={routes.home}>
+              <Link to={routes.home} onClick={handleDirectionToPage}>
                 <LogoIcon />
               </Link>
               <Text c="#6C7080" variant="text-4" display={{ 0: "none", md: "block" }}>
@@ -62,22 +67,22 @@ export const Footer = ({ width }: { width?: number }) => {
               About
             </Title>
             <Stack gap={rem("16px")}>
-              <Link to={routes.aboutUs} className={classes.link}>
+              <Link to={routes.aboutUs} className={classes.link} onClick={handleDirectionToPage}>
                 About Us
               </Link>
-              <Link to={routes.termsOfService} className={classes.link}>
+              <Link to={routes.termsOfService} className={classes.link} onClick={handleDirectionToPage}>
                 Terms of Service
               </Link>
-              <Link to={routes.privacyNotice} className={classes.link}>
+              <Link to={routes.privacyNotice} className={classes.link} onClick={handleDirectionToPage}>
                 Privacy Notice
               </Link>
-              <Link to={routes.cookiesPolicy} className={classes.link}>
+              <Link to={routes.cookiesPolicy} className={classes.link} onClick={handleDirectionToPage}>
                 Cookies Policy
               </Link>
-              <Link to={routes.amlKycPolicy} className={classes.link}>
+              <Link to={routes.amlKycPolicy} className={classes.link} onClick={handleDirectionToPage}>
                 AML & KYC Policy
               </Link>
-              <Link to={routes.bugBountyProgram} className={classes.link}>
+              <Link to={routes.bugBountyProgram} className={classes.link} onClick={handleDirectionToPage}>
                 Bug Bounty Program
               </Link>
             </Stack>
@@ -87,22 +92,22 @@ export const Footer = ({ width }: { width?: number }) => {
               Products
             </Title>
             <Stack gap={rem("16px")}>
-              <Link to={routes.trade} className={classes.link}>
+              <Link to={routes.trade} className={classes.link} onClick={handleDirectionToPage}>
                 Spot trading
               </Link>
-              <Link to={routes.tradeFutures} className={classes.link}>
+              <Link to={routes.tradeFutures} className={classes.link} onClick={handleDirectionToPage}>
                 Futures trade
               </Link>
-              <Link to={routes.buyCrypto} className={classes.link}>
+              <Link to={routes.buyCrypto} className={classes.link} onClick={handleDirectionToPage}>
                 Buy crypto
               </Link>
-              <Link to={routes.finance} className={classes.link}>
+              <Link to={routes.finance} className={classes.link} onClick={handleDirectionToPage}>
                 Fast swap
               </Link>
-              <Link to={routes.staking} className={classes.link}>
+              <Link to={routes.staking} className={classes.link} onClick={handleDirectionToPage}>
                 Staking
               </Link>
-              <Link to={routes.p2p} className={classes.link}>
+              <Link to={routes.p2p} className={classes.link} onClick={handleDirectionToPage}>
                 P2P
               </Link>
             </Stack>
@@ -112,10 +117,10 @@ export const Footer = ({ width }: { width?: number }) => {
               Support
             </Title>
             <Stack gap={rem("16px")}>
-              <Link to={routes.live} className={classes.link}>
+              <Link to={routes.live} className={classes.link} onClick={handleDirectionToPage}>
                 Live Chat
               </Link>
-              <Link to={routes.faq} className={classes.link}>
+              <Link to={routes.faq} className={classes.link} onClick={handleDirectionToPage}>
                 FAQ
               </Link>
             </Stack>
@@ -125,13 +130,13 @@ export const Footer = ({ width }: { width?: number }) => {
               Market Tools
             </Title>
             <Stack gap={rem("16px")}>
-              <Link to={routes.cryptoMarketCap} className={classes.link}>
+              <Link to={routes.cryptoMarketCap} className={classes.link} onClick={handleDirectionToPage}>
                 Crypto Market Cap
               </Link>
-              <Link to={routes.marketScreener} className={classes.link}>
+              <Link to={routes.marketScreener} className={classes.link} onClick={handleDirectionToPage}>
                 Market Screener
               </Link>
-              <Link to={routes.technicalAnalysis} className={classes.link}>
+              <Link to={routes.technicalAnalysis} className={classes.link} onClick={handleDirectionToPage}>
                 Technical Analysis
               </Link>
             </Stack>

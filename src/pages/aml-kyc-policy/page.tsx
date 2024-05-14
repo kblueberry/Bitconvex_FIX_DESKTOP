@@ -144,6 +144,12 @@ export function Page() {
               </ul>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/aml-kyc-policy/4.png`}
+              alt="light-4"
+              className={classes.lightFour}
+            />
             <Stack gap={"clamp(12px, 2vw, 2rem)"}>
               <Title order={4} className={classes.blueText}>
                 AML/KYC Policy includes:
@@ -261,6 +267,12 @@ export function Page() {
               </Text>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/aml-kyc-policy/2.png`}
+              alt="light-2"
+              className={classes.lightFive}
+            />
             <Stack gap={"clamp(12px, 2vw, 2rem)"}>
               <Title order={4} className={classes.blueText}>
                 Chief Compliance Officer
@@ -421,6 +433,12 @@ export function Page() {
               </Text>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/aml-kyc-policy/4.png`}
+              alt="light-4"
+              className={classes.lightSix}
+            />
             <Stack gap={"clamp(12px, 2vw, 2rem)"}>
               <Title order={4} className={classes.blueText}>
                 Full list of Banned Jurisdictions

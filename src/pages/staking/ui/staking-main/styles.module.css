@@ -83,6 +83,9 @@
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23625FF4FF' stroke-width='2' stroke-dasharray='10' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
   border-radius: rem(8px);
   z-index: 10;
+  background-position: bottom;
+  background-size: -1px 1px;
+  background-repeat: no-repeat;
 }
 .selectBox {
   position: relative;
@@ -127,7 +130,7 @@
     height: auto !important;
   }
   .selectBox {
-    padding: 1.5rem;
+    padding: 1.8rem;
     display: grid;
     grid-template-columns: auto 1px auto;
   }
@@ -174,6 +177,6 @@
   .selectBox .divider {
     width: 100% !important;
     height: 1px !important;
-    background-color: rgba(255,255,255,.12);
+    background-color: rgba(255, 255, 255, 0.12);
   }
 }

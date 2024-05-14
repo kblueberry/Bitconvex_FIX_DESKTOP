@@ -1,3 +1,5 @@
+@import url(../../../../app/styles/mixin.css);
+
 .banner-wrapper {
   flex: 1;
   padding: clamp(28px, 6vw, 96px) 0;
@@ -28,6 +30,8 @@
 .banner-sub-title {
   z-index: 10;
   position: relative;
+  font-family: var(--text-font-family);
+  @mixin text-1;
 }
 .banner-right-side {
   flex-shrink: 0;

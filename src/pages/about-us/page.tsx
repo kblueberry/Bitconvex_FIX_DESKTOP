@@ -1,7 +1,9 @@
 import { Flex, Grid, Group, Image, Stack, Text, Title, rem } from "@mantine/core";
 import clsx from "clsx";
+
 import { Container, Footer, Header, Wrapper } from "@/shared/ui";
-import aboutUsOverlay from '../../../public/assets/aboutUsOverlay.png';
+
+import aboutUsOverlay from "../../../public/assets/aboutUsOverlay.png";
 import classes from "./styles.module.css";
 import { RoadMap } from "./ui";
 
@@ -15,13 +17,13 @@ export function Page() {
 
       <Stack gap={0} pos="relative">
         <Container>
-          <Group className={classes.section} pb={{0: 32, md: 64}}>
+          <Group className={classes.section} pb={{ 0: 32, md: 64 }}>
             <Group align={"stretch"} justify={"space-between"} className={classes.welcomeWrapper}>
               <Stack className={classes.welcomeTextWrapper}>
-                <Title c="white" fz={{0: 40, md: 54}} order={2}>
+                <Title c="white" order={2} className={classes.welcomeTitle}>
                   Welcome to BitConvex
                 </Title>
-                <Text w={{0: '100%', md: 700}} fz={{0: 16, md: 20}} color="white">
+                <Text w={{ 0: "100%", md: 700 }} variant="text-2" color="white">
                   Your premier destination for seamless cryptocurrency trading. At BitConvex, we
                   <br /> empower users with cutting-edge technology, a secure trading environment, and a user-friendly platform designed to elevate
                   your crypto experience.
@@ -34,12 +36,7 @@ export function Page() {
                 alt="welcome"
                 className={classes.welcomeImage}
               />
-              <img
-                draggable="false"
-                alt="about-us-overlay"
-                className={classes.overlayImage}
-                src={aboutUsOverlay}
-              />
+              <img draggable="false" alt="about-us-overlay" className={classes.overlayImage} src={aboutUsOverlay} />
               <img
                 draggable="false"
                 src={`${import.meta.env.BASE_URL}assets/welcome-image-2.png`}
@@ -53,15 +50,15 @@ export function Page() {
 
         <Stack className={classes.section}>
           <Container>
-            <Stack gap={'clamp(1.5rem, 4vw, 4rem)'}>
-              <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-                <Title c="white" fz={{0: 40, md: 54}} ta={"center"} order={2}>
+            <Stack gap={"clamp(1.5rem, 4vw, 4rem)"}>
+              <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+                <Title c="white" fz={{ 0: 40, md: 54 }} ta={"center"} order={2}>
                   Our{" "}
-                  <Text c="#625FF4" fw={600} fz={{0: 40, md: 54}} className={classes.coloredTextPart} span>
+                  <Text c="#625FF4" fw={600} fz={{ 0: 40, md: 54 }} className={classes.coloredTextPart} span>
                     mission
                   </Text>
                 </Title>
-                <Text color="white" fz={{0: 16, md: 20}} ta={"center"} className={classes.subTitle}>
+                <Text color="white" fz={{ 0: 16, md: 20 }} ta={"center"} className={classes.subTitle}>
                   Provide a safe, secure and affordable cryptocurrency exchange for everyone from beginners <br /> to professional traders. can learn,
                   grow and succeed in the cryptocurrency industry
                 </Text>
@@ -141,19 +138,15 @@ export function Page() {
 
         <Stack className={classes.section}>
           <Container>
-            <Stack gap={'clamp(1.5rem, 4vw, 4rem)'}>
-              <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
-                <Title c="white" fz={{0: 40, md: 54}} ta={"center"} order={2}>
-                  <Text
-                    fz={{0: 40, md: 54}}
-                    c="#625FF4"
-                    fw={600}
-                    className={classes.coloredTextPart} span>
+            <Stack gap={"clamp(1.5rem, 4vw, 4rem)"}>
+              <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
+                <Title c="white" fz={{ 0: 40, md: 54 }} ta={"center"} order={2}>
+                  <Text fz={{ 0: 40, md: 54 }} c="#625FF4" fw={600} className={classes.coloredTextPart} span>
                     Road
                   </Text>
                   map
                 </Title>
-                <Text fz={{0: 16, md: 20}} ta={"center"} className={classes.subTitle}>
+                <Text fz={{ 0: 16, md: 20 }} ta={"center"} className={classes.subTitle}>
                   Our development plans from 2019 to 2025
                 </Text>
               </Stack>
@@ -170,7 +163,7 @@ export function Page() {
         <Stack className={classes.section}>
           <Container>
             <Stack gap={rem("64px")}>
-              <Image draggable="false" src={`${import.meta.env.BASE_URL}assets/map.png`} alt="map" w="100%" mih={350} style={{borderRadius: 10}} />
+              <Image draggable="false" src={`${import.meta.env.BASE_URL}assets/map.png`} alt="map" w="100%" mih={350} style={{ borderRadius: 10 }} />
               <Grid columns={10} gutter={96} grow justify={"space-between"} className={classes.partnersWrapper}>
                 <Grid.Col span={{ base: 5, md: 2 }}>
                   <Image draggable="false" src={`${import.meta.env.BASE_URL}assets/partners/Near.png`} fit="contain" alt="Near" />

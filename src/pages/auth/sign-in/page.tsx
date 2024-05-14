@@ -1,7 +1,10 @@
 import { Button, Checkbox, Group, Image, PasswordInput, Stack, Text, TextInput, Title, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
+import clsx from "clsx";
+
 import { routes } from "@/shared/routing";
 import { Header, HidePasswordIcon, ShowPasswordIcon, Wrapper } from "@/shared/ui";
+
 import { Footer } from "../components/Footer/Footer";
 import classes from "./styles.module.css";
 
@@ -37,12 +40,12 @@ export const Page = () => {
           className={classes.lightRight}
         />
 
-        <Stack gap={'clamp(1.5rem, 3vw, 3rem)'} className={classes.formWrapper}>
-          <Stack gap={'clamp(1rem, 1.75vw, 1.75rem)'}>
-            <Title c="white" ta={'center'} order={2} fz={{0: 40, md: 54}}>
+        <Stack gap={"clamp(1.5rem, 3vw, 3rem)"} className={classes.formWrapper}>
+          <Stack gap={"clamp(1rem, 1.75vw, 1.75rem)"}>
+            <Title c="white" ta={"center"} order={2} fz={54}>
               Sign In to BitConvex{" "}
             </Title>
-            <Text ta="center" color="white" fz={{0: 16, md: 20}} className={classes.greyText}>
+            <Text ta="center" color="white" variant="text-2" className={classes.greyText}>
               Access the Future of Finance! Sign In to Your Account.
             </Text>
           </Stack>
@@ -51,13 +54,13 @@ export const Page = () => {
             <Stack gap={rem(32)} className={classes.zIndex}>
               <Stack gap={rem("16px")}>
                 <label htmlFor="email">
-                  <Text fz={{0: 14, md: 16}} color="white" mb={8} lh={"19px"}>
+                  <Text variant="text-4" c="white" mb={8} lh={"19.49px"}>
                     Email
                   </Text>
                   <TextInput id="email" size="xxl" placeholder="Your email" />
                 </label>
                 <label htmlFor="pass">
-                  <Text fz={{0: 14, md: 16}} color="white" mb={8} lh={"19px"}>
+                  <Text variant="text-4" c="white" mb={8} lh={"19.49px"}>
                     Password
                   </Text>
                   <PasswordInput
@@ -71,20 +74,33 @@ export const Page = () => {
               </Stack>
 
               <Group justify={"space-between"}>
-                <Checkbox c="white" label={<Text fz={{0: 14, md: 16}} color="white">Remember me</Text>} />
-                <Text to={routes.auth.forgotPassword} fz={{0: 14, md: 16}} color="white" component={Link} className={classes.blueText}>
+                <Checkbox
+                  c="white"
+                  label={
+                    <Text fz={16} c="white" className={classes.rememberMeLabel}>
+                      Remember me
+                    </Text>
+                  }
+                />
+                <Text to={routes.auth.forgotPassword} fz={16} component={Link} className={classes.blueText}>
                   Forgot Password?
                 </Text>
               </Group>
             </Stack>
 
-            <Stack gap={'clamp(1.5rem, 2vw, 2rem)'}>
-              <Button size="xxl" className={classes.btn} h={{0: 78, md: 92}} variant="radial-gradient" rightSection={<EnterIcon />}>
+            <Stack gap={"clamp(1.5rem, 2vw, 2rem)"}>
+              <Button
+                size="xxl"
+                className={clsx(classes.btn, classes.signInButton)}
+                h={{ 0: 78, md: 92 }}
+                variant="radial-gradient"
+                rightSection={<EnterIcon />}
+              >
                 SIGN IN
               </Button>
-              <Text c="white" ta="left" fz={{0: 14, md: 16}} color="white">
+              <Text c="white" ta="left" fz={16}>
                 Don’t have an account?{" "}
-                <Text fz={{0: 14, md: 16}} color="white" to={routes.auth.signUp} component={Link} className={classes.blueText}>
+                <Text fz={16} to={routes.auth.signUp} component={Link} className={classes.blueText}>
                   Register Here
                 </Text>
               </Text>
