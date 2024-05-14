@@ -93,6 +93,13 @@ export function Page() {
               </Text>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/terms-of-service/4.png`}
+              alt="light-4"
+              className={classes.lightFour}
+            />
+
             <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
               <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 2. RISK WARNING.
@@ -367,6 +374,12 @@ export function Page() {
               </Text>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/terms-of-service/2.png`}
+              alt="light-2"
+              className={classes.lightFive}
+            />
             <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
               <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 5. EXCHANGE.
@@ -477,6 +490,12 @@ export function Page() {
               </Text>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/terms-of-service/4.png`}
+              alt="light-4"
+              className={classes.lightSix}
+            />
             <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
               <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 7. FEES.
@@ -636,6 +655,12 @@ export function Page() {
               </Text>
             </Stack>
 
+            <Image
+              draggable={false}
+              src={`${import.meta.env.BASE_URL}assets/light/terms-of-service/2.png`}
+              alt="light-2"
+              className={classes.lightSeven}
+            />
             <Stack gap={"clamp(1rem, 2vw, 2rem)"}>
               <Title order={4} className={classes.blueText} fz={{ 0: 20, md: 24 }}>
                 10. TRANSACTIONS ON CRYPTOCURRENCY NETWORKS.

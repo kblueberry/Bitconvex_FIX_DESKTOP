@@ -30,6 +30,38 @@
   position: absolute;
 }
 
+.light-four {
+  position: absolute;
+  top: 10%;
+  left: -3%;
+  width: auto;
+  z-index: -1;
+}
+
+.light-five {
+  position: absolute;
+  top: 28%;
+  right: 0;
+  width: auto;
+  z-index: -1;
+}
+
+.light-six {
+  position: absolute;
+  top: 46%;
+  left: -3%;
+  width: auto;
+  z-index: -1;
+}
+
+.light-seven {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: auto;
+  z-index: -1;
+}
+
 .icon-wrapper {
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: rem(10px);
