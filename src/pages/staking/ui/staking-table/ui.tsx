@@ -74,6 +74,8 @@ const COINS = [
     Expires: "info",
     Realtime_profit: "info",
     Invested: "info",
+    pl: 200,
+    Earned: "info",
   },
   {
     icon: <BitcoinIcon width={29} />,
@@ -82,6 +84,8 @@ const COINS = [
     Expires: "info",
     Realtime_profit: "info",
     Invested: "info",
+    pl: 220,
+    Earned: "info",
   },
   {
     icon: <BitcoinIcon width={29} />,
@@ -90,6 +94,8 @@ const COINS = [
     Expires: "info",
     Realtime_profit: "info",
     Invested: "info",
+    pl: 280,
+    Earned: "info",
   },
   {
     icon: <BitcoinIcon width={29} />,
@@ -98,6 +104,8 @@ const COINS = [
     Expires: "info",
     Realtime_profit: "info",
     Invested: "info",
+    pl: 200,
+    Earned: "info",
   },
   {
     icon: <BitcoinIcon width={29} />,
@@ -106,6 +114,8 @@ const COINS = [
     Expires: "info",
     Realtime_profit: "info",
     Invested: "info",
+    pl: 200,
+    Earned: "info",
   },
 ];
 export const StakingTable = ({ usedForTradingBot }: { usedForTradingBot: boolean }) => {
@@ -178,13 +188,13 @@ export const StakingTable = ({ usedForTradingBot }: { usedForTradingBot: boolean
           {usedForTradingBot && (
             <>
               <Table.Td w={"225"}>
-                <Text c="white" variant="text-3" span>
-                  info
+                <Text variant="text-3" span className={classes.plAmount}>
+                  {coin.pl}%
                 </Text>
               </Table.Td>
               <Table.Td w={"225"}>
                 <Text c="white" variant="text-3" span>
-                  info
+                  {coin.Earned}
                 </Text>
               </Table.Td>
               <Table.Td w={"225"}>
