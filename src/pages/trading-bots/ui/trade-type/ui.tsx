@@ -90,7 +90,7 @@ export const TradeType = () => {
         <Image
           draggable={false}
           src={`${import.meta.env.BASE_URL}assets/light/trading-bots/light-column.png`}
-          alt="main-light-6"
+          alt="column"
           className={classes.lightColumn}
         />
       </Container>

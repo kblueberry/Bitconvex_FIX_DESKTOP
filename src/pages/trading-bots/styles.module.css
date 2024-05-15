@@ -1,35 +1,41 @@
 @import url("@/app/styles/mixin.css");
 
-.light-one {
-  top: 0;
-  width: auto;
-  right: 0;
-  z-index: -1;
-  position: absolute;
-}
-
-.light-two {
-  top: 0;
-  left: 0;
-  width: auto;
-  z-index: -1;
-  position: absolute;
-}
-
 .light-three {
-  top: rem(75);
+  top: 2%;
   right: 0;
   width: auto;
   z-index: -1;
   position: absolute;
 }
 
-.light-four {
-  top: 58%;
-  left: 0;
-  width: auto;
-  z-index: -1;
+.cube-one-light {
   position: absolute;
+  top: -40%;
+  left: 0;
+  z-index: -1;
+  width: auto;
+}
+
+.cube-one {
+  position: absolute;
+  width: 7%;
+  left: 0;
+  top: 92%;
+}
+
+.cube-two {
+  width: 6%;
+  left: 0;
+  position: absolute;
+  top: 85%;
+}
+
+.light-cube-two {
+  position: absolute;
+  left: -40%;
+  top: 47%;
+  z-index: -1;
+  height: 70%;
 }
 
 .shape {
