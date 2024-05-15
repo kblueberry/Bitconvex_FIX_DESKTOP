@@ -12,23 +12,31 @@
     position: absolute;
     bottom: -6em;
     left: -15em;
+    width: 144px;
+    height: 159.02px;
   }
 
   .bitcoinTwo {
     position: absolute;
-    top: 8em;
-    left: -14em;
+    width: 198px;
+    height: 196.75px;
+    top: 12em;
+    left: -13em;
   }
 
   .etheriumTwo {
     position: absolute;
     top: 8em;
     left: -36em;
+    width: 166px;
+    height: 166px;
   }
 
   .liteCoin {
     position: absolute;
-    top: -4em;
+    width: 155px;
+    height: 155px;
+    top: -1em;
     left: -27em;
   }
 }
