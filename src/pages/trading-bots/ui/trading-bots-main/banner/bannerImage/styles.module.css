@@ -3,15 +3,16 @@
 
   .mainRobot {
     position: absolute;
-    top: 5em;
-    left: -40em;
+    top: 3em;
+    left: -36em;
     width: 520px;
+    height: 505px;
   }
 
   .bitcoinOne {
     position: absolute;
     bottom: -36em;
-    left: -15em;
+    left: -10em;
     width: 144px;
     height: 159.02px;
   }
@@ -21,13 +22,13 @@
     width: 198px;
     height: 196.75px;
     top: 12em;
-    left: -13em;
+    left: -8em;
   }
 
   .etheriumTwo {
     position: absolute;
     top: 8em;
-    left: -36em;
+    left: -33em;
     width: 166px;
     height: 166px;
   }
@@ -36,8 +37,8 @@
     position: absolute;
     width: 155px;
     height: 155px;
-    top: -1em;
-    left: -27em;
+    top: -3em;
+    left: -23em;
   }
 }
 
