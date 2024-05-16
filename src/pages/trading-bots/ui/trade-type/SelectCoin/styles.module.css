@@ -34,6 +34,7 @@
 }
 .label {
   font-size: var(--text-3-fz);
+  color: var(--color-white);
   line-height: 21.29px;
   font-family: ProximaNova;
 }
