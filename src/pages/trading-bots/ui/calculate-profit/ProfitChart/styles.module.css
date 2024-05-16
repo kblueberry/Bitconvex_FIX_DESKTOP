@@ -11,9 +11,10 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
+    width: 345px;
 
     .slider {
-      width: 300px;
+      position: relative;
       --_thumb-bd: #625ff8;
       --slider-color: #625ff8;
       --slider-track-bg: rgba(17, 17, 20, 1);
@@ -21,6 +22,40 @@
       div[role="slider"] {
         --_thumb-bg: #625ff8 !important;
       }
+
+      .sliderTrack {
+        position: absolute;
+        left: -90px;
+        width: 245px;
+      }
+    }
+
+    .sliderMarkWrapper {
+      .sliderMark {
+        display: none;
+      }
+
+      .sliderMarkLabel {
+        position: absolute;
+        top: -7px;
+      }
+
+      &:first-child {
+        .sliderMarkLabel {
+          left: -40px;
+        }
+      }
+
+      &:last-child {
+        .sliderMarkLabel {
+          right: -93px;
+        }
+      }
+    }
+
+    .sliderName {
+      text-align: center;
+      padding-left: 40px;
     }
   }
 
