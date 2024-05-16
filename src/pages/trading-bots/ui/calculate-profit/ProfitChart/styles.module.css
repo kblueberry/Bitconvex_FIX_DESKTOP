@@ -28,6 +28,33 @@
         left: -90px;
         width: 245px;
       }
+
+      .sliderThumbLabel {
+        position: relative;
+        width: 300px;
+        background: #625ff8;
+        border-radius: 10px;
+        padding: 3px 12px;
+        font-family: var(--text-font-family);
+        font-size: 15px;
+        font-weight: var(--font-weight-semi-bold);
+        line-height: 18.27px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 13px;
+          width: 14px;
+          height: 14px;
+          background: #625ff8;
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+          z-index: -1;
+        }
+      }
     }
 
     .sliderMarkWrapper {

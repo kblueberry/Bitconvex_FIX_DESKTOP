@@ -12,6 +12,7 @@ export const ProfitChart = () => {
           <Slider
             classNames={{
               trackContainer: classes.sliderTrack,
+              label: classes.sliderThumbLabel,
               mark: classes.sliderMark,
               markWrapper: classes.sliderMarkWrapper,
               markLabel: classes.sliderMarkLabel,
@@ -34,6 +35,7 @@ export const ProfitChart = () => {
           <Slider
             classNames={{
               trackContainer: classes.sliderTrack,
+              label: classes.sliderThumbLabel,
               mark: classes.sliderMark,
               markWrapper: classes.sliderMarkWrapper,
               markLabel: classes.sliderMarkLabel,
