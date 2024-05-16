@@ -1,9 +1,8 @@
-import { Grid, Image, Stack, Text, Title, rem } from "@mantine/core";
+import { Grid, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
 import { BitcoinIcon, Container } from "@/shared/ui";
 
-import commonClasses from "../../styles.module.css";
 import classes from "./styles.module.css";
 import { TradingResult } from "./tradingResult/ui";
 
@@ -84,18 +83,6 @@ export const TradingResults = () => {
                 </Grid.Col>
               );
             })}
-            <Image
-              draggable={false}
-              src={`${import.meta.env.BASE_URL}assets/light/trading-bots/light_cube.png`}
-              alt="cube-1-light"
-              className={commonClasses.cubeOneLight}
-            />
-            <Image
-              draggable={false}
-              src={`${import.meta.env.BASE_URL}assets/light/trading-bots/left_cube_1.png`}
-              alt="cube-1"
-              className={commonClasses.cubeOne}
-            />
           </Grid>
         </Stack>
       </Container>

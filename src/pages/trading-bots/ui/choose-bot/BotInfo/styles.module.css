@@ -3,7 +3,10 @@
   background: var(--color-black);
   border-radius: rem(3);
   padding: 24px 19px;
-  flex: 1;
+
+  &:last-child {
+    padding: 16px;
+  }
 
   &:hover,
   .active {
