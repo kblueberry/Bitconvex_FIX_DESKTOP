@@ -109,6 +109,10 @@
   }
 }
 
+.plAmount {
+  color: rgba(14, 203, 123, 1) !important;
+}
+
 .search-input-wrapper {
   min-width: rem(300px);
 }

@@ -3,7 +3,10 @@
   background: var(--color-black);
   border-radius: rem(3);
   padding: 24px 19px;
-  flex: 1;
+
+  &:last-child {
+    padding: 16px;
+  }
 
   &:hover,
   .active {
@@ -27,6 +30,10 @@
   font-weight: var(--font-weight-regular);
   color: var(--color-white);
   text-align: start;
+
+  &.scalpingBotInfo {
+    line-height: 17.2px;
+  }
 }
 
 .botBenefitContainer {

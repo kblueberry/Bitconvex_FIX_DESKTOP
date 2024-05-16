@@ -33,7 +33,7 @@ const BOTS = [
     benefit: "48%",
   },
   {
-    title: "Scalping Trading \nBot",
+    title: "Scalping Trading Bot",
     description:
       "It operates on the principle of scalping, where each trade takes only a few minutes. Utilizing Smart Money methods and technical analysis, the script seeks the optimal entry point, which will be open for up to 30 minutes. Trust our bot to achieve consistent profits and confidently manage your cryptocurrency portfolio. ",
     benefit: "83%",

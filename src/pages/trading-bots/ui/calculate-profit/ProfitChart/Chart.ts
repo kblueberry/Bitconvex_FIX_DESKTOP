@@ -6,6 +6,9 @@ export const chart = {
   ],
   options: {
     chart: {
+      toolbar: {
+        show: false,
+      },
       type: "line",
       zoom: {
         enabled: false,
@@ -25,6 +28,7 @@ export const chart = {
       strokeOpacity: 0,
     },
     grid: {
+      borderColor: "rgba(255, 255, 255, 0.8)",
       xaxis: {
         lines: {
           show: true,
@@ -47,7 +51,6 @@ export const chart = {
           fontSize: "20px",
           fontFamily: "ProximaNova, sans-serif",
           fontWeight: 400,
-          cssClass: "apexcharts-xaxis-label",
         },
       },
     },
@@ -56,11 +59,10 @@ export const chart = {
       max: 4800,
       labels: {
         style: {
-          colors: ["rgba(255, 255, 255, 0.8)"],
+          colors: ["rgba(255, 255, 255, 0.6)"],
           fontSize: "16px",
           fontFamily: "ProximaNova, sans-serif",
           fontWeight: 400,
-          cssClass: "apexcharts-yaxis-label",
         },
       },
     },

@@ -11,7 +11,7 @@ export const BotInfo = ({ title, description, benefit }: BotProps) => {
         <Title fz={{ 0: 22, md: 24 }} order={4} className={clsx(classes.botTitle, { [classes.long]: title === "Technical Analysis Trading Bot" })}>
           {title}
         </Title>
-        <Text className={classes.botInfoText}>{description}</Text>
+        <Text className={clsx(classes.botInfoText, { [classes.scalpingBotInfo]: title === "Scalping Trading Bot" })}>{description}</Text>
         <Box className={classes.botBenefitContainer}>
           <Text className={classes.botInfoText}>Profit for last month amounted to {benefit}</Text>
         </Box>

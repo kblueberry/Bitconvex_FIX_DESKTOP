@@ -10,7 +10,14 @@ export const ProfitChart = () => {
       <div className={classes.calculationsWrapper}>
         <div className={classes.sliderWrap}>
           <Slider
-            className={classes.slider}
+            classNames={{
+              trackContainer: classes.sliderTrack,
+              label: classes.sliderThumbLabel,
+              mark: classes.sliderMark,
+              markWrapper: classes.sliderMarkWrapper,
+              markLabel: classes.sliderMarkLabel,
+              root: classes.slider,
+            }}
             size="xl"
             marks={[
               { value: 20, label: "20$" },
@@ -18,12 +25,22 @@ export const ProfitChart = () => {
             ]}
             min={20}
             max={5000}
+            labelAlwaysOn
           />
-          <Text variant="text-2">Your deposit</Text>
+          <Text variant="text-2" className={classes.sliderName}>
+            Your deposit
+          </Text>
         </div>
         <div className={classes.sliderWrap}>
           <Slider
-            className={classes.slider}
+            classNames={{
+              trackContainer: classes.sliderTrack,
+              label: classes.sliderThumbLabel,
+              mark: classes.sliderMark,
+              markWrapper: classes.sliderMarkWrapper,
+              markLabel: classes.sliderMarkLabel,
+              root: classes.slider,
+            }}
             size="xl"
             marks={[
               { value: 1, label: "1 day" },
@@ -31,8 +48,11 @@ export const ProfitChart = () => {
             ]}
             min={1}
             max={50}
+            labelAlwaysOn
           />
-          <Text variant="text-2">Length of investment</Text>
+          <Text variant="text-2" className={classes.sliderName}>
+            Length of investment
+          </Text>
         </div>
 
         <Text className={classes.profitMain} variant="text-1">
