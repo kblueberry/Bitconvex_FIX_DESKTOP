@@ -48,7 +48,7 @@ export function Page() {
       />
 
       <Header />
-      <Container width={1470}>
+      <Container className="tradeBotsContainer">
         <Banner />
         <TradingResults />
         <ChooseBot />
