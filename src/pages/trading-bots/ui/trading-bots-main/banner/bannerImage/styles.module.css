@@ -55,24 +55,24 @@
     .bitcoinOne {
       position: absolute;
       bottom: -36em;
-      left: -14em;
+      left: -10em;
       z-index: 1;
     }
 
     .bitcoinTwo {
       top: 10em;
-      left: -12em;
+      left: -9em;
       z-index: 1;
     }
 
     .etheriumTwo {
-      top: 14em;
-      left: -34em;
+      top: 13em;
+      left: -31em;
     }
 
     .liteCoin {
-      top: 0;
-      left: -28em;
+      top: -3em;
+      left: -24em;
     }
   }
 }
