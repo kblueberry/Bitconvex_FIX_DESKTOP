@@ -6,6 +6,9 @@ export const chart = {
   ],
   options: {
     chart: {
+      toolbar: {
+        show: false,
+      },
       type: "line",
       zoom: {
         enabled: false,
