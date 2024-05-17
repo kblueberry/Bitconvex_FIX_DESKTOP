@@ -2,123 +2,22 @@ import { Button, Divider, Flex, Group, Pagination, Stack, Table, Text, TextInput
 import clsx from "clsx";
 import { useCallback, useMemo, useState } from "react";
 
-import { BitcoinIcon, MarketSortIcon, NextIcon, PreviousIcon, SearchIcon } from "@/shared/ui";
+import { MarketSortIcon, NextIcon, PreviousIcon, SearchIcon } from "@/shared/ui";
 
 import classes from "./styles.module.css";
 
 type SortingLabel = "Coin" | "Plane" | "Expires" | "Realtime profit" | "Invested";
 type SortingDirection = "ASC" | "DESC";
-const HEADERS = [
-  {
-    label: "Coin",
-    sortable: true,
-  },
-  {
-    label: "Plane",
-    sortable: true,
-    className: classes.coinTh,
-  },
-  {
-    label: "Expires ",
-    sortable: true,
-  },
-  {
-    label: "RT profit",
-    sortable: true,
-  },
-  {
-    label: "Invested",
-    sortable: true,
-  },
-];
-const TRADING_BOTS_HEADERS = [
-  {
-    label: "Coin",
-    sortable: true,
-  },
-  {
-    label: "Qty",
-    sortable: true,
-    className: classes.coinTh,
-  },
-  {
-    label: "Bot ",
-    sortable: true,
-  },
-  {
-    label: "Trade type",
-    sortable: true,
-  },
-  {
-    label: "Activation time",
-    sortable: true,
-  },
-  {
-    label: "P&L",
-    sortable: true,
-  },
-  {
-    label: "Earned",
-    sortable: true,
-  },
-  {
-    label: "Action",
-    sortable: true,
-  },
-];
-const COINS = [
-  {
-    icon: <BitcoinIcon width={29} />,
-    name: "Bitcoin",
-    Plane: "info",
-    Expires: "info",
-    Realtime_profit: "info",
-    Invested: "info",
-    pl: 200,
-    Earned: "info",
-  },
-  {
-    icon: <BitcoinIcon width={29} />,
-    name: "Bitcoin",
-    Plane: "info",
-    Expires: "info",
-    Realtime_profit: "info",
-    Invested: "info",
-    pl: 220,
-    Earned: "info",
-  },
-  {
-    icon: <BitcoinIcon width={29} />,
-    name: "Bitcoin",
-    Plane: "info",
-    Expires: "info",
-    Realtime_profit: "info",
-    Invested: "info",
-    pl: 280,
-    Earned: "info",
-  },
-  {
-    icon: <BitcoinIcon width={29} />,
-    name: "Bitcoin",
-    Plane: "info",
-    Expires: "info",
-    Realtime_profit: "info",
-    Invested: "info",
-    pl: 200,
-    Earned: "info",
-  },
-  {
-    icon: <BitcoinIcon width={29} />,
-    name: "Bitcoin",
-    Plane: "info",
-    Expires: "info",
-    Realtime_profit: "info",
-    Invested: "info",
-    pl: 200,
-    Earned: "info",
-  },
-];
-export const StakingTable = ({ usedForTradingBot }: { usedForTradingBot: boolean }) => {
+
+export const StakingTable = ({
+  usedForTradingBot,
+  tableHeaders,
+  tableData,
+}: {
+  usedForTradingBot: boolean;
+  tableHeaders: Array<any>;
+  tableData: Array<any>;
+}) => {
   const [sortingLabel, setSortingLabel] = useState<SortingLabel>("Coin");
   const [sortingDirection, setSortingDirection] = useState<SortingDirection>("ASC");
   const onTableHeadSortLabelClick = useCallback(
@@ -133,7 +32,7 @@ export const StakingTable = ({ usedForTradingBot }: { usedForTradingBot: boolean
     [sortingDirection, sortingLabel],
   );
   const headers = useMemo(() => {
-    return (usedForTradingBot ? TRADING_BOTS_HEADERS : HEADERS).map((header) => {
+    return tableHeaders.map((header) => {
       return (
         <Table.Th key={header.label} className={header.className}>
           <Group
@@ -154,7 +53,7 @@ export const StakingTable = ({ usedForTradingBot }: { usedForTradingBot: boolean
     });
   }, [onTableHeadSortLabelClick, sortingDirection]);
   const tableCoins = useMemo(() => {
-    return COINS.map((coin) => {
+    return tableData.map((coin) => {
       return (
         <Table.Tr key={coin.name}>
           <Table.Td w={"225"} px={15} className={classes.tbodyTdWithIcon}>
@@ -167,22 +66,22 @@ export const StakingTable = ({ usedForTradingBot }: { usedForTradingBot: boolean
           </Table.Td>
           <Table.Td w={"225"}>
             <Text c="white" variant="text-3" span>
-              {coin.Plane}
+              {coin.Plane || coin.qty}
             </Text>
           </Table.Td>
           <Table.Td w={"225"}>
             <Text c="white" variant="text-3" span>
-              {coin.Expires}
+              {coin.Expires || coin.bot}
             </Text>
           </Table.Td>
           <Table.Td w={"225"}>
             <Text c="white" variant="text-3" span>
-              {coin.Realtime_profit}
+              {coin.Realtime_profit || coin.tradeType}
             </Text>
           </Table.Td>
           <Table.Td w={"225"}>
             <Text c="white" variant="text-3" span>
-              {coin.Invested}
+              {coin.Invested || coin.activationTime}
             </Text>
           </Table.Td>
           {usedForTradingBot && (
@@ -194,7 +93,7 @@ export const StakingTable = ({ usedForTradingBot }: { usedForTradingBot: boolean
               </Table.Td>
               <Table.Td w={"225"}>
                 <Text c="white" variant="text-3" span>
-                  {coin.Earned}
+                  {coin.earned}$
                 </Text>
               </Table.Td>
               <Table.Td w={"225"}>

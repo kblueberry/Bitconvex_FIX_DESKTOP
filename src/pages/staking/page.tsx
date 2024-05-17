@@ -4,6 +4,7 @@ import { StakingCalculate, StakingHeader, StakingMain, StakingTable } from "@/pa
 
 import { Container, Footer, Header, Wrapper } from "@/shared/ui";
 
+import { COINS, HEADERS } from "./StakeData";
 import classes from "./styles.module.css";
 
 export function Page() {
@@ -20,7 +21,7 @@ export function Page() {
         <StakingHeader />
         <StakingCalculate />
         <StakingMain />
-        <StakingTable usedForTradingBot={false} />
+        <StakingTable usedForTradingBot={false} tableHeaders={HEADERS} tableData={COINS} />
       </Container>
       <Footer />
     </Wrapper>
