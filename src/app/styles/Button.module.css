@@ -139,10 +139,10 @@
 
     &:hover {
       box-shadow:
-        0px 4px 4px 0px rgba(255, 255, 255, 0.3) inset,
-        0px -4px 4px 0px rgba(12, 13, 16, 0.3) inset,
-        0px 0px 1px 4px rgba(255, 255, 255, 0.08),
-        0px 0px 48px 0px rgba(98, 95, 244, 0.48);
+        0px 8px 8px 0px rgba(255, 255, 255, 0.3) inset,
+        0px -8px 8px 0px rgba(12, 13, 16, 0.3) inset,
+        0px 0px 1px 8px rgba(255, 255, 255, 0.08),
+        0px 0px 160px 0px rgba(98, 95, 244, 0.64);
 
       &[data-with-right-section] {
         svg path {
