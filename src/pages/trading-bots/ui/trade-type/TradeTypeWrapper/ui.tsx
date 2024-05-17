@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { useState } from "react";
 
 import commonStyles from "../../../styles.module.css";
-import { TradeTypeProps } from "../ui";
+import { TradeTypeProps } from "../TradeTypes";
 import classes from "./styles.module.css";
 
 export const TradeTypeWrapper = ({ title, profit, minInvestment, risk, selected }: TradeTypeProps) => {
