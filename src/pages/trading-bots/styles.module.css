@@ -62,3 +62,7 @@
   z-index: 0;
   position: absolute;
 }
+
+.user-select-forbidden {
+  user-select: none;
+}
