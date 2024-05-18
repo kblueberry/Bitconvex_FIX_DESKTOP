@@ -1,5 +1,7 @@
 import { Accordion, Stack, Text, Title, rem } from "@mantine/core";
+
 import { PlusIcon } from "@/shared/ui";
+
 import classes from "./styles.module.css";
 
 const firstTopic = [
@@ -53,12 +55,12 @@ const secondTopic = [
 
 export const FaqContent = () => {
   return (
-    <Stack gap={'clamp(2rem, 4vw, 4rem)'} className={classes.faqWrapper}>
+    <Stack gap={"clamp(2rem, 4vw, 4rem)"} className={classes.faqWrapper}>
       <Title order={3} className={classes.faqTitle}>
         <span className={classes.textTitleHighlighted}>F</span>requently <span className={classes.textTitleHighlighted}>A</span>sked{" "}
         <span className={classes.textTitleHighlighted}>Q</span>uestions
       </Title>
-      <Stack gap={'clamp(1.5rem, 2vw, 2rem)'}>
+      <Stack gap={"clamp(1.5rem, 2vw, 2rem)"}>
         <Text className={classes.topicTitle}>Questions topic</Text>
         <Accordion
           chevron={<PlusIcon />}
@@ -71,7 +73,7 @@ export const FaqContent = () => {
             chevron: classes.faqAccordionChevron,
             content: classes.faqAccordionContent,
           }}
-          pb={{0: 32, md: 87}}
+          pb={{ 0: 32, md: 87 }}
         >
           {firstTopic.map((faqItem) => (
             <Accordion.Item key={faqItem.title} value={faqItem.title}>
@@ -79,7 +81,7 @@ export const FaqContent = () => {
                 <Title order={3}>{faqItem.title}</Title>
               </Accordion.Control>
               <Accordion.Panel>
-                <Text c="white" fz={{0: 14, md: 20}}>
+                <Text c="white" variant="text-2">
                   {faqItem.description}
                 </Text>
               </Accordion.Panel>
@@ -107,7 +109,7 @@ export const FaqContent = () => {
                 <Title order={3}>{faqItem.title}</Title>
               </Accordion.Control>
               <Accordion.Panel>
-                <Text c="white" fz={{0: 14, md: 20}}>
+                <Text c="white" variant="text-2">
                   {faqItem.description}
                 </Text>
               </Accordion.Panel>
