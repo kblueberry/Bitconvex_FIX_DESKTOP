@@ -1,7 +1,7 @@
 @import url("@/app/styles/mixin.css");
 
 .light-three {
-  top: 2%;
+  top: -2%;
   right: 0;
   width: auto;
   z-index: -1;
