@@ -2,7 +2,8 @@ import { Group, Stack, Text, Title, rem } from "@mantine/core";
 import clsx from "clsx";
 import { useState } from "react";
 
-import { TradeTypeProps } from "../ui";
+import commonStyles from "../../../styles.module.css";
+import { TradeTypeProps } from "../TradeTypes";
 import classes from "./styles.module.css";
 
 export const TradeTypeWrapper = ({ title, profit, minInvestment, risk, selected }: TradeTypeProps) => {
@@ -20,16 +21,16 @@ export const TradeTypeWrapper = ({ title, profit, minInvestment, risk, selected 
       onClick={selectType}
     >
       <Group gap={rem("12px")}>
-        <Title fz={{ 0: 22, md: 24 }} order={4} className={classes.tradeTitle}>
+        <Title fz={{ 0: 22, md: 24 }} order={4} className={clsx(classes.tradeTitle, commonStyles.userSelectForbidden)}>
           {title}
         </Title>
-        <Text className={classes.tradeInfoText}>
+        <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
           <b className={classes.subTitle}>Profit:</b> up to {profit}% per day
         </Text>
-        <Text className={classes.tradeInfoText}>
-          <b className={classes.subTitle}>Min. investment:</b> {minInvestment}%
+        <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
+          <b className={classes.subTitle}>Min. investment:</b> {minInvestment}$
         </Text>
-        <Text className={classes.tradeInfoText}>
+        <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
           <b className={classes.subTitle}>Risk:</b> {risk}%
         </Text>
       </Group>

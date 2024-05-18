@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 
 import { Container } from "@/shared/ui";
-import { StartTradingBtn } from "@/shared/ui/startTradingBtn";
+import { BannerButton } from "@/shared/ui/bannerButton";
 
 import { BannerImage } from "./bannerImage/ui";
 import classes from "./styles.module.css";
@@ -48,7 +48,7 @@ export const Banner = () => {
                 earning money, but don’t forget about risk management.
               </Text>
               <Group align={"center"} justify={"flex-start"} className={classes.tradeActions}>
-                <StartTradingBtn />
+                <BannerButton size="extra-large" text="START TRADING" />
                 <div className={classes.activeStatistics}>
                   <Text variant={md ? "text-2" : "text-1"}>
                     <b>Active Strategies:</b> 56.150

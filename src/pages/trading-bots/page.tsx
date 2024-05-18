@@ -55,8 +55,8 @@ export function Page() {
         <TradeType />
         <CalculateProfit />
         <ActiveInvestments />
-        <Footer />
       </Container>
+      <Footer />
     </Wrapper>
   );
 }

@@ -13,10 +13,8 @@
 }
 
 .first-td-wrapper {
-  & svg {
-    width: rem(22);
-    height: rem(22);
-  }
+  justify-content: flex-start;
+  margin-left: 12px;
 }
 
 .table-head {

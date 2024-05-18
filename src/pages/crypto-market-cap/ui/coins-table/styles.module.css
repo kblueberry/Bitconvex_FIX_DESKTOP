@@ -11,20 +11,16 @@
     width: rem(22);
     height: rem(22);
   }
-
 }
 
 .first-td-wrapper {
-  & svg {
-    width: rem(22);
-    height: rem(22);
-  }
+  justify-content: flex-start;
+  margin-left: 12px;
 }
 
 .table-head {
   --_table-border-color: rgba(255, 255, 255, 0.07) !important;
   & tr {
-
     height: 19px;
     border-bottom: var(--_tr-border-bottom);
 
@@ -62,7 +58,7 @@
   @mixin hover {
     & svg {
       & path {
-        fill: var(--color-blue)
+        fill: var(--color-blue);
       }
     }
   }
@@ -157,7 +153,7 @@
   .table-body td:first-child {
     display: none;
   }
-  .table-body td:nth-child(2) div svg{
+  .table-body td:nth-child(2) div svg {
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -173,7 +169,7 @@
     line-height: 100%;
     display: block;
   }
-  .coin-chart-wrapper{
+  .coin-chart-wrapper {
     max-width: 184px !important;
   }
   .coin-chart-wrapper div {

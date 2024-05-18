@@ -1,6 +1,5 @@
 import { Button, Checkbox, Group, Image, PasswordInput, Stack, Text, TextInput, Title, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
-import clsx from "clsx";
 
 import { routes } from "@/shared/routing";
 import { Header, HidePasswordIcon, ShowPasswordIcon, Wrapper } from "@/shared/ui";
@@ -89,13 +88,7 @@ export const Page = () => {
             </Stack>
 
             <Stack gap={"clamp(1.5rem, 2vw, 2rem)"}>
-              <Button
-                size="xxl"
-                className={clsx(classes.btn, classes.signInButton)}
-                h={{ 0: 78, md: 92 }}
-                variant="radial-gradient"
-                rightSection={<EnterIcon />}
-              >
+              <Button size="xxl" className={classes.btn} h={{ 0: 78, md: 92 }} variant="radial-gradient" rightSection={<EnterIcon />}>
                 SIGN IN
               </Button>
               <Text c="white" ta="left" fz={16}>

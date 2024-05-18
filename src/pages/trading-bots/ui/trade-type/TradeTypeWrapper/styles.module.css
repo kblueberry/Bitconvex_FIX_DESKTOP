@@ -10,6 +10,7 @@
     border-bottom-color: rgba(255, 255, 255, 0.16);
   }
 
+  &:hover,
   &.active {
     border-bottom-color: var(--color-blue);
     background: linear-gradient(313.06deg, rgba(98, 95, 244, 0.2) 6.43%, rgba(12, 13, 16, 0.2) 99.25%);

@@ -37,6 +37,7 @@
   position: relative;
   flex-shrink: 0;
   max-width: 530px;
+  user-select: none;
 
   .mainBannerImg {
     width: 100%;

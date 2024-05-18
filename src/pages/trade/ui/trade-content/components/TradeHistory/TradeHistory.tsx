@@ -19,7 +19,7 @@ export const TradeHistory = () => {
   const [activePeriodValue, setActivePeriodValue] = useState(0);
 
   return (
-    <Container className={classes.container}>
+    <Container className={classes.container} padding={48}>
       <Stack gap={32}>
         <Group justify="space-between">
           <Text className={classes.tradeHistoryBigText}>Trade History</Text>
