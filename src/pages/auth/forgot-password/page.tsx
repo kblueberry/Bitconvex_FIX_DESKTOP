@@ -68,7 +68,7 @@ export const Page = () => {
               </label>
             </Stack>
 
-            <Button className={classes.btn} type="button" size="xxl" variant="radial-gradient" rightSection={<ResetIcon />} onClick={onFormSubmit}>
+            <Button type="button" size="xxl" variant="radial-gradient" rightSection={<ResetIcon />} onClick={onFormSubmit}>
               Reset Password
             </Button>
             <Text c="white" ta="left" fz={16}>
