@@ -146,6 +146,10 @@
   }
 }
 
+div[style*="min-width: 100%"][style*="display: table"] {
+  min-height: 100%;
+}
+
 @media (max-width: 1200px) {
   .chatTitle {
     font-size: 40px;
