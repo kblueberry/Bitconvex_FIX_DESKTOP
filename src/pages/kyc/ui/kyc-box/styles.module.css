@@ -89,7 +89,7 @@
 }
 .rates-button-root {
   --_button-bd: 1px solid rgba(255, 255, 255, 0.12);
-  --button-hover: transparent !important;
+  /* --button-hover: transparent !important; */
   --button-radius: rem(4px) !important;
 
   transform: none;
@@ -99,22 +99,27 @@
     --text-color: var(--color-grey);
   }
 
-  @mixin hover {
-    --_button-bd: 1px solid #7673f5;
+  &:hover,
+  &:active,
+  &.rates-button-root-active {
+    border: 1px solid #7673f5 !important;
+  }
+
+  &:hover {
     box-shadow: 0px 0px 8px 0px rgba(98, 95, 244, 0.64);
 
-    & :local(.rates-button-label) {
-      --text-color: var(--color-blue);
+    .rates-button-label {
+      color: var(--color-blue);
       text-shadow: 0px 2px 8px rgba(98, 95, 244, 0.64);
     }
   }
 
   &:active,
-  &:local(.rates-button-root-active) {
-    --_button-bd: 1px solid #7673f5;
+  &.rates-button-root-active {
     box-shadow: none;
-    & :local(.rates-button-label) {
-      --text-color: var(--color-blue);
+
+    .rates-button-label {
+      color: var(--color-blue);
       text-shadow: none;
     }
   }
