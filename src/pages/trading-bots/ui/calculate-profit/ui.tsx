@@ -13,7 +13,7 @@ export const CalculateProfit = () => {
         <Stack gap={rem(64)}>
           <HighlightedBlueTitle title="Calculate" subTitle="Your Profit" />
           <ProfitChart />
-          <Button variant="radial-gradient" className={classes.mainButton} rightSection={<StartTradingIcon />}>
+          <Button size="extra-large" variant="radial-gradient" className={classes.mainButton} rightSection={<StartTradingIcon />}>
             ACTIVATE BOT
           </Button>
         </Stack>
