@@ -14,7 +14,7 @@ export const HEADERS = [
     sortable: true,
   },
   {
-    label: "RT profit",
+    label: "Realtime profit",
     sortable: true,
   },
   {

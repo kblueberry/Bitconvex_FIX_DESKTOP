@@ -1,4 +1,5 @@
 import { Group, Pill, Table, Text, Title, rem } from "@mantine/core";
+import clsx from "clsx";
 import React, { useCallback, useMemo, useState } from "react";
 import { P, match } from "ts-pattern";
 
@@ -17,7 +18,6 @@ import {
   RateChart,
   RateIcon,
   RateType,
-  StarIcon,
   StellarIcon,
   SuperFarmIcon,
   TetherIcon,
@@ -27,7 +27,6 @@ import {
 } from "@/shared/ui";
 
 import classes from "./styles.module.css";
-import clsx from "clsx";
 
 interface Coin {
   icon: React.ReactNode;
@@ -46,8 +45,8 @@ interface Header {
   className?: string;
 }
 
-type SortingLabel = '#' | 'Coin Name' | 'Coin Price' | 'Change' | '24h High Price' | '24h Low Price' | 'Market Cap';
-type SortingDirection = 'ASC' | 'DESC';
+type SortingLabel = "#" | "Coin Name" | "Coin Price" | "Change" | "24h High Price" | "24h Low Price" | "Market Cap";
+type SortingDirection = "ASC" | "DESC";
 
 const COINS: Coin[] = [
   {
@@ -204,63 +203,69 @@ const COINS: Coin[] = [
 
 const HEADERS: Header[] = [
   {
-    label: '#',
-    sortable: true
-  },
-  {
-    label: 'Coin Name',
+    label: "#",
     sortable: true,
-    className: classes.coinTh
   },
   {
-    label: 'Coin Price',
-    sortable: true
+    label: "Coin Name",
+    sortable: true,
+    className: classes.coinTh,
   },
   {
-    label: 'Change',
-    sortable: true
+    label: "Coin Price",
+    sortable: true,
   },
   {
-    label: '24h High Price',
-    sortable: true
+    label: "Change",
+    sortable: true,
   },
   {
-    label: '24h Low Price',
-    sortable: true
+    label: "24h High Price",
+    sortable: true,
   },
   {
-    label: 'Market Cap',
-    sortable: true
+    label: "24h Low Price",
+    sortable: true,
   },
   {
-    label: 'Chart',
+    label: "Market Cap",
+    sortable: true,
+  },
+  {
+    label: "Chart",
     sortable: false,
-    className: classes.chartTh
-  }
+    className: classes.chartTh,
+  },
 ];
 
 export const CoinsTable = () => {
+  const [sortingLabel, setSortingLabel] = useState<SortingLabel>("#");
+  const [sortingDirection, setSortingDirection] = useState<SortingDirection>("ASC");
 
-  const [sortingLabel, setSortingLabel] = useState<SortingLabel>('#');
-  const [sortingDirection, setSortingDirection] = useState<SortingDirection>('ASC');
-
-  const onTableHeadSortLabelClick = useCallback((label: SortingLabel) => {
-    if (sortingLabel != label) {
-      setSortingLabel(label);
-      setSortingDirection('ASC');
-    } else {
-      setSortingDirection(sortingDirection === 'ASC' ? 'DESC' : 'ASC');
-    }
-  }, [sortingDirection, sortingLabel]);
+  const onTableHeadSortLabelClick = useCallback(
+    (label: SortingLabel) => {
+      if (sortingLabel != label) {
+        setSortingLabel(label);
+        setSortingDirection("ASC");
+      } else {
+        setSortingDirection(sortingDirection === "ASC" ? "DESC" : "ASC");
+      }
+    },
+    [sortingDirection, sortingLabel],
+  );
 
   const headers = useMemo(() => {
-    return HEADERS.map(header => {
+    return HEADERS.map((header) => {
       return (
-        <Table.Th key={header.label} className={clsx({[classes.tableHeadThSortable]: header.sortable}, header.className)}>
-          <Group gap={rem('2px')}
-                 justify={header.sortable ? 'flex-start' : 'center'}
-                 className={clsx(classes.tableHeadSortLabel, {[classes.tableHeadSortLabelSortingDesc]: sortingLabel === header.label && sortingDirection === 'DESC'})}
-                 onClick={header.sortable ? () => onTableHeadSortLabelClick(header.label as SortingLabel) : undefined}>
+        <Table.Th key={header.label} className={clsx({ [classes.tableHeadThSortable]: header.sortable }, header.className)}>
+          <Group
+            gap={rem("2px")}
+            justify={header.sortable ? "flex-start" : "center"}
+            className={clsx(classes.tableHeadSortLabel, {
+              [classes.tableHeadSortLabelSortingDesc]: sortingLabel === header.label && sortingDirection === "DESC",
+            })}
+            onClick={header.sortable ? () => onTableHeadSortLabelClick(header.label as SortingLabel) : undefined}
+          >
             <Text c="inherit" variant="text-5" span>
               {header.label}
             </Text>
@@ -274,65 +279,77 @@ export const CoinsTable = () => {
   const tableCoins = useMemo(() => {
     return COINS.map((coin, index) => {
       const type: RateType = match(coin.change)
-        .with(P.when(value => value > 0), () => "positive" as RateType)
-        .with(P.when(value => value < 0), () => "negative" as RateType)
+        .with(
+          P.when((value) => value > 0),
+          () => "positive" as RateType,
+        )
+        .with(
+          P.when((value) => value < 0),
+          () => "negative" as RateType,
+        )
         .otherwise(() => "zero" as RateType);
       return (
         <Table.Tr key={coin.name}>
-          <Table.Td>
+          <Table.Td w={70}>
             <Group gap={rem(16)} className={classes.firstTdWrapper}>
-              <StarIcon />
-              <Text variant="text-3" className={classes.greyText} span>{index + 1}</Text>
+              <Text variant="text-3" className={classes.greyText} span>
+                №{index + 1}
+              </Text>
             </Group>
           </Table.Td>
           <Table.Td className={classes.tbodyTdWithIcon}>
             <Group gap={rem(8)}>
               {coin.icon}
-              <Title c="white" order={4} fz={20}>{coin.name}</Title>
-              <Pill classNames={{root: classes.coinShortName, label: classes.coinShortNameLabel}}>
-                {coin.shortName}
-              </Pill>
+              <Title c="white" order={4} fz={20}>
+                {coin.name}
+              </Title>
+              <Pill classNames={{ root: classes.coinShortName, label: classes.coinShortNameLabel }}>{coin.shortName}</Pill>
             </Group>
           </Table.Td>
           <Table.Td>
-            <Text c="white" variant="text-4" span>${coin.price}</Text>
+            <Text c="white" variant="text-4" span>
+              ${coin.price}
+            </Text>
           </Table.Td>
           <Table.Td>
             <Group gap={rem(4)}>
-              <RateIcon type={type} size={22}/>
-              <Text c="white" variant="text-4" span>{coin.change}%</Text>
+              <RateIcon type={type} size={22} />
+              <Text c="white" variant="text-4" span>
+                {coin.change}%
+              </Text>
             </Group>
           </Table.Td>
           <Table.Td>
-            <Text c="white" variant="text-4" span>${coin.dayHighPrice}</Text>
+            <Text c="white" variant="text-4" span>
+              ${coin.dayHighPrice}
+            </Text>
           </Table.Td>
           <Table.Td>
-            <Text c="white" variant="text-4" span>${coin.dayLowPrice}</Text>
+            <Text c="white" variant="text-4" span>
+              ${coin.dayLowPrice}
+            </Text>
           </Table.Td>
           <Table.Td>
-            <Text c="white" variant="text-4" span>${coin.marketCap}</Text>
+            <Text c="white" variant="text-4" span>
+              ${coin.marketCap}
+            </Text>
           </Table.Td>
           <Table.Td>
-            <Group justify={'flex-end'} className={classes.coinChartWrapper}>
+            <Group justify={"flex-end"} className={classes.coinChartWrapper}>
               <RateChart type={type} data={randomChartData()} />
             </Group>
           </Table.Td>
         </Table.Tr>
       );
-    })
+    });
   }, []);
 
   return (
-    <Table classNames={{tr: classes.tableTr, td: classes.tableTd}} verticalSpacing={rem('16px')} withRowBorders={true}>
-      <Table.Thead classNames={{thead: classes.tableHead}}>
-        <Table.Tr>
-          {headers}
-        </Table.Tr>
+    <Table classNames={{ tr: classes.tableTr, td: classes.tableTd }} verticalSpacing={rem("16px")} withRowBorders={true}>
+      <Table.Thead classNames={{ thead: classes.tableHead }}>
+        <Table.Tr>{headers}</Table.Tr>
       </Table.Thead>
-      <Table.Tbody classNames={{tbody: classes.tableBody}}>
-        {tableCoins}
-      </Table.Tbody>
+      <Table.Tbody classNames={{ tbody: classes.tableBody }}>{tableCoins}</Table.Tbody>
     </Table>
   );
-
 };

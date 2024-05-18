@@ -16,7 +16,6 @@ import {
   PolkadotIcon,
   RateIcon,
   RateType,
-  StarIcon,
   StellarIcon,
   SuperFarmIcon,
   TetherIcon,
@@ -348,11 +347,10 @@ export const CoinsTable = () => {
         .otherwise(() => "zero" as RateType);
       return (
         <Table.Tr key={coin.name}>
-          <Table.Td>
+          <Table.Td w={70}>
             <Group gap={rem(16)} className={classes.firstTdWrapper}>
-              <StarIcon />
               <Text variant="text-4" className={classes.greyText} span>
-                {index + 1}
+                №{index + 1}
               </Text>
             </Group>
           </Table.Td>
