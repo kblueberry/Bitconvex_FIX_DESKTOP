@@ -144,6 +144,16 @@
       fill: white;
     }
   }
+
+  &:hover {
+    span:last-child {
+      svg {
+        path {
+          fill: white !important;
+        }
+      }
+    }
+  }
 }
 
 div[style*="min-width: 100%"][style*="display: table"] {
