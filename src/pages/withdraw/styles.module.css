@@ -1,5 +1,9 @@
 @import url("@/app/styles/mixin.css");
 
+.box-wrapper {
+  gap: 32px;
+}
+
 .light-one {
   top: 0;
   width: auto;
