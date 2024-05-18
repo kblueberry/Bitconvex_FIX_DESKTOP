@@ -1,4 +1,3 @@
-import { useResize } from "@/hooks/useResize";
 import { Button, Stack, rem } from "@mantine/core";
 
 import { Container, StartTradingIcon } from "@/shared/ui";

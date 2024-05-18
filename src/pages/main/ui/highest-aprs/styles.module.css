@@ -23,6 +23,15 @@
 }
 
 .highest-aprs-button {
+  width: 439px;
+  height: 125px;
+  padding: 48px 96px;
+  gap: 8px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
 }
 
 .highest-aprs-button-label {
@@ -36,7 +45,7 @@
 .highest-apr-wrapper {
   min-height: clamp(180px, 16.875vw, 270px);
   border: rem(1px) solid rgba(255, 255, 255, 0.12);
-  padding: clamp(1.5rem,2vw,2rem) clamp(1.25rem, 2vw, 2rem);
+  padding: clamp(1.5rem, 2vw, 2rem) clamp(1.25rem, 2vw, 2rem);
   border-radius: 8px;
   background: var(--color-black);
   position: relative;
@@ -139,8 +148,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .highest-apr-wrapper 
-  .grid > div > div {
+  .highest-apr-wrapper .grid > div > div {
     padding: 0;
   }
 }

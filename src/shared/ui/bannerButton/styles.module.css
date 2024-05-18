@@ -2,6 +2,14 @@
   z-index: 9;
   position: relative;
   padding: 0 2rem;
+  width: 446px;
+  height: 125px;
+  padding: 48px 96px;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
 }
 
 @media only screen and (max-width: 75rem) {

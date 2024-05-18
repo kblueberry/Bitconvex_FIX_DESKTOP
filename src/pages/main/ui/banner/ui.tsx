@@ -3,7 +3,7 @@ import { Box, Group, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
 import { Container } from "@/shared/ui";
-import { StartTradingBtn } from "@/shared/ui/startTradingBtn/ui";
+import { BannerButton } from "@/shared/ui/bannerButton/ui";
 
 import classes from "./styles.module.css";
 
@@ -146,7 +146,7 @@ export const Banner = () => {
                 <Text size={md ? "18px" : "24px"} c="white" className={classes.bannerSubTitle}>
                   Join the Rapidly Expanding Global Crypto Exchange
                 </Text>
-                <StartTradingBtn />
+                <BannerButton size="extra-large" text="START TRADING" />
               </Stack>
             </motion.div>
           </Stack>

@@ -1,33 +1,40 @@
 import { Button, Grid, Group, Image, Stack, Text, Title, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
 import { motion } from "framer-motion";
+
 import { routes } from "@/shared/routing";
 import { Container, StartStakingIcon } from "@/shared/ui";
+
 import classes from "./styles.module.css";
 
 export const HighestAprs = () => {
   return (
     <Stack className={classes.highestAprsWrapper}>
       <Container>
-        <Stack style={{
-          gap: 'clamp(1.5rem,4vw,4rem)'
-        }}>
-          <Stack style={{
-            gap: 'clamp(1rem,2vw,rem)'
-          }} align="center">
-            <Title ta={"center"} order={2} fz={{0: 40, md: 54}} className={classes.highestAprsTitle}>
+        <Stack
+          style={{
+            gap: "clamp(1.5rem,4vw,4rem)",
+          }}
+        >
+          <Stack
+            style={{
+              gap: "clamp(1rem,2vw,rem)",
+            }}
+            align="center"
+          >
+            <Title ta={"center"} order={2} fz={{ 0: 40, md: 54 }} className={classes.highestAprsTitle}>
               Highest APRs, <br />
               <Text span className={classes.highestAprsTitleHighlighted}>
                 Zero Loss
               </Text>{" "}
               Concerns!
             </Title>
-            <Text ta="center" fz={{0: 16, md: 20}} className={classes.highestAprsSubTitle}>
+            <Text ta="center" fz={{ 0: 16, md: 20 }} className={classes.highestAprsSubTitle}>
               Maximize Gains with Top APRs and Zero Loss Worries!
             </Text>
           </Stack>
 
-          <Grid className={classes.grid} gutter={{0: 16, md: 32}}>
+          <Grid className={classes.grid} gutter={{ 0: 16, md: 32 }}>
             <Grid.Col span={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 4 }}>
               <motion.div
                 className={classes.rateWrap}
@@ -51,7 +58,7 @@ export const HighestAprs = () => {
                     <Title c="white" order={4} className={classes.highestAprTitle}>
                       ETH
                     </Title>
-                    <Text c="white" fz={{0: 12, md:20}} className={classes.highestAprSubTitle}>
+                    <Text c="white" fz={{ 0: 12, md: 20 }} className={classes.highestAprSubTitle}>
                       Total locked: 3.07K
                     </Text>
                   </Group>
@@ -90,7 +97,7 @@ export const HighestAprs = () => {
                         </linearGradient>
                       </defs>
                     </svg>
-                    <Title c="white" order={3} fw={700} fz={{0: 21, md: 32}}>
+                    <Title c="white" order={3} fw={700} fz={{ 0: 21, md: 32 }}>
                       27.8%
                     </Title>
                   </Group>
@@ -134,7 +141,7 @@ export const HighestAprs = () => {
                     <Title c="white" order={4} className={classes.highestAprTitle}>
                       SOL
                     </Title>
-                    <Text c="white" fz={{0: 12, md:20}} className={classes.highestAprSubTitle}>
+                    <Text c="white" fz={{ 0: 12, md: 20 }} className={classes.highestAprSubTitle}>
                       Total locked: 58.8K
                     </Text>
                   </Group>
@@ -173,7 +180,7 @@ export const HighestAprs = () => {
                         </linearGradient>
                       </defs>
                     </svg>
-                    <Title c="white" order={3} fw={700} fz={{0: 21, md: 32}}>
+                    <Title c="white" order={3} fw={700} fz={{ 0: 21, md: 32 }}>
                       68.6%
                     </Title>
                   </Group>
@@ -217,7 +224,7 @@ export const HighestAprs = () => {
                     <Title c="white" order={4} className={classes.highestAprTitle}>
                       TRX
                     </Title>
-                    <Text c="white" fz={{0: 12, md:20}} className={classes.highestAprSubTitle}>
+                    <Text c="white" fz={{ 0: 12, md: 20 }} className={classes.highestAprSubTitle}>
                       Total locked: 8.5M
                     </Text>
                   </Group>
@@ -256,7 +263,7 @@ export const HighestAprs = () => {
                         </linearGradient>
                       </defs>
                     </svg>
-                    <Title c="white" order={3} fw={700} fz={{0: 21, md: 32}}>
+                    <Title c="white" order={3} fw={700} fz={{ 0: 21, md: 32 }}>
                       56.1%
                     </Title>
                   </Group>
@@ -300,7 +307,7 @@ export const HighestAprs = () => {
                     <Title c="white" order={4} className={classes.highestAprTitle}>
                       BTC
                     </Title>
-                    <Text c="white" fz={{0: 12, md:20}} className={classes.highestAprSubTitle}>
+                    <Text c="white" fz={{ 0: 12, md: 20 }} className={classes.highestAprSubTitle}>
                       Total locked: 263.8
                     </Text>
                   </Group>
@@ -339,7 +346,7 @@ export const HighestAprs = () => {
                         </linearGradient>
                       </defs>
                     </svg>
-                    <Title c="white" order={3} fw={700} fz={{0: 21, md: 32}}>
+                    <Title c="white" order={3} fw={700} fz={{ 0: 21, md: 32 }}>
                       33.7%
                     </Title>
                   </Group>
@@ -383,7 +390,7 @@ export const HighestAprs = () => {
                     <Title c="white" order={4} className={classes.highestAprTitle}>
                       USDT
                     </Title>
-                    <Text c="white" fz={{0: 12, md:20}} className={classes.highestAprSubTitle}>
+                    <Text c="white" fz={{ 0: 12, md: 20 }} className={classes.highestAprSubTitle}>
                       Total locked: 5.37M
                     </Text>
                   </Group>
@@ -422,7 +429,7 @@ export const HighestAprs = () => {
                         </linearGradient>
                       </defs>
                     </svg>
-                    <Title c="white" order={3} fw={700} fz={{0: 21, md: 32}}>
+                    <Title c="white" order={3} fw={700} fz={{ 0: 21, md: 32 }}>
                       55.3%
                     </Title>
                   </Group>
@@ -466,7 +473,7 @@ export const HighestAprs = () => {
                     <Title c="white" order={4} className={classes.highestAprTitle}>
                       FTM
                     </Title>
-                    <Text c="white" fz={{0: 12, md:20}} className={classes.highestAprSubTitle}>
+                    <Text c="white" fz={{ 0: 12, md: 20 }} className={classes.highestAprSubTitle}>
                       Total locked: 675.4К
                     </Text>
                   </Group>
@@ -505,7 +512,7 @@ export const HighestAprs = () => {
                         </linearGradient>
                       </defs>
                     </svg>
-                    <Title c="white" fz={{0: 21, md: 32}} fw={700} order={3}>
+                    <Title c="white" fz={{ 0: 21, md: 32 }} fw={700} order={3}>
                       7.80%
                     </Title>
                   </Group>
@@ -528,24 +535,19 @@ export const HighestAprs = () => {
           </Grid>
 
           <Group justify="center">
-            <Link to={routes.staking} style={{
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              textDecoration: 'none',
-            }}>
+            <Link
+              to={routes.staking}
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                textDecoration: "none",
+              }}
+            >
               <Button
-                c="white"
-                h={{0: 94, md: 124}}
-                style={{
-                  width: '100%',
-                  maxWidth: 'clamp(340px, 27.5vw, 440px)',
-                  margin: '0 auto',
-                }}
                 variant="radial-gradient"
-                component="span"
+                size="extra-large"
                 rightSection={<StartStakingIcon />}
-                fz={{0: 18, md:20}}
                 classNames={{
                   root: classes.highestAprsButton,
                   label: classes.highestAprsButtonLabel,
