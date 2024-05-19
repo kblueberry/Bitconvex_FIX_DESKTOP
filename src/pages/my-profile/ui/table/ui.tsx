@@ -81,6 +81,10 @@ export const TableProfile = () => {
     },
     [sortingDirection, sortingLabel],
   );
+  const handleRedirection = () => {
+    window.scrollTo(0, 0);
+  };
+
   const headers = useMemo(() => {
     return HEADERS.map((header) => {
       return (
@@ -128,12 +132,12 @@ export const TableProfile = () => {
             </Text>
           </Table.Td>
           <Table.Td w={240}>
-            <Link to={routes.deposit} params={{ coin: coin.short_name }} className={classes.tableLink}>
+            <Link to={routes.deposit} params={{ coin: coin.short_name }} className={classes.tableLink} onClick={handleRedirection}>
               {laptop ? <img src={downloadIcon} alt="" /> : "Deposit"}
             </Link>
           </Table.Td>
           <Table.Td w={240}>
-            <Link to={routes.withdraw} params={{ coin: coin.short_name }} className={classes.tableLink}>
+            <Link to={routes.withdraw} params={{ coin: coin.short_name }} className={classes.tableLink} onClick={handleRedirection}>
               {laptop ? <img src={withdrawIcon} alt="" /> : "Withdraw"}
             </Link>
           </Table.Td>

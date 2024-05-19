@@ -29,6 +29,8 @@ const FAQ_ITEMS = [
 ];
 
 export const Faq = () => {
+  const handleRedirection = () => window.scrollTo(0, 0);
+
   return (
     <Stack className={classes.faqWrapper}>
       <Container>
@@ -59,7 +61,7 @@ export const Faq = () => {
                 <Text variant="text-2" className={classes.faqSubTitle}>
                   Explore Common Queries and Find Quick Solutions in Our FAQ Section.
                 </Text>
-                <Link to={routes.faq} className={classes.moreQuestionsText}>
+                <Link to={routes.faq} className={classes.moreQuestionsText} onClick={handleRedirection}>
                   <span>More questions</span>
                   <ArrowRightCircleIcon />
                 </Link>

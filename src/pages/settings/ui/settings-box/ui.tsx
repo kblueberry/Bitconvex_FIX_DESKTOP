@@ -14,6 +14,9 @@ import classes from "./style.module.css";
 
 export const SettingsBox = () => {
   const [opened, { open, close }] = useDisclosure(false);
+
+  const handleRedirection = () => window.scrollTo(0, 0);
+
   return (
     <>
       <Stack gap={rem(32)}>
@@ -30,7 +33,7 @@ export const SettingsBox = () => {
                 </Flex>
                 <Text className={classes.textRed}>UNVERIFIED</Text>
               </Stack>
-              <Link to={routes.kyc} className={classes.actionArrow}>
+              <Link to={routes.kyc} className={classes.actionArrow} onClick={handleRedirection}>
                 <ArrowIcon />
               </Link>
             </Flex>
