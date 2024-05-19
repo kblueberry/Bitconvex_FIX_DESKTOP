@@ -143,7 +143,7 @@ export const Banner = () => {
               transition={{ duration: 1, delay: 0.15 }}
             >
               <Stack gap={"clamp(2rem, 4vw, 4rem)"}>
-                <Text size={md ? "18px" : "24px"} c="white" className={classes.bannerSubTitle}>
+                <Text c="white" className={classes.bannerSubTitle}>
                   Join the Rapidly Expanding Global Crypto Exchange
                 </Text>
                 <BannerButton size="extra-large" text="START TRADING" />
