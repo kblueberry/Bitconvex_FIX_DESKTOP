@@ -12,6 +12,10 @@ import classes from "./styles.module.css";
 export const Promocode = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
+  const handleRedirection = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <Flex className={classes.box} justify={"space-between"} mt={rem(32)}>
@@ -26,7 +30,7 @@ export const Promocode = () => {
                   </Flex>
                   <Text className={classes.textRed}>UNVERIFIED</Text>
                 </Stack>
-                <Link to={routes.kyc} className={classes.actionArrow}>
+                <Link to={routes.kyc} className={classes.actionArrow} onClick={handleRedirection}>
                   <ArrowIcon />
                 </Link>
               </Flex>

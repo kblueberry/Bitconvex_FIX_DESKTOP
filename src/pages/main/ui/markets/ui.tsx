@@ -1,9 +1,11 @@
+import { useResize } from "@/hooks/useResize";
 import { Group, Image, Pill, Stack, Table, Text, Title, rem } from "@mantine/core";
 import { Link } from "atomic-router-react";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { P, match } from "ts-pattern";
+
 import { randomChartData } from "@/shared/lib/random-chart-data";
 import { routes } from "@/shared/routing";
 import {
@@ -20,8 +22,8 @@ import {
   SolanaIcon,
   XRPIcon,
 } from "@/shared/ui";
+
 import classes from "./styles.module.css";
-import { useResize } from "@/hooks/useResize";
 
 const MARKETS = [
   {
@@ -81,7 +83,7 @@ const MARKETS = [
 ];
 
 export const Markets = () => {
-  const {isAdaptive: md} = useResize(1200);
+  const { isAdaptive: md } = useResize(1200);
   const [sortState, setSortState] = useState<{ sortCol: string; sortFunc: 1 | 2 | 3 }>({ sortCol: "", sortFunc: 1 });
   const sortHandler = (cell: string) => {
     if (cell !== sortState.sortCol) setSortState({ sortCol: cell, sortFunc: 2 });
@@ -142,6 +144,10 @@ export const Markets = () => {
     });
   }, []);
 
+  const handleRedirection = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <motion.div
       className={classes.rateWrap}
@@ -162,14 +168,19 @@ export const Markets = () => {
     >
       <Stack className={classes.marketsWrapper}>
         <Container>
-          <Stack gap={'clamp(1.5rem, 4vw, 4rem)'}>
+          <Stack gap={"clamp(1.5rem, 4vw, 4rem)"}>
             <Group justify={"space-between"} align={"flex-end"}>
-              <Title c="white" fz={{0: 40, md: 54}} order={2}>
+              <Title c="white" fz={{ 0: 40, md: 54 }} order={2}>
                 Markets
               </Title>
-              <Link to={routes.cryptoMarketCap} className={classes.marketsSeeAllMarketsText} style={{
-                fontSize: 'clamp(1rem, 1.25vw, 1.25rem)'
-              }}>
+              <Link
+                to={routes.cryptoMarketCap}
+                className={classes.marketsSeeAllMarketsText}
+                onClick={handleRedirection}
+                style={{
+                  fontSize: "clamp(1rem, 1.25vw, 1.25rem)",
+                }}
+              >
                 See all markets
                 <ArrowRightCircleIcon />
               </Link>
@@ -245,28 +256,25 @@ export const Markets = () => {
                     </Table.Th>
                     {!md && (
                       <Table.Th onClick={() => sortHandler("Markets")} w={"50px"}>
-                      <Group gap={rem("2px")}>
-                        <Text c="inherit" variant="text-3">
-                          Markets
-                        </Text>
-                        <div
-                          className={clsx(
-                            classes.sortArrowWrapper,
-                            sortState.sortCol === "Markets" && (sortState.sortFunc === 2 || sortState.sortFunc === 3) && classes.active,
-                            sortState.sortCol === "Markets" && sortState.sortFunc === 3 && classes.rotate,
-                          )}
-                        >
-                          <MarketSortIcon />
-                        </div>
-                      </Group>
-                    </Table.Th>
+                        <Group gap={rem("2px")}>
+                          <Text c="inherit" variant="text-3">
+                            Markets
+                          </Text>
+                          <div
+                            className={clsx(
+                              classes.sortArrowWrapper,
+                              sortState.sortCol === "Markets" && (sortState.sortFunc === 2 || sortState.sortFunc === 3) && classes.active,
+                              sortState.sortCol === "Markets" && sortState.sortFunc === 3 && classes.rotate,
+                            )}
+                          >
+                            <MarketSortIcon />
+                          </div>
+                        </Group>
+                      </Table.Th>
                     )}
                   </Table.Tr>
                 </Table.Thead>
-                <Table.Tbody
-                  classNames={{ tbody: classes.marketsTableBody }}>
-                    {markets}
-                  </Table.Tbody>
+                <Table.Tbody classNames={{ tbody: classes.marketsTableBody }}>{markets}</Table.Tbody>
               </Table>
             </Group>
 
