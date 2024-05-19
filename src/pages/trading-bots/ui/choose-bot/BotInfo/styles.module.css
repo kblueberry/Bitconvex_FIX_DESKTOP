@@ -1,6 +1,5 @@
 .bot-wrapper {
-  border: 3px dashed rgb(255 255 255 / 12%);
-  background: var(--color-black);
+  border: 3px dashed;
   border-radius: rem(3);
   padding: 24px 19px;
 
@@ -8,10 +7,16 @@
     padding: 16px;
   }
 
+  &.inactive {
+    border-color: rgb(255 255 255 / 12%);
+    background: var(--color-black);
+  }
+
   &:hover,
   .active {
     box-shadow: 0px 0px 16px 0px rgba(255, 255, 255, 0.04) inset;
     border-color: var(--color-blue);
+    background: linear-gradient(313.06deg, rgba(98, 95, 244, 0.2) 6.43%, rgba(12, 13, 16, 0.2) 99.25%);
   }
 
   .botTitle {

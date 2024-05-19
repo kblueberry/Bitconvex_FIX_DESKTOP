@@ -12,7 +12,7 @@ export const TRADE_TYPES = [
     profit: 0.5,
     minInvestment: 300,
     risk: 0.5,
-    selected: true,
+    selected: false,
   },
   {
     title: "Medium Trading",

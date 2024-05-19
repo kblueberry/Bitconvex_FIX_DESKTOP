@@ -349,7 +349,7 @@ export const CoinsTable = () => {
         <Table.Tr key={coin.name}>
           <Table.Td w={70}>
             <Group gap={rem(16)} className={classes.firstTdWrapper}>
-              <Text variant="text-4" className={classes.greyText} span>
+              <Text variant="text-3" className={classes.greyText} span>
                 №{index + 1}
               </Text>
             </Group>

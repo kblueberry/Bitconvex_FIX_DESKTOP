@@ -106,7 +106,7 @@ export const TableProfile = () => {
     return COINS.map((coin) => {
       return (
         <Table.Tr key={coin.name}>
-          <Table.Td className={classes.tbodyTdWithIcon}>
+          <Table.Td className={classes.tbodyTdWithIcon} w={300}>
             <Group gap={rem(8)} px={12}>
               {coin.icon}
               <Text c="white" className={classes.text}>
@@ -117,7 +117,7 @@ export const TableProfile = () => {
               </Text>
             </Group>
           </Table.Td>
-          <Table.Td w={200}>
+          <Table.Td w={220}>
             <Text c="white" variant="text-3" span>
               {coin.Balance}
             </Text>
