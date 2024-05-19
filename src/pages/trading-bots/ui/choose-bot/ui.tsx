@@ -11,6 +11,7 @@ export interface BotProps {
   title: string;
   description: string;
   benefit: string;
+  selected: boolean;
 }
 
 const BOTS = [
@@ -19,24 +20,28 @@ const BOTS = [
     description:
       "Operating on the principle of continuous data collection and experience from major players, our bot automatically adapts to market dynamics, ensuring optimal trading strategies. Trust your investments to a professional approach and enjoy the growth of your portfolio hassle-free. ",
     benefit: "185%",
+    selected: false,
   },
   {
     title: "Smart Money Trading Bot",
     description:
       "Utilizing the Smart Money concept and possessing extensive market cycle statistics, it trades taking into account indicators such as OB, BOS, FVG, SSL/BSL, and other entry factors. Rely on our bot to achieve consistent profits and confidently manage your cryptocurrency portfolio. ",
     benefit: "60%",
+    selected: false,
   },
   {
     title: "Technical Analysis Trading Bot",
     description:
       "It operates based on finding valid entry zones, including structure breakout, analysis of key levels, classical chart patterns, and formations. Trust our bot to identify optimal entry points in the market and manage your cryptocurrency portfolio with confidence. ",
     benefit: "48%",
+    selected: false,
   },
   {
     title: "Scalping Trading Bot",
     description:
       "It operates on the principle of scalping, where each trade takes only a few minutes. Utilizing Smart Money methods and technical analysis, the script seeks the optimal entry point, which will be open for up to 30 minutes. Trust our bot to achieve consistent profits and confidently manage your cryptocurrency portfolio. ",
     benefit: "83%",
+    selected: false,
   },
 ] as BotProps[];
 

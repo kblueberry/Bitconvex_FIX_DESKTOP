@@ -40,10 +40,8 @@
 
 .column-light-three {
   position: absolute;
-  top: 23%;
-  right: 0;
-  width: 20%;
-  height: 39%;
+  top: 20%;
+  right: -50%;
   z-index: -1;
 }
 
@@ -70,40 +68,36 @@
 
 @media screen and (max-width: 1400px) {
   .column-light-three {
-    top: 31%;
-    right: -7%;
-    height: 25%;
+    top: 23%;
+    right: -26%;
   }
 
   .light-column {
-    top: 42%;
+    top: 40%;
     right: -4%;
   }
 }
 
 @media screen and (max-width: 75em) {
   .column-light-three {
-    top: 33%;
-    right: 0;
+    top: 36%;
+    right: -22%;
   }
 
   .light-column {
-    top: 44%;
+    top: 48%;
     right: -4%;
   }
 }
 
 @media screen and (max-width: 45em) {
   .column-light-three {
-    top: 37%;
+    top: 39%;
     right: 0;
-    height: 20%;
-    /* z-index: -1; */
   }
 
   .light-column {
     top: 46%;
     right: -4%;
-    /* z-index: -1; */
   }
 }
