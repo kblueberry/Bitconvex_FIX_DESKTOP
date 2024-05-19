@@ -5,6 +5,7 @@
   padding: 15px 34px;
   border-radius: 8px;
   cursor: pointer;
+  background: rgba(10, 10, 12, 1);
 
   &.inactive {
     border-bottom-color: rgba(255, 255, 255, 0.16);
