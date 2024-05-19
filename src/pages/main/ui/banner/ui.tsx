@@ -2,12 +2,15 @@ import { useResize } from "@/hooks/useResize";
 import { Box, Group, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
+import { routes } from "@/shared/routing";
 import { Container } from "@/shared/ui";
 import { BannerButton } from "@/shared/ui/bannerButton/ui";
 
 import classes from "./styles.module.css";
 
 export const Banner = () => {
+  const handleRedirection = () => window.scrollTo(0, 0);
+
   const { isAdaptive: md } = useResize(1200);
   return (
     <Container>
@@ -146,7 +149,7 @@ export const Banner = () => {
                 <Text c="white" className={classes.bannerSubTitle}>
                   Join the Rapidly Expanding Global Crypto Exchange
                 </Text>
-                <BannerButton size="extra-large" text="START TRADING" />
+                <BannerButton size="extra-large" text="START TRADING" route={routes.trade} {...{ handleRedirection }} />
               </Stack>
             </motion.div>
           </Stack>

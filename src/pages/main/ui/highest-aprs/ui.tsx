@@ -8,6 +8,8 @@ import { Container, StartStakingIcon } from "@/shared/ui";
 import classes from "./styles.module.css";
 
 export const HighestAprs = () => {
+  const handleRedirection = () => window.scrollTo(0, 0);
+
   return (
     <Stack className={classes.highestAprsWrapper}>
       <Container>
@@ -552,6 +554,7 @@ export const HighestAprs = () => {
                   root: classes.highestAprsButton,
                   label: classes.highestAprsButtonLabel,
                 }}
+                onClick={handleRedirection}
               >
                 START STAKING
               </Button>
