@@ -40,9 +40,9 @@
 
 .column-light-three {
   position: absolute;
-  top: 37%;
+  top: 31%;
   right: 0;
-  width: 30%;
+  width: 50%;
   z-index: -1;
 }
 
