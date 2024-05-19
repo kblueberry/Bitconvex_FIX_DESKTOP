@@ -47,7 +47,7 @@ const BOTS = [
 
 export const ChooseBot = () => {
   return (
-    <Stack className={classes.wrapper}>
+    <Stack className={classes.wrapper} id="choose-bot">
       <Container>
         <Stack gap={rem(64)}>
           <HighlightedBlueTitle title="Choose" subTitle="Your Bot" />

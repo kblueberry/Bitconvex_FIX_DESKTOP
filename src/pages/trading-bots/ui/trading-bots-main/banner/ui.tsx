@@ -3,6 +3,7 @@ import { Group, Stack, Text, Title, rem } from "@mantine/core";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 
+import { routes } from "@/shared/routing";
 import { Container } from "@/shared/ui";
 import { BannerButton } from "@/shared/ui/bannerButton";
 
@@ -11,6 +12,13 @@ import classes from "./styles.module.css";
 
 export const Banner = () => {
   const { isAdaptive: md } = useResize(1200);
+
+  const handleRedirection = () => {
+    const chooseBotSection = document.getElementById("choose-bot");
+    if (!!chooseBotSection) {
+      chooseBotSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+  };
 
   return (
     <Container>
@@ -48,7 +56,7 @@ export const Banner = () => {
                 earning money, but don’t forget about risk management.
               </Text>
               <Group align={"center"} justify={"flex-start"} className={classes.tradeActions}>
-                <BannerButton size="extra-large" text="START TRADING" />
+                <BannerButton size="extra-large" text="START TRADING" route={routes.tradingBots} {...{ handleRedirection }} />
                 <div className={classes.activeStatistics}>
                   <Text variant={md ? "text-2" : "text-1"}>
                     <b>Active Strategies:</b> 56.150
