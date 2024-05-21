@@ -123,3 +123,16 @@
   position: absolute;
   transform: translate(0, -28%);
 }
+
+@media screen and (max-width: 1200px) {
+  .light-nine {
+    top: 49em;
+  }
+
+  .light-eight {
+    top: -22em;
+    left: 33%;
+    width: 70%;
+    transform: rotate(-180deg);
+  }
+}
