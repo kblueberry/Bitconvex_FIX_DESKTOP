@@ -1,30 +1,36 @@
 import { Flex, Grid, Group, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
+
 import { Container } from "@/shared/ui";
+
 import classes from "./styles.module.css";
 
 export const Metrics = () => {
   return (
     <Stack className={classes.metricsWrapper}>
       <Container>
-        <Stack gap={'clamp(1.5rem, 4vw, 4rem)'}>
-          <Stack style={{
-            gap: 'clamp(1rem, 2vw, 2rem)',
-          }} align="center">
-            <Title ta={'center'} order={2} className={classes.metricsTitle} fz={{0: 40, md: 54}}>
+        <Stack gap={"clamp(1.5rem, 4vw, 4rem)"}>
+          <Stack
+            style={{
+              gap: "clamp(1rem, 2vw, 2rem)",
+            }}
+            align="center"
+            className={classes.metricsTitleContainer}
+          >
+            <Title ta={"center"} order={2} className={classes.metricsTitle}>
               Unrivaled Exchange
               <Text span className={classes.metricsTitleHighlighted} ml={rem(15)}>
                 Metrics
               </Text>
             </Title>
-            <Text ta="center" color="#6C7080" fz={{0: 16, md: 20}} classNames={{ root: classes.metricsSubTitle }}>
+            <Text ta="center" color="#6C7080" fz={{ 0: 16, md: 20 }} classNames={{ root: classes.metricsSubTitle }}>
               Trade confidently on our robust cryptocurrency exchange with 3M+ deals, $91M+ volume, <br />
               and 4,000,000+ users. Stable platform, 5%+ volatility. Elevate your trading.
             </Text>
           </Stack>
 
-          <Grid gutter={{0: 16, md: 32}}>
-            <Grid.Col span={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }}>
+          <Grid gutter={{ 0: 16, md: 32 }}>
+            <Grid.Col span={{ md: 6, lg: 3, xl: 3 }} className={classes.metricColumn}>
               <motion.div
                 variants={{
                   hidden: {
@@ -41,9 +47,9 @@ export const Metrics = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <Stack gap={rem("12px")} className={classes.metricWrapper}>
-                  <Group style={{gap: 'clamp(.5rem, 1vw, 1rem)'}} align={"center"} justify={"flex-start"}>
-                    <Flex align={"center"} justify={"center"} p={{0: 4, md: 8}} className={classes.metricIconWrapper}>
+                <Stack gap={rem("16px")} className={classes.metricWrapper}>
+                  <Group style={{ gap: "clamp(.5rem, 1vw, 1rem)" }} align={"center"} justify={"flex-start"}>
+                    <Flex align={"center"} justify={"center"} p={{ 0: 4, md: 8 }} className={classes.metricIconWrapper}>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           fillRule="evenodd"
@@ -53,18 +59,18 @@ export const Metrics = () => {
                         />
                       </svg>
                     </Flex>
-                    <Text c="white" variant="text-2" fz={{0: 18, md: 20}} className={classes.metricTitle}>
+                    <Text c="white" variant="text-2" className={classes.metricTitle}>
                       Users
                     </Text>
                   </Group>
-                  <Title c="white" fz={{0: 48, md: 79}} order={1}>
+                  <Title c="white" order={1} className={classes.metricAmount}>
                     4M+
                   </Title>
                 </Stack>
               </motion.div>
             </Grid.Col>
 
-            <Grid.Col span={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }}>
+            <Grid.Col span={{ md: 6, lg: 3, xl: 3 }} className={classes.metricColumn}>
               <motion.div
                 variants={{
                   hidden: {
@@ -82,9 +88,9 @@ export const Metrics = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Stack gap={rem("16px")} className={classes.metricWrapper}>
-                  <Group gap={rem("16px")} align={"center"} justify={"flex-start"}>
-                    <Flex align={"center"} justify={"center"} p={rem("8px")} className={classes.metricIconWrapper}>
-                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <Group style={{ gap: "clamp(.5rem, 1vw, 1rem)" }} align={"center"} justify={"flex-start"}>
+                    <Flex align={"center"} justify={"center"} p={{ 0: 4, md: 8 }} className={classes.metricIconWrapper}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M3.89062 18.625H4.67188V18.7969C4.67188 19.0126 4.84676 19.1875 5.0625 19.1875C5.27824 19.1875 5.45312 19.0126 5.45312 18.7969V18.625H6.23438C6.45012 18.625 6.625 18.4501 6.625 18.2344V11.2031C6.625 10.9874 6.45012 10.8125 6.23438 10.8125H5.45312V8.64062C5.45312 8.42488 5.27824 8.25 5.0625 8.25C4.84676 8.25 4.67188 8.42488 4.67188 8.64062V10.8125H3.89062C3.67488 10.8125 3.5 10.9874 3.5 11.2031V18.2344C3.5 18.4501 3.67488 18.625 3.89062 18.625Z"
                           fill="white"
@@ -108,18 +114,18 @@ export const Metrics = () => {
                       </svg>
                     </Flex>
 
-                    <Text c="white" variant="text-2" fz={20} className={classes.metricTitle}>
+                    <Text c="white" variant="text-2" className={classes.metricTitle}>
                       Deals
                     </Text>
                   </Group>
-                  <Title c="white" order={1} fz={{0: 48, md: 79}}>
+                  <Title c="white" order={1} className={classes.metricAmount}>
                     3M+
                   </Title>
                 </Stack>
               </motion.div>
             </Grid.Col>
 
-            <Grid.Col span={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }}>
+            <Grid.Col span={{ md: 6, lg: 3, xl: 3 }} className={classes.metricColumn}>
               <motion.div
                 variants={{
                   hidden: {
@@ -137,8 +143,8 @@ export const Metrics = () => {
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
                 <Stack gap={rem("16px")} className={classes.metricWrapper}>
-                  <Group gap={rem("16px")} align={"center"} justify={"flex-start"}>
-                    <Flex align={"center"} justify={"center"} p={rem("8px")} className={classes.metricIconWrapper}>
+                  <Group style={{ gap: "clamp(.5rem, 1vw, 1rem)" }} align={"center"} justify={"flex-start"}>
+                    <Flex align={"center"} justify={"center"} p={{ 0: 4, md: 8 }} className={classes.metricIconWrapper}>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           fillRule="evenodd"
@@ -149,18 +155,18 @@ export const Metrics = () => {
                       </svg>
                     </Flex>
 
-                    <Text c="white" variant="text-2" fz={20} className={classes.metricTitle}>
+                    <Text c="white" variant="text-2" className={classes.metricTitle}>
                       Volatility
                     </Text>
                   </Group>
-                  <Title c="white" order={1} fz={{0: 48, md: 79}}>
+                  <Title c="white" order={1} className={classes.metricAmount}>
                     5%+
                   </Title>
                 </Stack>
               </motion.div>
             </Grid.Col>
 
-            <Grid.Col span={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }}>
+            <Grid.Col span={{ md: 6, lg: 3, xl: 3 }} className={classes.metricColumn}>
               <motion.div
                 variants={{
                   hidden: {
@@ -178,9 +184,9 @@ export const Metrics = () => {
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
                 <Stack gap={rem("16px")} className={classes.metricWrapper}>
-                  <Group gap={rem("16px")} align={"center"} justify={"flex-start"}>
-                    <Flex align={"center"} justify={"center"} p={rem("8px")} className={classes.metricIconWrapper}>
-                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <Group style={{ gap: "clamp(.5rem, 1vw, 1rem)" }} align={"center"} justify={"flex-start"} className={classes.metricTitleWrapper}>
+                    <Flex align={"center"} justify={"center"} p={{ 0: 4, md: 8 }} className={classes.metricIconWrapper}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M17.5899 9.91667C17.9215 9.91667 18.2394 9.78497 18.4738 9.55055C18.7082 9.31613 18.8399 8.99819 18.8399 8.66667V8.09417C18.8384 6.92039 18.3714 5.79514 17.5414 4.96516C16.7115 4.13517 15.5862 3.66821 14.4124 3.66667H13.4233V3.25C13.4233 2.91848 13.2916 2.60054 13.0572 2.36612C12.8227 2.1317 12.5048 2 12.1733 2C11.8418 2 11.5238 2.1317 11.2894 2.36612C11.055 2.60054 10.9233 2.91848 10.9233 3.25V3.66667H9.93411C8.87117 3.66508 7.84314 4.04595 7.03782 4.7397C6.23249 5.43344 5.70363 6.39375 5.54783 7.44521C5.39203 8.49667 5.6197 9.56908 6.18925 10.4665C6.75881 11.364 7.63222 12.0266 8.64994 12.3333L10.9233 12.955V17.8333H9.93411C9.4231 17.8327 8.93322 17.6294 8.57189 17.2681C8.21056 16.9067 8.00727 16.4168 8.00661 15.9058V15.3333C8.00661 15.0018 7.87491 14.6839 7.64049 14.4494C7.40607 14.215 7.08813 14.0833 6.75661 14.0833C6.42509 14.0833 6.10715 14.215 5.87273 14.4494C5.6383 14.6839 5.50661 15.0018 5.50661 15.3333V15.9058C5.50815 17.0796 5.97512 18.2049 6.8051 19.0348C7.63508 19.8648 8.76033 20.3318 9.93411 20.3333H10.9233V20.75C10.9233 21.0815 11.055 21.3995 11.2894 21.6339C11.5238 21.8683 11.8418 22 12.1733 22C12.5048 22 12.8227 21.8683 13.0572 21.6339C13.2916 21.3995 13.4233 21.0815 13.4233 20.75V20.3333H14.4124C15.4754 20.3349 16.5034 19.954 17.3087 19.2603C18.1141 18.5666 18.6429 17.6062 18.7987 16.5548C18.9545 15.5033 18.7268 14.4309 18.1573 13.5335C17.5877 12.636 16.7143 11.9734 15.6966 11.6667L13.4233 11.0467V6.16667H14.4124C14.9234 6.16733 15.4133 6.37062 15.7747 6.73195C16.136 7.09328 16.3393 7.58317 16.3399 8.09417V8.66667C16.3399 8.99819 16.4716 9.31613 16.7061 9.55055C16.9405 9.78497 17.2584 9.91667 17.5899 9.91667ZM14.9916 14.0658C15.4312 14.2044 15.8067 14.4958 16.0499 14.8873C16.2932 15.2788 16.3882 15.7445 16.3176 16.2001C16.2471 16.6556 16.0158 17.0707 15.6655 17.3704C15.3152 17.67 14.8692 17.8342 14.4083 17.8333H13.4233V13.6375L14.9916 14.0658ZM10.9233 10.3625L9.35494 9.93417C8.91566 9.79573 8.54044 9.50464 8.29716 9.11356C8.05388 8.72248 7.95861 8.25723 8.0286 7.802C8.09858 7.34678 8.32918 6.93163 8.67869 6.63168C9.0282 6.33172 9.47353 6.16677 9.93411 6.16667H10.9233V10.3625Z"
                           fill="white"
@@ -188,12 +194,14 @@ export const Metrics = () => {
                       </svg>
                     </Flex>
 
-                    <Text c="white" variant="text-2" fz={20} className={classes.metricTitle}>
+                    <Text c="white" variant="text-2" className={classes.metricTitle}>
                       Trading volume
                     </Text>
                   </Group>
-                  <Title c="white" order={1} fz={{0: 48, md: 79}}>
-                    <span style={{ fontSize: "32px", lineHeight: "32px" }}>$</span>91M<span style={{ fontSize: "60px", lineHeight: "60px" }}>+</span>
+                  <Title c="white" order={1} className={classes.metricAmount}>
+                    <span className={classes.dollarSign}>$</span>
+                    91M
+                    <span className={classes.plusSign}>+</span>
                   </Title>
                 </Stack>
               </motion.div>
