@@ -1,10 +1,9 @@
-import { Accordion, Group, Image, Stack, Text, Title, rem } from "@mantine/core";
-import { Link } from "atomic-router-react";
+import { Accordion, Image, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 
-import { routes } from "@/shared/routing";
-import { ArrowRightCircleIcon, Container, PlusIcon } from "@/shared/ui";
+import { Container, PlusIcon } from "@/shared/ui";
 
+import { FaqTitleWrapper } from "./faqTitleWrapper";
 import classes from "./styles.module.css";
 
 const FAQ_ITEMS = [
@@ -29,8 +28,6 @@ const FAQ_ITEMS = [
 ];
 
 export const Faq = () => {
-  const handleRedirection = () => window.scrollTo(0, 0);
-
   return (
     <Stack className={classes.faqWrapper}>
       <Container>
@@ -52,21 +49,7 @@ export const Faq = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <Stack gap={rem("32px")}>
-              <Title order={2} className={classes.faqTitle} fz={{ 0: 40, md: 54 }}>
-                <span className={classes.textTitleHighlighted}>F</span>requently <span className={classes.textTitleHighlighted}>A</span>sked{" "}
-                <span className={classes.textTitleHighlighted}>Q</span>uestions
-              </Title>
-              <Group justify={"space-between"}>
-                <Text variant="text-2" className={classes.faqSubTitle}>
-                  Explore Common Queries and Find Quick Solutions in Our FAQ Section.
-                </Text>
-                <Link to={routes.faq} className={classes.moreQuestionsText} onClick={handleRedirection}>
-                  <span>More questions</span>
-                  <ArrowRightCircleIcon />
-                </Link>
-              </Group>
-            </Stack>
+            <FaqTitleWrapper />
           </motion.div>
 
           <Accordion

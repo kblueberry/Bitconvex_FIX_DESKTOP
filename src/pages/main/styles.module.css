@@ -159,4 +159,17 @@
     width: 22px;
     height: 22px;
   }
+
+  .light-eight {
+    top: -44%;
+    width: 100%;
+    transform: rotate(-180deg);
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 590px) {
+  .light-eight {
+    top: -36%;
+    left: 2%;
+  }
 }

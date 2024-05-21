@@ -6,14 +6,6 @@
   position: relative;
 }
 
-.faq-title {
-  color: white;
-}
-
-.faq-sub-title {
-  @mixin textGrey;
-}
-
 .faq-accordion-root {
   --accordion-chevron-size: 24px;
 
@@ -104,33 +96,6 @@
       & path {
         fill: var(--color-blue);
       }
-    }
-  }
-}
-
-.more-questions-text {
-  @mixin text-2-full;
-  @mixin transition;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  color: var(--color-blue);
-  cursor: pointer;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  text-decoration-line: underline;
-  text-decoration-color: transparent;
-
-  & svg {
-    @mixin transition;
-  }
-
-  @mixin hover {
-    text-shadow: 0px 2px 8px rgba(98, 95, 244, 0.64);
-    text-decoration-color: var(--color-blue);
-
-    & svg {
-      filter: drop-shadow(0px 2px 8px rgba(98, 95, 244, 0.64));
     }
   }
 }
