@@ -170,3 +170,13 @@
     left: -7%;
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 549px) {
+  .light-five {
+    top: -36%;
+  }
+
+  .highest-aprs-sub-title {
+    padding: 0 10px;
+  }
+}
