@@ -35,6 +35,11 @@ export const theme = createTheme({
         fontWeight: "600",
         lineHeight: "normal",
       },
+      h5: {
+        fontSize: rem(21),
+        fontWeight: "600",
+        lineHeight: "25.2px",
+      },
     },
   },
   fontFamily: "CraftworkGrotesk, sans-serif",
