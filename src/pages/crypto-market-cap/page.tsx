@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Flex, Grid, Group, Image, Pagination, Stack, Text, TextInput, Title, UnstyledButton, rem } from "@mantine/core";
+import { Box, Button, Divider, Grid, Group, Image, Pagination, Stack, Text, TextInput, UnstyledButton, rem } from "@mantine/core";
 
 import {
   BitcoinIcon,

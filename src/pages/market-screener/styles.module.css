@@ -1,7 +1,7 @@
 @import url("@/app/styles/mixin.css");
 
 @define-mixin activeHover {
-  --_button-bd: 1px solid #7673F5;
+  --_button-bd: 1px solid #7673f5;
   box-shadow: 0px 0px 8px 0px rgba(98, 95, 244, 0.64);
 
   & :local(.rates-button-label) {
@@ -54,7 +54,6 @@
   flex: 1;
   padding: var(--adaptive-section-py) 0;
   position: relative;
-
 }
 
 .icon-wrapper {
@@ -89,7 +88,7 @@
 
   &:active,
   &:local(.rates-button-root-active) {
-    --_button-bd: 1px solid #7673F5;
+    --_button-bd: 1px solid #7673f5;
     box-shadow: none;
     & :local(.rates-button-label) {
       --text-color: var(--color-blue);
@@ -98,7 +97,7 @@
   }
 
   @mixin hover {
-    --_button-bd: 1px solid #7673F5;
+    --_button-bd: 1px solid #7673f5;
     box-shadow: 0px 0px 8px 0px rgba(98, 95, 244, 0.64);
 
     & :local(.rates-button-label) {
@@ -106,7 +105,6 @@
       text-shadow: 0px 2px 8px rgba(98, 95, 244, 0.64);
     }
   }
-
 }
 
 .rates-button-root-active {
@@ -148,7 +146,6 @@
 
   &:hover,
   &[data-active] {
-
     &::after {
       opacity: 1;
       background: var(--gradient-radial);
@@ -159,11 +156,9 @@
       --text-color: var(--color-blue);
       text-shadow: 0px 2px 8px rgba(98, 95, 244, 0.64);
     }
-
   }
 
   &[data-active] {
-
     &::after {
       box-shadow: none;
     }
@@ -172,7 +167,6 @@
       text-shadow: none;
     }
   }
-
 }
 
 .category-button {
@@ -228,5 +222,11 @@
     justify-content: center;
     width: 3rem;
     height: 3rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .description {
+    font-size: 16px;
   }
 }
