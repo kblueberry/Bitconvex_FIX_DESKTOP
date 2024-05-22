@@ -1,3 +1,5 @@
+import { trimLongName } from "@/helpers/trimLongName";
+import { useResize } from "@/hooks/useResize";
 import { Group, Pill, Table, Text, Title, rem } from "@mantine/core";
 import clsx from "clsx";
 import React, { useCallback, useMemo, useState } from "react";
@@ -241,6 +243,7 @@ const HEADERS: Header[] = [
 export const CoinsTable = () => {
   const [sortingLabel, setSortingLabel] = useState<SortingLabel>("#");
   const [sortingDirection, setSortingDirection] = useState<SortingDirection>("ASC");
+  const { isAdaptive: md } = useResize(550);
 
   const onTableHeadSortLabelClick = useCallback(
     (label: SortingLabel) => {
@@ -288,6 +291,9 @@ export const CoinsTable = () => {
           () => "negative" as RateType,
         )
         .otherwise(() => "zero" as RateType);
+
+      const adaptiveFullCoinName = trimLongName(coin.name, md);
+
       return (
         <Table.Tr key={coin.name}>
           <Table.Td w={70}>
@@ -300,8 +306,8 @@ export const CoinsTable = () => {
           <Table.Td className={classes.tbodyTdWithIcon}>
             <Group gap={rem(8)}>
               {coin.icon}
-              <Title c="white" order={4} fz={20}>
-                {coin.name}
+              <Title c="white" order={4} fz={20} className={classes.coinFullName}>
+                {adaptiveFullCoinName}
               </Title>
               <Pill classNames={{ root: classes.coinShortName, label: classes.coinShortNameLabel }}>{coin.shortName}</Pill>
             </Group>
@@ -342,7 +348,7 @@ export const CoinsTable = () => {
         </Table.Tr>
       );
     });
-  }, []);
+  }, [md]);
 
   return (
     <Table classNames={{ tr: classes.tableTr, td: classes.tableTd }} verticalSpacing={rem("16px")} withRowBorders={true}>
