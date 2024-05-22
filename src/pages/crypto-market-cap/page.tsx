@@ -14,6 +14,7 @@ import {
   ShowRowsCount,
   Wrapper,
 } from "@/shared/ui";
+import { TitleWithIcon } from "@/shared/ui/titleWithIcon/ui";
 
 import classes from "./styles.module.css";
 import { CoinsTable, TopRate } from "./ui";
@@ -32,20 +33,12 @@ export function Page() {
         <Container>
           <Stack gap={rem("32px")}>
             <Stack gap={"clamp(1rem, 2vw,2rem)"}>
-              <Group className={classes.headerRow}>
-                <Flex justify="center" align="center" className={classes.iconWrapper}>
-                  <img draggable="false" src={`${import.meta.env.BASE_URL}assets/crypto-market-cap-icon.png`} alt="privacyNotice" />
-                </Flex>
-                <Title c="white" order={2} fz={{ 0: 28, md: 54 }}>
-                  Crypto Market Cap
-                </Title>
-              </Group>
+              <TitleWithIcon title="Crypto Market Cap" iconSrc={`${import.meta.env.BASE_URL}assets/crypto-market-cap-icon.png`} alt="privacyNotice" />
 
               <Text variant="text-2" className={classes.greyText}>
                 View the latest cryptocurrency prices for the hundreds of digital assets listed on BitConvex, alongside their daily price change and
-                market cap <br />
-                statistics. You can also select "Trade" for any cryptocurrency in the list to visit the relevant BitConvex market for buying and
-                selling each asset.
+                market cap statistics. You can also select "Trade" for any cryptocurrency in the list to visit the relevant BitConvex market for
+                buying and selling each asset.
               </Text>
             </Stack>
 
