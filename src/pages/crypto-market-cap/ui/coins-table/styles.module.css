@@ -129,29 +129,11 @@
 }
 
 @media (max-width: 1040px) {
-  .table-head th:first-child {
-    display: none;
-  }
   .table-head-sort-label {
     flex-wrap: nowrap;
   }
   .table-head-sort-label span {
     white-space: nowrap;
-  }
-  .table-head th:nth-child(4) {
-    display: none;
-  }
-  .table-head th:nth-child(5) {
-    display: none;
-  }
-  .table-head th:nth-child(6) {
-    display: none;
-  }
-  .table-head th:nth-child(7) {
-    display: none;
-  }
-  .table-body td:first-child {
-    display: none;
   }
   .table-body td:nth-child(2) div svg {
     width: 1.5rem;
@@ -182,18 +164,6 @@
   }
   .coin-th {
     min-width: auto;
-  }
-  .table-body td:nth-child(4) {
-    display: none;
-  }
-  .table-body td:nth-child(5) {
-    display: none;
-  }
-  .table-body td:nth-child(6) {
-    display: none;
-  }
-  .table-body td:nth-child(7) {
-    display: none;
   }
   .table-body td {
     padding: 1rem 0 !important;

@@ -243,7 +243,7 @@ const HEADERS: Header[] = [
 export const CoinsTable = () => {
   const [sortingLabel, setSortingLabel] = useState<SortingLabel>("#");
   const [sortingDirection, setSortingDirection] = useState<SortingDirection>("ASC");
-  const { isAdaptive: md } = useResize(550);
+  const { isAdaptive: md } = useResize(1200);
 
   const onTableHeadSortLabelClick = useCallback(
     (label: SortingLabel) => {
