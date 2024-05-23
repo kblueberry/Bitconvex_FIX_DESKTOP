@@ -1,4 +1,6 @@
+import { getSiblings } from "@/helpers/getResponsivePaginationSiblings";
 import { Box, Divider, Grid, Group, Image, Pagination, Stack, Text, UnstyledButton, rem } from "@mantine/core";
+import { useEffect, useState } from "react";
 
 import {
   BitcoinIcon,
@@ -21,6 +23,20 @@ import classes from "./styles.module.css";
 import { CoinsTable, TopRate } from "./ui";
 
 export function Page() {
+  const [siblings, setSiblings] = useState(getSiblings());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSiblings(getSiblings());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/crypto-market-cap/1.png`} alt="light-1" className={classes.lightOne} />
@@ -96,7 +112,7 @@ export function Page() {
                 <Text variant="text-4" className={classes.greyText}>
                   1-20 of 9,383 assets
                 </Text>
-                <Pagination total={20} defaultValue={1}>
+                <Pagination total={20} defaultValue={1} {...{ siblings }}>
                   <Group gap={rem("8px")} justify="center">
                     <Pagination.Previous icon={PreviousIcon} />
                     <Pagination.Items />
