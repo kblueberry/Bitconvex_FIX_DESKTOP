@@ -1,8 +1,10 @@
-import { Box, Button, Divider, Flex, Group, Image, Pagination, Stack, Text, Title, UnstyledButton, rem } from "@mantine/core";
+import { Box, Divider, Group, Image, Pagination, Stack, Text, UnstyledButton, rem } from "@mantine/core";
 
 import { Container, Footer, Header, NextIcon, PreviousIcon, ShowRowsCount, Wrapper } from "@/shared/ui";
+import { TableSelectionHeader } from "@/shared/ui/tableSelectionHeader";
 import { TitleWithIcon } from "@/shared/ui/titleWithIcon";
 
+import { SELECTORS } from "./MarketScreenerCoinsSelectors";
 import classes from "./styles.module.css";
 import { CoinsTable } from "./ui/coins-table/ui";
 
@@ -38,7 +40,7 @@ export function Page() {
               </Text>
             </Stack>
             <Stack gap={"clamp(12px, 1vw, 1rem)"} className={classes.ratesTableWrapper}>
-              <Group justify={"flex-start"}>
+              {/* <Group justify={"flex-start"}>
                 <Button
                   size="xl"
                   variant="outline"
@@ -62,7 +64,8 @@ export function Page() {
                 <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
                   Most volatile
                 </Button>
-              </Group>
+              </Group> */}
+              <TableSelectionHeader selectors={SELECTORS} headerClassName="alignFromStart" />
 
               <Stack gap={0}>
                 <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />

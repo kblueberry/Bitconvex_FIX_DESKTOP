@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Grid, Group, Image, Pagination, Stack, Text, TextInput, UnstyledButton, rem } from "@mantine/core";
+import { Box, Divider, Grid, Group, Image, Pagination, Stack, Text, UnstyledButton, rem } from "@mantine/core";
 
 import {
   BitcoinIcon,
@@ -10,12 +10,13 @@ import {
   PolkadotIcon,
   PolygonIcon,
   PreviousIcon,
-  SearchIcon,
   ShowRowsCount,
   Wrapper,
 } from "@/shared/ui";
+import { TableSelectionHeader } from "@/shared/ui/tableSelectionHeader";
 import { TitleWithIcon } from "@/shared/ui/titleWithIcon/ui";
 
+import { SELECTORS } from "./MarketCapCoinsSelectors";
 import classes from "./styles.module.css";
 import { CoinsTable, TopRate } from "./ui";
 
@@ -58,36 +59,7 @@ export function Page() {
             </Grid>
 
             <Stack gap={rem("32px")} className={classes.ratesTableWrapper}>
-              <Group justify={"space-between"} className={classes.tableHeader}>
-                <Group className={classes.buttonFlex}>
-                  <Button
-                    size="xl"
-                    variant="outline"
-                    className={classes.ratesButtonRootActive}
-                    classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}
-                  >
-                    Top Gainers
-                  </Button>
-                  <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                    Top Loser
-                  </Button>
-                  <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                    New in market
-                  </Button>
-                  <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                    Top in Volume
-                  </Button>
-                </Group>
-                <TextInput
-                  size="lg"
-                  classNames={{
-                    input: classes.searchInput,
-                    wrapper: classes.searchInputWrapper,
-                  }}
-                  leftSection={<SearchIcon />}
-                  placeholder="Search Crypto"
-                />
-              </Group>
+              <TableSelectionHeader selectors={SELECTORS} />
 
               <Stack gap={0}>
                 <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
