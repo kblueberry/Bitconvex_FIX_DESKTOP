@@ -50,7 +50,7 @@ export const TradingResults = () => {
     <Stack className={classes.wrapper}>
       <Container>
         <Stack gap={rem(64)}>
-          <Title c="white" order={1} fz={54} className={classes.tradingTitle}>
+          <Title c="white" order={1} className={classes.tradingTitle}>
             Best trading results in
             <Text span className={classes.tradingTitleColored}>
               24 hours
@@ -60,7 +60,7 @@ export const TradingResults = () => {
           <Grid gutter={{ 0: 16, md: 30 }} align={"stretch"}>
             {TRADING_RESULTS.map((result, i) => {
               return (
-                <Grid.Col key={result.name} span={{ xs: 6, sm: 6, md: 3, lg: 3, xl: 3 }} className={classes.col}>
+                <Grid.Col key={result.name} span={{ md: 3, lg: 3, xl: 3 }} className={classes.col}>
                   <motion.div
                     className={classes.rateWrap}
                     variants={{

@@ -9,6 +9,10 @@
   padding: clamp(24px, 2vw, 2rem) clamp(1.25rem, 2vw, 2rem) 0;
 }
 
+.rateCoinNameWrapper {
+  gap: rem(12px);
+}
+
 .rate-short-name {
   --_pill-color: white !important;
   --pill-radius: rem(3);
@@ -30,7 +34,6 @@
 
 .rate-content {
   width: 100%;
-  /* height: rem(172); */
   position: relative;
   display: flex;
   flex-direction: row;
@@ -61,4 +64,26 @@
     width: 100%;
     height: 100%;
   }
+}
+
+@media screen and (min-width: 401px) and (max-width: 440px) {
+  .rateCoinNameWrapper {
+    gap: rem(5px);
+  }
+  .icon-wrap {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* .rate-wrapper {
+    align-items: center;
+  }
+  .rate-content {
+    justify-content: center;
+  }
+  .instruments-wrap {
+    align-items: center;
+  } */
 }
