@@ -1,4 +1,6 @@
+import { getSiblings } from "@/helpers/getResponsivePaginationSiblings";
 import { Box, Divider, Group, Image, Pagination, Stack, Text, UnstyledButton, rem } from "@mantine/core";
+import { useEffect, useState } from "react";
 
 import { Container, Footer, Header, NextIcon, PreviousIcon, ShowRowsCount, Wrapper } from "@/shared/ui";
 import { TableSelectionHeader } from "@/shared/ui/tableSelectionHeader";
@@ -9,6 +11,20 @@ import classes from "./styles.module.css";
 import { CoinsTable } from "./ui/coins-table/ui";
 
 export function Page() {
+  const [siblings, setSiblings] = useState(getSiblings());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSiblings(getSiblings());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/market-screener/1.png`} alt="light-1" className={classes.lightOne} />
@@ -40,31 +56,6 @@ export function Page() {
               </Text>
             </Stack>
             <Stack gap={"clamp(12px, 1vw, 1rem)"} className={classes.ratesTableWrapper}>
-              {/* <Group justify={"flex-start"}>
-                <Button
-                  size="xl"
-                  variant="outline"
-                  className={classes.ratesButtonRootActive}
-                  classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}
-                >
-                  General
-                </Button>
-                <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                  Top gainers
-                </Button>
-                <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                  All-time high
-                </Button>
-                <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                  All-time low
-                </Button>
-                <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                  New monthly high
-                </Button>
-                <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                  Most volatile
-                </Button>
-              </Group> */}
               <TableSelectionHeader selectors={SELECTORS} headerClassName="alignFromStart" />
 
               <Stack gap={0}>
@@ -101,7 +92,7 @@ export function Page() {
                 <Text variant="text-4" className={classes.greyText}>
                   1-20 of 9,383 assets
                 </Text>
-                <Pagination total={20} defaultValue={1}>
+                <Pagination total={20} defaultValue={1} {...{ siblings }}>
                   <Group gap={rem("8px")} justify="center">
                     <Pagination.Previous icon={PreviousIcon} />
                     <Pagination.Items />
