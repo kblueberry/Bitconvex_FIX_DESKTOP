@@ -1,8 +1,5 @@
 @import url("./mixin.css");
 
-.root {
-}
-
 .control:first-child,
 .control:last-child {
   border: 1px solid var(--color-blue);
@@ -96,5 +93,24 @@
   }
   & :local(.control):last-child {
     --_control-border-color: var(--color-grey);
+  }
+}
+
+@media screen and (max-width: 795px) {
+  .root {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 383px) {
+  .root {
+    div:first-child {
+      flex-wrap: nowrap;
+
+      .control {
+        width: 33px;
+        height: 33px;
+      }
+    }
   }
 }
