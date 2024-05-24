@@ -118,16 +118,15 @@
   color: rgba(14, 203, 123, 1) !important;
 }
 
-.search-input-wrapper {
-  min-width: rem(300px);
-}
-
 @media (max-width: 1200px) {
   .box {
     padding: 2rem 1.25rem;
   }
   table {
     min-width: 480px;
+  }
+  .verticalHedingsTable {
+    width: 100vw;
   }
   .table-container {
     overflow-x: scroll;
@@ -148,7 +147,7 @@
     flex-wrap: nowrap;
   }
   .table-td {
-    width: auto !important;
+    width: 20%;
   }
   .table-td h4 {
     font-size: 20px;
@@ -166,6 +165,7 @@
   }
   .table-tr th {
     padding: 1rem 0 !important;
+    width: 12%;
   }
   .table-td span {
     font-size: 1rem;
@@ -177,4 +177,10 @@
   background: transparent !important;
   border: none;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 380px) {
+  .search-input {
+    width: 98%;
+  }
 }
