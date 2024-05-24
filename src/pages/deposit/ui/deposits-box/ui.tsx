@@ -8,17 +8,7 @@ import { BitcoinIcon, SearchIcon } from "@/shared/ui";
 import classes from "./styles.module.css";
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-export const DepositsBox = ({
-  height,
-  coin,
-  setCoin,
-  goToQR,
-}: {
-  height?: number;
-  coin?: number;
-  setCoin?: Dispatch<SetStateAction<number>>;
-  goToQR: () => void;
-}) => {
+export const DepositsBox = ({ height, coin, setCoin }: { height?: number; coin?: number; setCoin?: Dispatch<SetStateAction<number>> }) => {
   const [selectedDeposit, setSelectedDeposit] = useState(1);
   const { isAdaptive: md } = useResize(1200);
   const [showOthersHidden, setShowOthersHidden] = useState<boolean>(true);
