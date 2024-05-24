@@ -18,7 +18,7 @@ export const ProfitChart = () => {
       </div>
       <Stack gap={rem("27px")}>
         <div id="chart" className={classes.chartTable}>
-          <Chart options={chart.options} series={chart.series} height={512}></Chart>
+          <Chart options={chart.options} series={chart.series}></Chart>
         </div>
         <div id="html-dist"></div>
       </Stack>

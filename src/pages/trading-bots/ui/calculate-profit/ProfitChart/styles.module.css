@@ -15,17 +15,22 @@
   }
 }
 .chartTable {
+  min-height: 512px;
   gap: 27px;
 }
 
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 834px) {
   .calculationsWrapper {
-    gap: 32px;
+    gap: 24px;
 
     .profitMain {
       display: block;
       width: 100%;
       text-align: center;
     }
+  }
+
+  .chartTable {
+    min-height: 299px;
   }
 }

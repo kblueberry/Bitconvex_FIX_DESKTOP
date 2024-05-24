@@ -23,3 +23,9 @@
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 490px) {
+  .mainButton {
+    margin-top: -100px;
+  }
+}
