@@ -1,6 +1,7 @@
+import { getSiblings } from "@/helpers/getResponsivePaginationSiblings";
 import { Button, Divider, Flex, Group, Pagination, Stack, Table, Text, TextInput, Title, rem } from "@mantine/core";
 import clsx from "clsx";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { MarketSortIcon, NextIcon, PreviousIcon, SearchIcon } from "@/shared/ui";
 
@@ -31,6 +32,20 @@ export const StakingTable = ({
     },
     [sortingDirection, sortingLabel],
   );
+  const [siblings, setSiblings] = useState(getSiblings());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSiblings(getSiblings());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const headers = useMemo(() => {
     return tableHeaders.map((header) => {
       return (
@@ -136,7 +151,7 @@ export const StakingTable = ({
           <Text variant="text-4" className={classes.greyText}>
             1-20 of 9,383 assets
           </Text>
-          <Pagination total={20} defaultValue={1}>
+          <Pagination total={20} defaultValue={1} {...{ siblings }}>
             <Group gap={0} justify="center">
               <Pagination.Previous icon={PreviousIcon} />
               <Pagination.Items />
