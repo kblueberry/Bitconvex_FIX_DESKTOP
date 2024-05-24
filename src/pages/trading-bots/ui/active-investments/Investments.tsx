@@ -1,5 +1,3 @@
-import { Button } from "@mantine/core";
-
 import { BitcoinIcon } from "@/shared/ui/icon";
 
 export const INVESTMENT_TABLE_HEADERS = [
