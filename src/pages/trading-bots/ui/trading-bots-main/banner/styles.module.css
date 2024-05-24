@@ -115,4 +115,16 @@
   .banner-title {
     font-size: 2rem !important;
   }
+
+  .bannerSubTitle {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .tradeActions {
+    .activeStatistics {
+      width: 307px;
+    }
+  }
 }
