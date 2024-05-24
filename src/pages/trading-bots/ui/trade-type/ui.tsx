@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { Container } from "@/shared/ui/container/ui";
 
+import commonClasses from "../../styles.module.css";
 import { HighlightedBlueTitle } from "../shared/HighlightedBlueTitle/ui";
 import { SelectCoin } from "./SelectCoin";
 import { TradeTypeWrapper } from "./TradeTypeWrapper";
@@ -13,7 +14,7 @@ export const TradeType = () => {
   return (
     <Stack className={classes.wrapper}>
       <Container>
-        <Stack gap={rem(64)}>
+        <Stack gap={rem(64)} className={commonClasses.section}>
           <HighlightedBlueTitle title="Trade" subTitle="type" />
 
           <Flex gap={rem("32px")} justify={"space-between"}>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { Container } from "@/shared/ui";
 
+import commonClasses from "../../styles.module.css";
 import { HighlightedBlueTitle } from "../shared/HighlightedBlueTitle/ui";
 import { BotInfo } from "./BotInfo/ui";
 import classes from "./styles.module.css";
@@ -49,7 +50,7 @@ export const ChooseBot = () => {
   return (
     <Stack className={classes.wrapper} id="choose-bot">
       <Container>
-        <Stack gap={rem(64)}>
+        <Stack gap={rem(64)} className={commonClasses.section}>
           <HighlightedBlueTitle title="Choose" subTitle="Your Bot" />
 
           <Box className={classes.botsWrapper}>

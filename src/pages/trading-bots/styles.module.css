@@ -66,6 +66,10 @@
   user-select: none;
 }
 
+.section {
+  gap: rem(64px);
+}
+
 @media screen and (max-width: 1400px) {
   .column-light-three {
     top: 23%;
@@ -99,5 +103,9 @@
   .light-column {
     top: 46%;
     right: -4%;
+  }
+
+  .section {
+    gap: rem(32px);
   }
 }

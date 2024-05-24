@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { BitcoinIcon, Container } from "@/shared/ui";
 
+import commonClasses from "../../styles.module.css";
 import classes from "./styles.module.css";
 import { TradingResult } from "./tradingResult/ui";
 
@@ -49,7 +50,7 @@ export const TradingResults = () => {
   return (
     <Stack className={classes.wrapper}>
       <Container>
-        <Stack gap={rem(64)}>
+        <Stack className={commonClasses.section}>
           <Title c="white" order={1} className={classes.tradingTitle}>
             Best trading results in
             <Text span className={classes.tradingTitleColored}>
