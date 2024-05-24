@@ -17,7 +17,7 @@ export const TradeType = () => {
         <Stack gap={rem(64)} className={commonClasses.section}>
           <HighlightedBlueTitle title="Trade" subTitle="type" />
 
-          <Flex gap={rem("32px")} justify={"space-between"}>
+          <Flex gap={rem("32px")} className={classes.tradeTypesFlex}>
             <SelectCoin className="selectTradeOptionsWrapper" />
             <Box className={classes.tradeTypesWrapper}>
               {TRADE_TYPES.map((type, index) => (

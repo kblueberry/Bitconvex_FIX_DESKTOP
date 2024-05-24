@@ -6,6 +6,9 @@
   border-radius: 8px;
   cursor: pointer;
   background: rgba(10, 10, 12, 1);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   &.inactive {
     border-bottom-color: rgba(255, 255, 255, 0.16);
@@ -20,6 +23,7 @@
 .tradeTitle {
   color: var(--color-blue) !important;
   text-wrap: wrap;
+  width: 130px;
 }
 .tradeInfoText {
   font-family: var(--text-font-family);
@@ -27,5 +31,12 @@
 
   .subTitle {
     font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1200em) {
+  .tradeWrapper {
+    width: 100%;
+    padding: 20px 22px;
   }
 }

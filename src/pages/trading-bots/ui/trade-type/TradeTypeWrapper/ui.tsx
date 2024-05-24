@@ -1,4 +1,4 @@
-import { Group, Stack, Text, Title, rem } from "@mantine/core";
+import { Stack, Text, Title, rem } from "@mantine/core";
 import clsx from "clsx";
 import { useState } from "react";
 
@@ -14,26 +14,19 @@ export const TradeTypeWrapper = ({ title, profit, minInvestment, risk, selected 
   };
 
   return (
-    <Stack
-      gap={rem("16px")}
-      className={clsx(classes.tradeWrapper, selected ? classes.active : classes.inactive)}
-      justify={"space-between"}
-      onClick={selectType}
-    >
-      <Group gap={rem("12px")}>
-        <Title fz={{ 0: 22, md: 24 }} order={4} className={clsx(classes.tradeTitle, commonStyles.userSelectForbidden)}>
-          {title}
-        </Title>
-        <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
-          <b className={classes.subTitle}>Profit:</b> up to {profit}% per day
-        </Text>
-        <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
-          <b className={classes.subTitle}>Min. investment:</b> {minInvestment}$
-        </Text>
-        <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
-          <b className={classes.subTitle}>Risk:</b> {risk}%
-        </Text>
-      </Group>
+    <Stack gap={rem("16px")} className={clsx(classes.tradeWrapper, selected ? classes.active : classes.inactive)} onClick={selectType}>
+      <Title fz={{ 0: 22, md: 24 }} order={4} className={clsx(classes.tradeTitle, commonStyles.userSelectForbidden)}>
+        {title}
+      </Title>
+      <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
+        <b className={classes.subTitle}>Profit:</b> up to {profit}% per day
+      </Text>
+      <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
+        <b className={classes.subTitle}>Min. investment:</b> {minInvestment}$
+      </Text>
+      <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
+        <b className={classes.subTitle}>Risk:</b> {risk}%
+      </Text>
     </Stack>
   );
 };
