@@ -54,7 +54,7 @@ export const DepositsBox = ({ height, coin, setCoin }: { height?: number; coin?:
 
           {md && (
             <Button variant="radial-gradient" className={classes.loadMoreAction} onClick={loadMore}>
-              Load more
+              {showOthersHidden ? "Load more" : "Hide"}
             </Button>
           )}
         </Stack>
