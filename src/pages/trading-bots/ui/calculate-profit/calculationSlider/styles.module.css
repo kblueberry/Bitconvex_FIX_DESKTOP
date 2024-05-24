@@ -78,3 +78,40 @@
     padding-left: 40px;
   }
 }
+
+@media screen and (max-width: 1096px) {
+  .sliderWrap {
+    width: 385px;
+
+    .slider {
+      .sliderTrack {
+        left: -123px;
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 796px) {
+  .sliderWrap {
+    margin: 0 auto;
+
+    .slider {
+      .sliderTrack {
+        left: -147px;
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .sliderWrap {
+    .slider {
+      .sliderTrack {
+        left: -99px;
+        width: 195px;
+      }
+    }
+  }
+}
