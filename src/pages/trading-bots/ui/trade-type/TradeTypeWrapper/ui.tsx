@@ -21,12 +21,14 @@ export const TradeTypeWrapper = ({ title, profit, minInvestment, risk, selected 
       <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
         <b className={classes.subTitle}>Profit:</b> up to {profit}% per day
       </Text>
-      <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
-        <b className={classes.subTitle}>Min. investment:</b> {minInvestment}$
-      </Text>
-      <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
-        <b className={classes.subTitle}>Risk:</b> {risk}%
-      </Text>
+      <div className={classes.tradeDescription}>
+        <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
+          <b className={classes.subTitle}>Min. investment:</b> {minInvestment}$
+        </Text>
+        <Text className={clsx(classes.tradeInfoText, commonStyles.userSelectForbidden)}>
+          <b className={classes.subTitle}>Risk:</b> {risk}%
+        </Text>
+      </div>
     </Stack>
   );
 };

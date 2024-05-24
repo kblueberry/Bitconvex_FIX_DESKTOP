@@ -22,9 +22,21 @@
   }
 }
 
-@media screen and (max-width: 1260px) {
+@media screen and (min-width: 1201px) {
+  .botsWrapper {
+    gap: 10px;
+    height: 100%;
+
+    .bot {
+      flex-basis: 24%;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .botsWrapper {
     gap: 12px;
+    height: 100%;
 
     .bot {
       flex-basis: 49%;
