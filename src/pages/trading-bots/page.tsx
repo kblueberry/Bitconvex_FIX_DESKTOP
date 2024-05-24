@@ -39,13 +39,13 @@ export function Page() {
         className={classes.columnLightThree}
       />
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/trading-bots/shape.png`} alt="column" className={classes.lightColumn} />
-      <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/trading-bots/cube_2.png`} alt="cube-2" className={classes.cubeTwo} />
+      {/* <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/trading-bots/cube_2.png`} alt="cube-2" className={classes.cubeTwo} />
       <Image
         draggable={false}
         src={`${import.meta.env.BASE_URL}assets/light/trading-bots/light_cube.png`}
         alt="light-cube-2"
         className={classes.lightCubeTwo}
-      />
+      /> */}
 
       <Header />
       <Container className="tradeBotsContainer">

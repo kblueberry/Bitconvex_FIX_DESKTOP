@@ -23,21 +23,6 @@
   top: 27%;
 }
 
-.cube-two {
-  width: 6%;
-  left: 0;
-  position: absolute;
-  top: 68%;
-}
-
-.light-cube-two {
-  position: absolute;
-  left: -3%;
-  top: 53%;
-  z-index: -1;
-  width: 30%;
-}
-
 .column-light-three {
   position: absolute;
   top: 20%;
