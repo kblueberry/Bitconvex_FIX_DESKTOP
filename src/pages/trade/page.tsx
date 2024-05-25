@@ -1,8 +1,10 @@
 import { Image } from "@mantine/core";
+import clsx from "clsx";
 import "react-circular-progressbar/dist/styles.css";
 
 import { Container, Footer, Header, Wrapper } from "@/shared/ui";
 
+import containerClasses from "../../shared/ui/container/styles.module.css";
 import classes from "./styles.module.css";
 import { TradeContent } from "./ui";
 
@@ -15,7 +17,7 @@ export function Page() {
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/my-profile/1.png`} alt="light-3" className={classes.lightFour} />
 
       <Header className="headerTradePage" />
-      <Container className="tradeContainer">
+      <Container className={clsx("tradeContainer", containerClasses.highOverlayPriority)}>
         <TradeContent />
       </Container>
       <Footer width={1460} />
