@@ -9,6 +9,10 @@
     padding: 0;
     max-width: calc(1450px + 1rem) !important;
   }
+
+  &.highOverlayPriority {
+    z-index: 2;
+  }
 }
 
 @media screen and (max-width: 1420em) {

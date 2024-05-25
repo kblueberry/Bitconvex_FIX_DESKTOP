@@ -1,4 +1,4 @@
-import { Box, Stack, Text, Title, rem } from "@mantine/core";
+import { Box, Text, Title } from "@mantine/core";
 import clsx from "clsx";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ export const BotInfo = ({ title, description, benefit, selected }: BotProps) => 
   };
 
   return (
-    <Stack gap={rem("16px")} className={clsx(classes.botWrapper, selected ? classes.active : classes.inactive)} onClick={selectBot}>
+    <div className={clsx(classes.botWrapper, selected ? classes.active : classes.inactive)} onClick={selectBot}>
       <Title
         fz={{ 0: 22, md: 24 }}
         order={4}
@@ -30,6 +30,6 @@ export const BotInfo = ({ title, description, benefit, selected }: BotProps) => 
       <Box className={classes.botBenefitContainer}>
         <Text className={clsx(commonClasses.userSelectForbidden, classes.botInfoText)}>Profit for last month amounted to {benefit}</Text>
       </Box>
-    </Stack>
+    </div>
   );
 };
