@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
 import { Container } from "../Container/Container";
-import classes from "../OrderBook/OrderBook.module.css";
+import classes from "./styles.module.css";
 
 export const ButtonTabs = ({
   categories,
