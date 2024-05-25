@@ -7,6 +7,7 @@ import { ButtonTabs } from "./components/ButtonTabs/ui";
 import { MarketStats } from "./components/MarketStats/MarketStats";
 import { MarketTrades } from "./components/MarketTrades/MarketTrades";
 import { OrderBook } from "./components/OrderBook/OrderBook";
+import { OrderBookMobile } from "./components/OrderBook/OrderBookMobile";
 import { Payment } from "./components/Payment/Payment";
 import { TradeActions } from "./components/TradeActions/ui";
 import { TradeChart } from "./components/TradeChart/TradeChart";
@@ -29,7 +30,7 @@ export const TradeContent = () => {
               <OrderBook />
             </>
           )}
-          {/* {activeCategory === "Trade" && (
+          {activeCategory === "Trade" && (
             <>
               <div className={classes.tradeTabContainer}>
                 <Payment />
@@ -37,7 +38,7 @@ export const TradeContent = () => {
               </div>
               <TradeHistory />
             </>
-          )} */}
+          )}
           {activeCategory === "Chart" && <TradeActions />}
         </Group>
       ) : (
