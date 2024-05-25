@@ -1,4 +1,4 @@
-import { orderBackgroundStyles } from "@/helpers/orderBackgroundStyles";
+import { priceFirstOrderBackgroundStyles, qtyFirstOrderBackgroundStyles } from "@/helpers/orderBackgroundStyles";
 import { Table } from "@mantine/core";
 import clsx from "clsx";
 
@@ -18,7 +18,7 @@ export const Orders = ({ rows, isPositive, cellsOrderChanged, className = "" }: 
       {rows.map((row) => (
         <Table.Tr
           key={row.id}
-          style={() => orderBackgroundStyles(row, isPositive)}
+          style={() => (!cellsOrderChanged ? priceFirstOrderBackgroundStyles(row, isPositive) : qtyFirstOrderBackgroundStyles(row, isPositive))}
           className={clsx(cellsOrderChanged ? classes.stocksRowReversed : classes.stocksRow, className)}
         >
           {row.cells.map((td) => (

@@ -36,7 +36,7 @@ export const StocksPriceFirst = ({ header, rows, isPositive, cellsOrderChanged }
           ))}
         </Table.Tr>
       </Table.Thead>
-      <Orders {...{ rows, isPositive, cellsOrderChanged }} rows={stockRows} className={!cellsOrderChanged ? classes.tradeOrdersAsksTable : ""} />
+      <Orders {...{ rows, isPositive, cellsOrderChanged }} rows={stockRows} />
     </Table>
   );
 };
