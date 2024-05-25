@@ -22,7 +22,7 @@ export const MarketStats = () => {
       <Container className={classes.container} padding={48}>
         <Group h={"100%"} align="center">
           <div style={{ flex: 1 }}>
-            <Stack gap={'clamp(24px, 2vw, 2rem)'}>
+            <Stack gap={"clamp(24px, 2vw, 2rem)"}>
               <Group className={classes.headeContainer}>
                 <Group align="center">
                   <Group gap={8} align="center">

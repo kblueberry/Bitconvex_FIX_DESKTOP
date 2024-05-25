@@ -1,6 +1,10 @@
 .chartContainer {
   height: 610px;
 }
+.tradeChartWrapper {
+  flex-wrap: nowrap;
+  padding-bottom: 40px;
+}
 .tradeChartTitle {
   color: white;
   font-size: 32px;
@@ -44,5 +48,15 @@
   .button-flex [aria-haspopup="listbox"] {
     height: 2rem;
     padding: 0 1rem !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tradeChartTitle {
+    font-size: 21px;
+  }
+
+  .chartContainer {
+    height: 541px;
   }
 }
