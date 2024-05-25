@@ -1,11 +1,7 @@
 .bot-wrapper {
   border: 3px dashed;
   border-radius: rem(3);
-  padding: 24px 19px;
-
-  &:last-child {
-    padding: 16px;
-  }
+  padding: rem(16px);
 
   &.inactive {
     border-color: rgb(255 255 255 / 12%);
@@ -30,11 +26,10 @@
 }
 
 .botInfoText {
-  font-size: 15px;
+  font-size: rem(15);
   line-height: 19px;
   font-weight: var(--font-weight-regular);
   color: var(--color-white);
-  text-align: start;
 
   &.scalpingBotInfo {
     line-height: 17.2px;
@@ -57,6 +52,12 @@
       width: 150px;
     }
   }
+
+  /* .botInfoText {
+    &.scalpingBotInfo {
+      font-size: 14px;
+    }
+  } */
 }
 
 @media screen and (max-width: 45em) {

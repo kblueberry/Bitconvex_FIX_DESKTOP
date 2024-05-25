@@ -12,6 +12,7 @@
   align-items: center;
   gap: 16px;
   overflow-x: auto;
+  height: 100%;
 
   .bot {
     display: flex;
@@ -19,24 +20,20 @@
     align-items: flex-start;
     justify-items: flex-start;
     flex-basis: 24%;
+    height: 100%;
+    flex: 1;
   }
 }
 
 @media screen and (min-width: 1201px) {
   .botsWrapper {
     gap: 10px;
-    height: 100%;
-
-    .bot {
-      flex-basis: 24%;
-    }
   }
 }
 
 @media screen and (max-width: 1200px) {
   .botsWrapper {
     gap: 12px;
-    height: 100%;
 
     .bot {
       flex-basis: 49%;
