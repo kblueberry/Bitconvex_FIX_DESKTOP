@@ -1,15 +1,6 @@
 .chartContainer {
   height: 610px;
 }
-.tradeChartWrapper {
-  flex-wrap: nowrap;
-  padding-bottom: 40px;
-}
-.tradeChartTitle {
-  color: white;
-  font-size: 32px;
-  font-weight: 700;
-}
 
 .periodButton {
   padding: 7px 15px;
@@ -34,9 +25,6 @@
   .chartContainer {
     padding: 2rem 1.5rem !important;
   }
-  .tradeChartTitle {
-    font-size: 24px !important;
-  }
   .button-flex {
     grid-gap: 1rem;
     margin-bottom: 0 !important;
@@ -52,10 +40,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .tradeChartTitle {
-    font-size: 21px;
-  }
-
   .chartContainer {
     height: 541px;
   }
