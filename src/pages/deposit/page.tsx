@@ -11,6 +11,14 @@ import classes from "./styles.module.css";
 export function Page() {
   const [selectedDeposit, setSelectedDeposit] = useState(1);
 
+  const goToQR = () => {
+    const depositQRSection = document.getElementById("depositQR");
+
+    if (!!depositQRSection) {
+      depositQRSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+  };
+
   return (
     <Wrapper>
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/main/1.png`} alt="main-light-1" className={classes.lightOne} />
@@ -22,7 +30,14 @@ export function Page() {
       <Container>
         <Sidebar>
           <Flex className={classes.wrapper} gap={rem(32)}>
-            <DepositsBox height={799} coin={selectedDeposit} setCoin={setSelectedDeposit} />
+            <DepositsBox
+              height={799}
+              coin={selectedDeposit}
+              setCoin={(selected) => {
+                setSelectedDeposit(selected);
+                goToQR();
+              }}
+            />
             <DepositsAddress key={selectedDeposit} />
           </Flex>
         </Sidebar>

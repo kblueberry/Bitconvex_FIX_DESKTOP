@@ -1,4 +1,4 @@
-import { Button, Stack, rem } from "@mantine/core";
+import { Button, Image, Stack, rem } from "@mantine/core";
 
 import { Container, StartTradingIcon } from "@/shared/ui";
 
@@ -18,6 +18,13 @@ export const CalculateProfit = () => {
           </Button>
         </Stack>
       </Container>
+      <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/trading-bots/cube_2.png`} alt="cube-2" className={classes.cubeTwo} />
+      <Image
+        draggable={false}
+        src={`${import.meta.env.BASE_URL}assets/light/trading-bots/light_cube.png`}
+        alt="light-cube-2"
+        className={classes.lightCubeTwo}
+      />
     </Stack>
   );
 };

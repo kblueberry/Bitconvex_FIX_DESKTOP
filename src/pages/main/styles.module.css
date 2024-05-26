@@ -56,7 +56,7 @@
 
 .light-eight {
   top: 50%;
-  left: 0;
+  left: -2%;
   width: auto;
   position: absolute;
   transform: translate(0, -50%);
@@ -71,6 +71,7 @@
 
 .crypto-text-container {
   display: grid;
+  position: relative;
 }
 
 .trading-banner-inner-wrapper {
@@ -158,5 +159,26 @@
   .btn svg {
     width: 22px;
     height: 22px;
+  }
+  .light-eight {
+    top: -22em;
+    left: 33%;
+    width: 70%;
+    transform: rotate(-180deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .light-eight {
+    top: 7%;
+    left: 33%;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .light-eight {
+    top: 17em;
+    left: 34%;
   }
 }

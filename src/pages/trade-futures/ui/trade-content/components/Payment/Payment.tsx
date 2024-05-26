@@ -1,13 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import { useResize } from "@/hooks/useResize";
 import { Button, Checkbox, Divider, Group, Stack, Text, TextInput } from "@mantine/core";
 import clsx from "clsx";
 import { useState } from "react";
 
 import { BitcoinIcon } from "@/shared/ui";
+import { TradeChartTitle } from "@/shared/ui/TradeChartTitle";
+import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { USDIcon } from "@/shared/ui/icon/USDIcon";
 import { WalletIcon } from "@/shared/ui/icon/WalletIcon";
 
-import { Container } from "../Container/Container";
 import classes from "./Payment.module.css";
 import { AdjustLeverage } from "./components/AdjustLeverage/AdjustLeverage";
 import { MarketSwitch } from "./components/MarketSwitch/MarketSwitch";
@@ -16,9 +18,12 @@ export const Payment = () => {
   const [activeSwitch, setActiveSwitch] = useState<1 | 2>(1);
   const [tpSiChecked, setTpSiChecked] = useState<boolean>(true);
   const [activeCategory, setActiveCategory] = useState<"Cross" | "Isolated">("Cross");
+  const { isAdaptive: md } = useResize(1200);
+
   return (
-    <Stack w={345} h="fit-content">
+    <Stack h="fit-content" className={classes.payment}>
       <Container>
+        {md && <TradeChartTitle className="withBottomIndent" />}
         <Stack gap={32}>
           <Stack gap={16}>
             <Group>

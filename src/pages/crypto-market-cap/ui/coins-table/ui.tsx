@@ -1,246 +1,21 @@
+import { trimLongName } from "@/helpers/trimLongName";
+import { useResize } from "@/hooks/useResize";
 import { Group, Pill, Table, Text, Title, rem } from "@mantine/core";
 import clsx from "clsx";
-import React, { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { P, match } from "ts-pattern";
 
 import { randomChartData } from "@/shared/lib/random-chart-data";
-import {
-  AnchorProtocolIcon,
-  BinanceCoinIcon,
-  BitcoinIcon,
-  CardanoIcon,
-  ChainlinkIcon,
-  CosmosIcon,
-  DogecoinIcon,
-  EthereumIcon,
-  MarketSortIcon,
-  PolkadotIcon,
-  RateChart,
-  RateIcon,
-  RateType,
-  StellarIcon,
-  SuperFarmIcon,
-  TetherIcon,
-  USDCoinIcon,
-  UniswapIcon,
-  XRPIcon,
-} from "@/shared/ui";
+import { SortingDirection, SortingLabel } from "@/shared/types/CoinsTable";
+import { MarketSortIcon, RateChart, RateIcon, RateType } from "@/shared/ui";
 
+import { COINS, HEADERS } from "./cryptoMarketTableData";
 import classes from "./styles.module.css";
-
-interface Coin {
-  icon: React.ReactNode;
-  name: string;
-  price: number;
-  shortName: string;
-  change: number;
-  dayHighPrice: number;
-  dayLowPrice: number;
-  marketCap: string;
-}
-
-interface Header {
-  label: string;
-  sortable: boolean;
-  className?: string;
-}
-
-type SortingLabel = "#" | "Coin Name" | "Coin Price" | "Change" | "24h High Price" | "24h Low Price" | "Market Cap";
-type SortingDirection = "ASC" | "DESC";
-
-const COINS: Coin[] = [
-  {
-    icon: <BitcoinIcon />,
-    name: "Bitcoin",
-    price: 43975.72,
-    shortName: "BTC",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <EthereumIcon />,
-    name: "Ethereum",
-    price: 43975.72,
-    shortName: "ETH",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <SuperFarmIcon />,
-    name: "SuperFarm",
-    price: 43975.72,
-    shortName: "SUPER",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <TetherIcon />,
-    name: "Tether",
-    price: 43975.72,
-    shortName: "USDT",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <BinanceCoinIcon />,
-    name: "Binance Coin",
-    price: 43975.72,
-    shortName: "BNB",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <CardanoIcon />,
-    name: "Cardano",
-    price: 43975.72,
-    shortName: "ADA",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <XRPIcon />,
-    name: "XRP",
-    price: 43975.72,
-    shortName: "XRP",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <USDCoinIcon />,
-    name: "USD Coin",
-    price: 43975.72,
-    shortName: "USDC",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <DogecoinIcon />,
-    name: "Dogecoin",
-    price: 43975.72,
-    shortName: "DOGE",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <PolkadotIcon />,
-    name: "Polkadot",
-    price: 43975.72,
-    shortName: "DOT",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <UniswapIcon />,
-    name: "Uniswap",
-    price: 43975.72,
-    shortName: "UNI",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <StellarIcon />,
-    name: "Stellar",
-    price: 43975.72,
-    shortName: "XLM",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <AnchorProtocolIcon />,
-    name: "Anchor Protocol",
-    price: 43975.72,
-    shortName: "ANC",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <ChainlinkIcon />,
-    name: "Chainlink",
-    price: 43975.72,
-    shortName: "LINK",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-  {
-    icon: <CosmosIcon />,
-    name: "Cosmos",
-    price: 43975.72,
-    shortName: "ATOM",
-    change: +37.55,
-    dayHighPrice: 43975.72,
-    dayLowPrice: 28975.72,
-    marketCap: "427.81M",
-  },
-];
-
-const HEADERS: Header[] = [
-  {
-    label: "#",
-    sortable: true,
-  },
-  {
-    label: "Coin Name",
-    sortable: true,
-    className: classes.coinTh,
-  },
-  {
-    label: "Coin Price",
-    sortable: true,
-  },
-  {
-    label: "Change",
-    sortable: true,
-  },
-  {
-    label: "24h High Price",
-    sortable: true,
-  },
-  {
-    label: "24h Low Price",
-    sortable: true,
-  },
-  {
-    label: "Market Cap",
-    sortable: true,
-  },
-  {
-    label: "Chart",
-    sortable: false,
-    className: classes.chartTh,
-  },
-];
 
 export const CoinsTable = () => {
   const [sortingLabel, setSortingLabel] = useState<SortingLabel>("#");
   const [sortingDirection, setSortingDirection] = useState<SortingDirection>("ASC");
+  const { isAdaptive: md } = useResize(1200);
 
   const onTableHeadSortLabelClick = useCallback(
     (label: SortingLabel) => {
@@ -288,6 +63,9 @@ export const CoinsTable = () => {
           () => "negative" as RateType,
         )
         .otherwise(() => "zero" as RateType);
+
+      const adaptiveFullCoinName = trimLongName(coin.name, md);
+
       return (
         <Table.Tr key={coin.name}>
           <Table.Td w={70}>
@@ -300,8 +78,8 @@ export const CoinsTable = () => {
           <Table.Td className={classes.tbodyTdWithIcon}>
             <Group gap={rem(8)}>
               {coin.icon}
-              <Title c="white" order={4} fz={20}>
-                {coin.name}
+              <Title c="white" order={4} fz={20} className={classes.coinFullName}>
+                {adaptiveFullCoinName}
               </Title>
               <Pill classNames={{ root: classes.coinShortName, label: classes.coinShortNameLabel }}>{coin.shortName}</Pill>
             </Group>
@@ -342,7 +120,7 @@ export const CoinsTable = () => {
         </Table.Tr>
       );
     });
-  }, []);
+  }, [md]);
 
   return (
     <Table classNames={{ tr: classes.tableTr, td: classes.tableTd }} verticalSpacing={rem("16px")} withRowBorders={true}>

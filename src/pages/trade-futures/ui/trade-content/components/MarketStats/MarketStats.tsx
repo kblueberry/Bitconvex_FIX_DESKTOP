@@ -2,6 +2,7 @@ import { Group, Progress, Stack, Text } from "@mantine/core";
 import { useState } from "react";
 
 import { BitcoinIcon } from "@/shared/ui";
+import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { ClockIcon } from "@/shared/ui/icon/ClockIcon";
 import { FavoriteStarFilledIcon } from "@/shared/ui/icon/FavoriteStarFilledIcon";
 import { InfoIcon } from "@/shared/ui/icon/InfoIcon";
@@ -9,7 +10,6 @@ import { MarketCapCurveIcon } from "@/shared/ui/icon/MarketCapCurveIcon";
 import { PositiveTrandIcon } from "@/shared/ui/icon/PositiveTrandIcon";
 import { SwapIcon } from "@/shared/ui/icon/SwapIcon";
 
-import { Container } from "../Container/Container";
 import { Select } from "../Select/Select";
 import classes from "./MarketStats.module.css";
 import "./Progress.css";
@@ -67,7 +67,7 @@ export const MarketStats = () => {
                   <Text className={classes.grayText}>High : $37,005.19</Text>
                 </Group>
               </Stack>
-              <Group gap={20} justify="space-between">
+              <Group className={classes.adaptive}>
                 <div className={classes.statBlockContainer}>
                   <Group gap={4} mb={16} className={classes.statBlockHeader}>
                     <MarketCapCurveIcon />

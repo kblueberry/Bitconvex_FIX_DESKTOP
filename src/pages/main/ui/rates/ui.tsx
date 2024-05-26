@@ -1,8 +1,10 @@
 import { Flex, Grid, Group, Image, Pill, Stack, Text, Title, rem } from "@mantine/core";
 import { motion } from "framer-motion";
 import { P, match } from "ts-pattern";
+
 import { randomChartData } from "@/shared/lib/random-chart-data";
 import { BNBIcon, BitcoinIcon, Container, EthereumIcon, RateChart, RateType, SolanaIcon } from "@/shared/ui";
+
 import classes from "./styles.module.css";
 
 interface RateProps {
@@ -67,7 +69,7 @@ const Rate = ({ name, icon, price, volume, percent, shortName }: RateProps) => {
           <div className={classes.iconWrap}>{icon}</div>
 
           <Stack align={"flex-start"} gap={rem("4px")}>
-            <Title fz={{0: 20, md: 24}} order={4} c="white">
+            <Title order={5} c="white">
               {name}
             </Title>
             <Pill className={classes.rateShortName} classNames={{ root: classes[type] }}>
@@ -78,12 +80,12 @@ const Rate = ({ name, icon, price, volume, percent, shortName }: RateProps) => {
           </Stack>
         </Group>
         <Group align="flex-end" justify="space-between">
-          <Title order={3} fz={{0: 24, md: 32}} fw={700} c="white">
+          <Title order={3} fz={{ 0: 24, md: 32 }} fw={700} c="white">
             ${price}
           </Title>
           <Group gap={rem("4px")}>
             {/* <RateIcon type={type}/> */}
-            <Title order={4} className={classes[`${type}Text`]} fz={{0: 18, md: 20}}>
+            <Title order={4} className={classes[`${type}Text`]} fz={{ 0: 18, md: 20 }}>
               {type !== "negative" ? "+" : ""}
               {percent.toString()}%
             </Title>
@@ -93,7 +95,7 @@ const Rate = ({ name, icon, price, volume, percent, shortName }: RateProps) => {
       <Stack className={classes.rateContent}>
         <RateChart type={type} data={randomChartData()} />
         <Flex align="center" justify="center" className={classes.rateButton}>
-          <Text c="white" fz={{0: 12, md: 14}} className={classes.rateButtonLabel}>
+          <Text c="white" fz={{ 0: 12, md: 14 }} className={classes.rateButtonLabel}>
             24h Volume: {volume}
           </Text>
         </Flex>
@@ -106,10 +108,10 @@ export const Rates = () => {
   return (
     <Stack className={classes.wrapper}>
       <Container>
-        <Grid gutter={{0: 16, md: 30}} align={"stretch"}>
+        <Grid gutter={{ 0: 16, md: 30 }} align={"stretch"}>
           {RATES.map((rate, i) => {
             return (
-              <Grid.Col key={rate.name} span={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3 }} className={classes.col}>
+              <Grid.Col key={rate.name} span={{ md: 3, lg: 3, xl: 3 }} className={classes.col}>
                 <motion.div
                   className={classes.rateWrap}
                   variants={{

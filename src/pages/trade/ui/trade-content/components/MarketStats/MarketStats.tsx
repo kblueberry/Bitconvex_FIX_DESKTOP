@@ -2,6 +2,7 @@ import { Group, Progress, Stack, Text } from "@mantine/core";
 import { useState } from "react";
 
 import { BitcoinIcon } from "@/shared/ui";
+import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { ClockIcon } from "@/shared/ui/icon/ClockIcon";
 import { FavoriteStarFilledIcon } from "@/shared/ui/icon/FavoriteStarFilledIcon";
 import { InfoIcon } from "@/shared/ui/icon/InfoIcon";
@@ -9,7 +10,6 @@ import { MarketCapCurveIcon } from "@/shared/ui/icon/MarketCapCurveIcon";
 import { PositiveTrandIcon } from "@/shared/ui/icon/PositiveTrandIcon";
 import { SwapIcon } from "@/shared/ui/icon/SwapIcon";
 
-import { Container } from "../Container/Container";
 import { Select } from "../Select/Select";
 import classes from "./MarketStats.module.css";
 import "./Progress.css";
@@ -22,7 +22,7 @@ export const MarketStats = () => {
       <Container className={classes.container} padding={48}>
         <Group h={"100%"} align="center">
           <div style={{ flex: 1 }}>
-            <Stack gap={'clamp(24px, 2vw, 2rem)'}>
+            <Stack gap={"clamp(24px, 2vw, 2rem)"}>
               <Group className={classes.headeContainer}>
                 <Group align="center">
                   <Group gap={8} align="center">
@@ -68,7 +68,7 @@ export const MarketStats = () => {
                 </Group>
               </Stack>
             </Stack>
-            <Group className={classes.adaptive} gap={20} justify="space-between" mt={64}>
+            <Group className={classes.adaptive} mt={64}>
               <div className={classes.statBlockContainer}>
                 <Group gap={4} mb={16} className={classes.statBlockHeader}>
                   <MarketCapCurveIcon />

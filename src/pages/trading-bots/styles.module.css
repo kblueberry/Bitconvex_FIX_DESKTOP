@@ -23,21 +23,6 @@
   top: 27%;
 }
 
-.cube-two {
-  width: 6%;
-  left: 0;
-  position: absolute;
-  top: 68%;
-}
-
-.light-cube-two {
-  position: absolute;
-  left: -3%;
-  top: 53%;
-  z-index: -1;
-  width: 30%;
-}
-
 .column-light-three {
   position: absolute;
   top: 20%;
@@ -64,6 +49,10 @@
 
 .user-select-forbidden {
   user-select: none;
+}
+
+.section {
+  gap: rem(64px);
 }
 
 @media screen and (max-width: 1400px) {
@@ -99,5 +88,9 @@
   .light-column {
     top: 46%;
     right: -4%;
+  }
+
+  .section {
+    gap: rem(32px);
   }
 }

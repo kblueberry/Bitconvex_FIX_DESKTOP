@@ -1,19 +1,19 @@
 import { Box, Button, Center, Combobox, Divider, Flex, Group, Image, List, Stack, Text, rem, useCombobox } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import clsx from "clsx";
 import { useState } from "react";
 
 import { ArrowIcon } from "@/pages/deposit/ui";
-import copyIcon from "../../../../../public/assets/copyIcon.svg";
 
+import copyIcon from "../../../../../public/assets/copyIcon.svg";
 import classes from "./styles.module.css";
-import { useMediaQuery } from "@mantine/hooks";
 
 export const DepositsAddress = () => {
-  const lg = useMediaQuery('(max-width: 1200px)')
+  const lg = useMediaQuery("(max-width: 1200px)");
   const [selectedItem, setSelectedItem] = useState<string | null>("BTC");
   const combobox = useCombobox();
   return (
-    <Stack gap={rem(32)} className={classes.wrapper}>
+    <Stack gap={rem(32)} className={classes.wrapper} id="depositQR">
       <Flex className={classes.header} justify={"space-between"}>
         <Text className={classes.title}>Deposit Address</Text>
         <Combobox

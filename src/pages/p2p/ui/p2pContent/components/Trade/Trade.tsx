@@ -1,6 +1,7 @@
+import { getSiblings } from "@/helpers/getResponsivePaginationSiblings";
 import { Box, Button, Group, Image, Pagination, Stack, Table, Text, rem } from "@mantine/core";
 import clsx from "clsx";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { NextIcon, PreviousIcon } from "@/shared/ui";
 
@@ -176,6 +177,20 @@ export const Trade = ({ tabName }: { tabName: string }) => {
     ],
     [tabName],
   );
+  const [siblings, setSiblings] = useState(getSiblings());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSiblings(getSiblings());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className={classes.tableContainer}>
       <Box className={classes.tableWrapper}>
@@ -229,6 +244,7 @@ export const Trade = ({ tabName }: { tabName: string }) => {
           classNames={{
             control: classes.control,
           }}
+          {...{ siblings }}
         >
           <Group gap={8} justify="center">
             <Pagination.Previous icon={NextIcon} />

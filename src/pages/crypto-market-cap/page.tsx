@@ -1,4 +1,7 @@
-import { Box, Button, Divider, Flex, Grid, Group, Image, Pagination, Stack, Text, TextInput, Title, UnstyledButton, rem } from "@mantine/core";
+import { getSiblings } from "@/helpers/getResponsivePaginationSiblings";
+import { useResize } from "@/hooks/useResize";
+import { Box, Divider, Grid, Group, Image, Pagination, Stack, Text, UnstyledButton, rem } from "@mantine/core";
+import { useEffect, useState } from "react";
 
 import {
   BitcoinIcon,
@@ -10,15 +13,33 @@ import {
   PolkadotIcon,
   PolygonIcon,
   PreviousIcon,
-  SearchIcon,
   ShowRowsCount,
   Wrapper,
 } from "@/shared/ui";
+import { TableSelectionHeader } from "@/shared/ui/tableSelectionHeader";
+import { TitleWithIcon } from "@/shared/ui/titleWithIcon/ui";
 
+import { SELECTORS } from "./MarketCapCoinsSelectors";
 import classes from "./styles.module.css";
 import { CoinsTable, TopRate } from "./ui";
+import { CoinsTableFixedColumn } from "./ui/coins-table/CoinsTableFixedColumn";
 
 export function Page() {
+  const [siblings, setSiblings] = useState(getSiblings());
+  const { isAdaptive: md } = useResize(1200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSiblings(getSiblings());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/crypto-market-cap/1.png`} alt="light-1" className={classes.lightOne} />
@@ -32,20 +53,12 @@ export function Page() {
         <Container>
           <Stack gap={rem("32px")}>
             <Stack gap={"clamp(1rem, 2vw,2rem)"}>
-              <Group className={classes.headerRow}>
-                <Flex justify="center" align="center" className={classes.iconWrapper}>
-                  <img draggable="false" src={`${import.meta.env.BASE_URL}assets/crypto-market-cap-icon.png`} alt="privacyNotice" />
-                </Flex>
-                <Title c="white" order={2} fz={{ 0: 28, md: 54 }}>
-                  Crypto Market Cap
-                </Title>
-              </Group>
+              <TitleWithIcon title="Crypto Market Cap" iconSrc={`${import.meta.env.BASE_URL}assets/crypto-market-cap-icon.png`} alt="privacyNotice" />
 
               <Text variant="text-2" className={classes.greyText}>
                 View the latest cryptocurrency prices for the hundreds of digital assets listed on BitConvex, alongside their daily price change and
-                market cap <br />
-                statistics. You can also select "Trade" for any cryptocurrency in the list to visit the relevant BitConvex market for buying and
-                selling each asset.
+                market cap statistics. You can also select "Trade" for any cryptocurrency in the list to visit the relevant BitConvex market for
+                buying and selling each asset.
               </Text>
             </Stack>
 
@@ -65,36 +78,7 @@ export function Page() {
             </Grid>
 
             <Stack gap={rem("32px")} className={classes.ratesTableWrapper}>
-              <Group justify={"space-between"} className={classes.tableHeader}>
-                <Group className={classes.buttonFlex}>
-                  <Button
-                    size="xl"
-                    variant="outline"
-                    className={classes.ratesButtonRootActive}
-                    classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}
-                  >
-                    Top Gainers
-                  </Button>
-                  <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                    Top Loser
-                  </Button>
-                  <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                    New in market
-                  </Button>
-                  <Button size="xl" variant="outline" classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
-                    Top in Volume
-                  </Button>
-                </Group>
-                <TextInput
-                  size="lg"
-                  classNames={{
-                    input: classes.searchInput,
-                    wrapper: classes.searchInputWrapper,
-                  }}
-                  leftSection={<SearchIcon />}
-                  placeholder="Search Crypto"
-                />
-              </Group>
+              <TableSelectionHeader selectors={SELECTORS} />
 
               <Stack gap={0}>
                 <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
@@ -122,7 +106,7 @@ export function Page() {
                   <ShowRowsCount />
                 </Group>
                 <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
-                <CoinsTable />
+                {md ? <CoinsTableFixedColumn /> : <CoinsTable />}
               </Stack>
 
               <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
@@ -131,7 +115,7 @@ export function Page() {
                 <Text variant="text-4" className={classes.greyText}>
                   1-20 of 9,383 assets
                 </Text>
-                <Pagination total={20} defaultValue={1}>
+                <Pagination total={20} defaultValue={1} {...{ siblings }}>
                   <Group gap={rem("8px")} justify="center">
                     <Pagination.Previous icon={PreviousIcon} />
                     <Pagination.Items />

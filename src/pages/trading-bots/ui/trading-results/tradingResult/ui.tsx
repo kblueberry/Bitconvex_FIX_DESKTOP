@@ -8,7 +8,7 @@ export const TradingResult = ({ name, icon, percent, shortName, instruments }: T
   return (
     <Stack gap={rem("16px")} className={classes.rateWrapper} justify={"space-between"}>
       <Stack gap={rem("32px")} className={classes.rateHeader}>
-        <Group gap={rem("12px")}>
+        <Group className={classes.rateCoinNameWrapper}>
           <div className={classes.iconWrap}>{icon}</div>
 
           <Stack align={"flex-start"} gap={rem("4px")}>

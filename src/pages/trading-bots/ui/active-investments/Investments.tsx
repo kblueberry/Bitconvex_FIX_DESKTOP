@@ -77,3 +77,39 @@ export const INVESTMENTS = [
     earned: 267,
   },
 ];
+
+export const INVESTMENTS_WITH_HEADINGS = [
+  {
+    heading: "Coin",
+    coins: [
+      { icon: <BitcoinIcon width={29} />, name: "BTC" },
+      { icon: <BitcoinIcon width={29} />, name: "BTC" },
+      { icon: <BitcoinIcon width={29} />, name: "BTC" },
+      { icon: <BitcoinIcon width={29} />, name: "BTC" },
+    ],
+  },
+  {
+    heading: "Qty",
+    coins: ["0.0004", "0.0004", "0.0004", "0.0004"],
+  },
+  {
+    heading: "Bot",
+    coins: ["Smart Money Trading Bot", "Smart Money Trading Bot", "Smart Money Trading Bot", "Smart Money Trading Bot"],
+  },
+  {
+    heading: "Trade Type",
+    coins: ["Lite", "Lite", "Lite", "Lite"],
+  },
+  {
+    heading: "Pl",
+    coins: ["200$", "300$", "234$", "355$"],
+  },
+  {
+    heading: "Earned",
+    coins: ["250$", "245$", "267$", "259$"],
+  },
+  {
+    heading: "Action",
+    coins: ["Stop", "Stop", "Stop", "Stop"],
+  },
+];

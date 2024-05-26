@@ -7,8 +7,8 @@
   padding: 48px 96px;
   gap: 8px;
   font-family: var(--font-sans);
-  font-size: 24px;
-  font-weight: 700;
+  font-size: var(--text-btn-fz);
+  font-weight: var(--text-btn-fw);
   line-height: 28.8px;
 }
 
@@ -16,14 +16,27 @@
   .home-button {
     padding: 0;
     margin: 0;
-  }
-  .home-button button {
-    padding: 0;
+
+    .banner-button {
+      padding: 0;
+      width: 345px;
+      height: 92px;
+      font-size: var(--text-3-fz);
+      line-height: 21.6px;
+    }
   }
 }
 
 @media only screen and (max-width: 48em) {
   .home-button {
     order: 2;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home-button {
+    .banner-button {
+      width: 305px;
+    }
   }
 }

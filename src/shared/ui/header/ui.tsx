@@ -102,6 +102,10 @@ const LINKS = [
     label: "Card",
   },
   {
+    to: routes.tradingBots,
+    label: "Trading Bots",
+  },
+  {
     to: "#1",
     label: "Support center",
     links: [
@@ -118,10 +122,6 @@ const LINKS = [
         ),
       },
     ],
-  },
-  {
-    to: routes.tradingBots,
-    label: "Trading Bots",
   },
 ];
 

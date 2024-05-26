@@ -1,6 +1,6 @@
+import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { Tabs } from "@/shared/ui/tabs";
 
-import { Container } from "../Container/Container";
 import classes from "./MarketTrades.module.css";
 import { MarketTradesTab } from "./tabs/MarketTradesTab/MarketTradesTab";
 

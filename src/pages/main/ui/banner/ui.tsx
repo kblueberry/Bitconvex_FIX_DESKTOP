@@ -19,7 +19,7 @@ export const Banner = () => {
           variants={{
             hidden: {
               opacity: 0,
-              x: "-100%",
+              x: -100,
             },
             visible: {
               opacity: 1,
@@ -41,7 +41,13 @@ export const Banner = () => {
             </Title>
             {md && (
               <Box className={classes.bannerRightSide}>
-                <img draggable="false" src={`${import.meta.env.BASE_URL}assets/main/banner/building.png`} alt="banner" width="100%" />
+                <img
+                  className={classes.bannerBuildingImage}
+                  draggable="false"
+                  src={`${import.meta.env.BASE_URL}assets/main/banner/building.png`}
+                  alt="banner"
+                  width="100%"
+                />
 
                 <motion.div
                   variants={{
@@ -133,7 +139,7 @@ export const Banner = () => {
               variants={{
                 hidden: {
                   opacity: 0,
-                  x: "-100%",
+                  x: -100,
                 },
                 visible: {
                   opacity: 1,
@@ -145,7 +151,7 @@ export const Banner = () => {
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.15 }}
             >
-              <Stack gap={"clamp(2rem, 4vw, 4rem)"}>
+              <Stack gap={"clamp(2rem, 4vw, 4rem)"} className={classes.bannerBottomContainer}>
                 <Text c="white" className={classes.bannerSubTitle}>
                   Join the Rapidly Expanding Global Crypto Exchange
                 </Text>

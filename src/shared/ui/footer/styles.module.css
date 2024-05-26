@@ -1,20 +1,18 @@
 @import url("@/app/styles/mixin.css");
 
 .wrapper {
+  position: relative;
   width: 100%;
   padding: var(--adaptive-section-py) rem(0);
   border-top: rem(1px) solid rgba(255, 255, 255, 0.12);
   background: var(--color-black);
-  z-index: 1;
+  z-index: 0;
 }
 .box {
   width: 1340px;
   padding: 0 10px;
   margin: 0 auto;
 }
-.left-side {
-}
-
 .footer-grid {
   flex: 1;
   max-width: 850px;
@@ -37,7 +35,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .footer-grid > div > div {
-    text-align: center
+    text-align: center;
   }
   .footer-grid > div {
     grid-gap: 12px 0;
@@ -48,7 +46,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1.75rem;
-    border-bottom: 1px solid rgba(255, 255, 255, .12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
   .box {
     grid-gap: 28px;

@@ -135,6 +135,20 @@
   pointer-events: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .light-six {
+    top: 13%;
+    left: -5%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .light-six {
+    top: -27%;
+    left: -5%;
+  }
+}
+
 @media (max-width: 550px) {
   .grid > div {
     display: grid;
@@ -150,5 +164,19 @@
   }
   .highest-apr-wrapper .grid > div > div {
     padding: 0;
+  }
+  .light-six {
+    top: -33%;
+    left: -7%;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 549px) {
+  .light-five {
+    top: -36%;
+  }
+
+  .highest-aprs-sub-title {
+    padding: 0 10px;
   }
 }

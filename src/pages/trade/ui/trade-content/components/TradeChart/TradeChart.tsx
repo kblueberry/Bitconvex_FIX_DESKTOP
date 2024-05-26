@@ -1,10 +1,11 @@
-import { Group, Text } from "@mantine/core";
+import { Group } from "@mantine/core";
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
-import { Coins } from "../Coins/Coins";
-import { Container } from "../Container/Container";
+import { TradeChartTitle } from "@/shared/ui/TradeChartTitle";
+import { Container } from "@/shared/ui/TradePageContainer/Container";
+
 import { Select } from "../Select/Select";
 import "./TradeChart.css";
 import classes from "./TradeChart.module.css";
@@ -313,10 +314,7 @@ export const TradeChart = () => {
 
   return (
     <Container padding={48} className={classes.chartContainer}>
-      <Group gap={8}>
-        <Text className={classes.tradeChartTitle}>Bitcoin/USDT Chart</Text>
-        <Coins />
-      </Group>
+      <TradeChartTitle />
       <Group className={classes.buttonFlex} mt={20} mb={32}>
         {period.map((item) => (
           <button

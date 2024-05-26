@@ -89,11 +89,7 @@
   .banner-right-side {
     max-width: 360px;
     margin: 0 auto;
-  }
-}
 
-@media screen and (max-width: 75em) {
-  .banner-right-side {
     .bitcoinOne {
       position: absolute;
       bottom: 97px;
@@ -134,19 +130,58 @@
       }
     }
   }
+
+  .banner-bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .banner-sub-title {
+      font-family: var(--text-font-family);
+      font-size: 21px;
+      font-weight: var(--font-weight-regular);
+      line-height: 25.58px;
+      text-align: center;
+    }
+  }
 }
 
 @media only screen and (max-width: 48em) {
   .banner-title {
     font-size: 3rem !important;
   }
+
   .banner-right-side {
-    max-width: 320px;
+    margin: 3em 0 1em;
+
+    .bitcoinThree {
+      left: 9em;
+      top: -26em;
+    }
+
+    .bitcoinFour {
+      bottom: 14em;
+      right: 0;
+    }
+  }
+
+  .banner-sub-title {
+    padding: 0 1.8em;
   }
 }
 
 @media only screen and (max-width: 30em) {
   .banner-title {
     font-size: 2rem !important;
+  }
+
+  .banner-right-side {
+    max-width: 320px;
+
+    .bitcoinThree {
+      left: 8em;
+      top: -24em;
+    }
   }
 }

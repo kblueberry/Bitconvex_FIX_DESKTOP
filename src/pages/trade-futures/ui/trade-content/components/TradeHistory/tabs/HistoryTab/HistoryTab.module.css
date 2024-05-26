@@ -63,3 +63,49 @@
     }
   }
 }
+
+@media (max-width: 1280px) {
+  .table-wrapper {
+    overflow-x: scroll;
+  }
+  .table-wrapper table {
+    min-width: 1000px;
+  }
+  .table tr td {
+    padding: 12px 0;
+  }
+  .table th {
+    padding: 12px 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .table {
+    th {
+      font-size: 17px;
+    }
+
+    tbody {
+      td {
+        font-size: 1.1em !important;
+        line-height: 16.8px;
+        padding-right: 3em;
+
+        &.green,
+        &.red {
+          font-size: 16px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding-right: 4.5em;
+        }
+      }
+
+      &.green,
+      &.red {
+        font-size: 16px;
+      }
+    }
+  }
+}

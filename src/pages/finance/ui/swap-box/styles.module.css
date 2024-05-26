@@ -138,8 +138,18 @@
   }
 }
 
+@media (max-width: 48em) {
+  .img {
+    left: 44%;
+  }
+}
+
 @media (max-width: 384px) {
   .swap-wrapper {
     padding: 1.5rem 1rem !important;
+  }
+
+  .img {
+    left: 42%;
   }
 }

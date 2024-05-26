@@ -233,6 +233,12 @@
   padding: rem(4px) rem(8px);
 }
 
+.statusIcon {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
 .greyText {
   color: var(--color-grey);
   font-family: "ProximaNova";
@@ -292,5 +298,11 @@
   }
   .pill {
     display: none;
+  }
+  .status {
+    display: none;
+  }
+  .statusIcon {
+    display: block;
   }
 }

@@ -1,4 +1,5 @@
 import { Flex, Image } from "@mantine/core";
+import { useState } from "react";
 import "react-circular-progressbar/dist/styles.css";
 
 import { DepositsBox } from "@/pages/deposit/ui";
@@ -9,6 +10,16 @@ import { Container, Footer, Header, Sidebar, Wrapper } from "@/shared/ui";
 import classes from "./styles.module.css";
 
 export function Page() {
+  const [selectedDeposit, setSelectedDeposit] = useState(1);
+
+  const goToWithdraw = () => {
+    const withdrawSection = document.getElementById("withdrawBitcoin");
+
+    if (!!withdrawSection) {
+      withdrawSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+  };
+
   return (
     <Wrapper>
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/main/1.png`} alt="main-light-1" className={classes.lightOne} />
@@ -20,7 +31,14 @@ export function Page() {
       <Container>
         <Sidebar>
           <Flex className={classes.boxWrapper}>
-            <DepositsBox height={804} />
+            <DepositsBox
+              height={804}
+              coin={selectedDeposit}
+              setCoin={(selected) => {
+                setSelectedDeposit(selected);
+                goToWithdraw();
+              }}
+            />
             <WithdrawBox />
           </Flex>
         </Sidebar>
