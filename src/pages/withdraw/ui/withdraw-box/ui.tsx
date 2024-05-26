@@ -22,7 +22,7 @@ export const WithdrawBox = () => {
     },
   });
   return (
-    <Stack gap={rem(32)} className={classes.wrapper}>
+    <Stack gap={rem(32)} className={classes.wrapper} id="withdrawBitcoin">
       <Flex justify={"space-between"}>
         <Text className={classes.title}>
           Withdraw

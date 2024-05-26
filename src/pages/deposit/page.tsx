@@ -13,7 +13,6 @@ export function Page() {
 
   const goToQR = () => {
     const depositQRSection = document.getElementById("depositQR");
-    console.log("is deposit section", depositQRSection);
 
     if (!!depositQRSection) {
       depositQRSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
