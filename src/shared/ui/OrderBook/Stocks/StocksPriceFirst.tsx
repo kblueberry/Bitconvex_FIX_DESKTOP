@@ -23,7 +23,7 @@ export const StocksPriceFirst = ({ header, rows, isPositive, cellsOrderChanged }
   }, [isPositive, rows]);
 
   return (
-    <Table>
+    <Table className={classes.leftPositionedTable}>
       <Table.Thead className={classes.tableTHead}>
         <Table.Tr>
           {header.map((head) => (

@@ -151,10 +151,48 @@
 @media screen and (max-width: 1200px) {
   table {
     min-width: 40% !important;
-  }
 
-  table.rightPositionedTable {
-    border-left: 5px solid #0c0d10;
+    &.leftPositionedTable {
+      .tableBody {
+        tr {
+          .tableCell {
+            &:first-child {
+              .tableCellValue {
+                color: rgb(14, 203, 123);
+              }
+            }
+
+            &:last-child {
+              .tableCellValue {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.rightPositionedTable {
+      border-left: 5px solid #0c0d10;
+
+      .tableBody {
+        tr {
+          .tableCell {
+            &:first-child {
+              .tableCellValue {
+                color: white;
+              }
+            }
+
+            &:last-child {
+              .tableCellValue {
+                color: rgb(228, 34, 34);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .ordersAll {
@@ -171,6 +209,11 @@
 
   .tradeOrderBookInfo {
     font-size: 24px;
+    color: rgba(14, 203, 123, 1);
+    padding: rem(16px) 7px;
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-bold);
+    line-height: 19.2px;
   }
 }
 
