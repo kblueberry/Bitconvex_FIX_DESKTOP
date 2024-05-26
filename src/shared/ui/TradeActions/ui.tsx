@@ -5,20 +5,26 @@ import { TradeIcon } from "@/shared/ui/icon/TradeIcon";
 
 import classes from "./TradeActions.module.css";
 
-export const TradeActions = () => {
+interface TradeActionProps {
+  actionsTitle: string;
+  buyLabel: string;
+  sellLabel: string;
+}
+
+export const TradeActions = ({ actionsTitle, buyLabel, sellLabel }: TradeActionProps) => {
   return (
     <div className={classes.tradeActionsView}>
       <div className={classes.tradeActionsFlexContainer}>
         <button className={classes.tradeIconButton}>
           <TradeIcon />
-          <p className={classes.tradeButtonLabel}>Futures</p>
+          <p className={classes.tradeButtonLabel}>{actionsTitle}</p>
         </button>
         <div className={classes.stockActions}>
           <Button className={clsx(classes.btn, classes.actionButton)} h={rem("54px")} variant="success">
-            Buy
+            {buyLabel}
           </Button>
           <Button className={clsx(classes.btn, classes.actionButton)} h={rem("54px")} variant="danger">
-            Sell
+            {sellLabel}
           </Button>
         </div>
       </div>

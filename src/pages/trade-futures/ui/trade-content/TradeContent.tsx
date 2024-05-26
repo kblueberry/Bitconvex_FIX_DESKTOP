@@ -3,6 +3,7 @@ import { Group, Stack } from "@mantine/core";
 import { useState } from "react";
 
 import { ButtonTabs } from "@/shared/ui/ButtonTabs/ui";
+import { TradeActions } from "@/shared/ui/TradeActions/ui";
 
 import { OrderBook } from "../../../../shared/ui/OrderBook/OrderBook";
 import { OrderBookMobile } from "../../../../shared/ui/OrderBook/OrderBookMobile";
@@ -10,7 +11,6 @@ import classes from "./TradeContent.module.css";
 import { MarketStats } from "./components/MarketStats/MarketStats";
 import { MarketTrades } from "./components/MarketTrades/MarketTrades";
 import { Payment } from "./components/Payment/Payment";
-import { TradeActions } from "./components/TradeActions/ui";
 import { TradeChart } from "./components/TradeChart/TradeChart";
 import { TradeHistory } from "./components/TradeHistory/TradeHistory";
 
@@ -40,7 +40,7 @@ export const TradeContent = () => {
               <TradeHistory />
             </>
           )}
-          {activeCategory === "Chart" && <TradeActions />}
+          {activeCategory === "Chart" && <TradeActions actionsTitle="Spot" buyLabel="Buy/Long" sellLabel="Sell/Long" />}
         </Group>
       ) : (
         <>
