@@ -68,7 +68,7 @@ export const MarketStats = () => {
                 </Group>
               </Stack>
             </Stack>
-            <Group className={classes.adaptive} gap={20} justify="space-between" mt={64}>
+            <Group className={classes.adaptive} mt={64}>
               <div className={classes.statBlockContainer}>
                 <Group gap={4} mb={16} className={classes.statBlockHeader}>
                   <MarketCapCurveIcon />
