@@ -3,7 +3,10 @@
 .tableContainer {
   display: flex;
   width: 100%;
-  overflow-x: auto;
+}
+
+.scrollableTable {
+  min-width: 100vw !important;
 }
 
 .fixedColumn {
@@ -22,6 +25,7 @@
 
 .table-td {
   height: 1px;
+  width: rem(200);
 
   & svg {
     width: rem(22);
@@ -39,10 +43,6 @@
   & tr {
     height: 19px;
     border-bottom: var(--_tr-border-bottom);
-
-    /*&[data-with-row-border] {
-        --_tr-border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      }*/
 
     & th {
       color: var(--color-grey);
@@ -142,4 +142,26 @@
 
 .chart-th {
   width: rem(100);
+}
+
+@media screen and (max-width: 1200px) {
+  .table-td {
+    width: 12%;
+
+    &.fixedColumn {
+      width: 34%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table-td {
+    &.fixedColumn {
+      width: 43%;
+
+      .coinFullName {
+        font-size: 16px !important;
+      }
+    }
+  }
 }

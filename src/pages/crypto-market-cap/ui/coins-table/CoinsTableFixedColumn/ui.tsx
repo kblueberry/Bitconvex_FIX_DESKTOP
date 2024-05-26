@@ -83,7 +83,7 @@ export const CoinsTableFixedColumn = () => {
               ${coin.marketCap}
             </Text>
           </Table.Td>
-          <Table.Td>
+          <Table.Td className={classes.coinChartCell}>
             <Group justify={"flex-end"} className={classes.coinChartWrapper}>
               <RateChart type={type} data={randomChartData()} />
             </Group>
@@ -95,7 +95,11 @@ export const CoinsTableFixedColumn = () => {
 
   return (
     <div className={classes.tableContainer}>
-      <Table classNames={{ tr: classes.tableTr, td: classes.tableTd }} verticalSpacing={rem("16px")} withRowBorders={true}>
+      <Table
+        classNames={{ table: classes.scrollableTable, tr: classes.tableTr, td: classes.tableTd }}
+        verticalSpacing={rem("16px")}
+        withRowBorders={true}
+      >
         <Table.Thead className={classes.tableHead}>
           <Table.Tr>
             {HEADERS_MOB.map((header, index) => {
