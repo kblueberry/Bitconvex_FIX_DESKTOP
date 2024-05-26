@@ -1,6 +1,7 @@
 import clsx from "clsx";
 
-import { headerMobile, rowsMobile } from "./OrderBook.constants";
+import { headerMobile, rowsMobile } from "@/shared/config/OrderBook.constants";
+
 import classes from "./OrderBook.module.css";
 import { OrderBookAll } from "./OrderBookAll";
 import { StocksBtcFirst } from "./Stocks/StocksBtcFirst";

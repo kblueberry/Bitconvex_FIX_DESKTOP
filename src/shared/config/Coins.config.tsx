@@ -1,6 +1,6 @@
 import { Tab } from "@/shared/ui/tabs/Tabs.types";
 
-import { CoinsTable } from "./components/CoinsTable/CoinsTable";
+import { CoinsTable } from "../ui/Coins/components/CoinsTable/CoinsTable";
 
 export const CoinsTabs: Tab[] = [
   {

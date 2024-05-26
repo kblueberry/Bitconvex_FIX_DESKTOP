@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
 import { Coins } from "@/shared/ui/Coins/Coins";
-import { Container } from "@/shared/ui/TradePageContainer/Container";
 
+import { Container } from "../Container/Container";
 import { Select } from "../Select/Select";
 import "./TradeChart.css";
 import classes from "./TradeChart.module.css";

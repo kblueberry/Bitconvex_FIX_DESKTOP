@@ -3,9 +3,9 @@ import { Divider, Group, Pagination, Stack, Text } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 import { NextIcon, PreviousIcon } from "@/shared/ui";
-import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { CalendarIcon } from "@/shared/ui/icon/CalendarIcon";
 
+import { Container } from "../Container/Container";
 import { Select } from "../Select/Select";
 import { Tabs } from "../tabs";
 import classes from "./TradeHistory.module.css";

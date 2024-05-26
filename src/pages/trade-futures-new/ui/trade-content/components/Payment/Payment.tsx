@@ -2,10 +2,10 @@ import { useResize } from "@/hooks/useResize";
 import { Group, Stack, Text } from "@mantine/core";
 
 import { Coins } from "@/shared/ui/Coins/Coins";
-import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { Tabs } from "@/shared/ui/tabs";
 
-import containerClasses from "../../../../../../shared/ui/TradePageContainer/Container.module.css";
+import { Container } from "../Container/Container";
+import containerClasses from "../Container/Container.module.css";
 import classes from "../TradeChart/TradeChart.module.css";
 import { BuyTab } from "./components/tabs/BuyTab/BuyTab";
 import { SellTab } from "./components/tabs/SellTab/SellTab";

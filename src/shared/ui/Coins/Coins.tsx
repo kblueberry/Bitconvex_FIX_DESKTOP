@@ -3,11 +3,11 @@ import { Button, CloseButton, Popover, Stack, TextInput } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import clsx from "clsx";
 
+import { CoinsTabs } from "@/shared/config/Coins.config";
 import { ArrowDown, SearchIcon } from "@/shared/ui";
 import { Tabs } from "@/shared/ui/tabs";
 
-import { Container } from "../Container/Container";
-import { CoinsTabs } from "./Coins.config";
+import { Container } from "../TradePageContainer/Container";
 import classes from "./Coins.module.css";
 
 export const Coins = () => {
