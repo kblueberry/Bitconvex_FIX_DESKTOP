@@ -1,4 +1,4 @@
-import { TPSLInput } from "@/pages/trade-futures-old/ui/trade-content/components/TradeHistory/tabs/OrdersTab/TPSLInput/TPSLInput";
+import { TPSLInput } from "./TPSLInput/TPSLInput";
 
 export const headerMobile = ["Pairs", "Direction", "Order Type", "Qty", "Action"];
 export const dataMobile = [
