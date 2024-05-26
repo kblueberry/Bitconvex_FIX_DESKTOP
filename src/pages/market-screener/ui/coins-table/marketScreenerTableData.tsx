@@ -261,3 +261,46 @@ export const HEADERS: CoinHeader[] = [
     sortable: true,
   },
 ];
+
+export const HEADERS_MOB: CoinHeader[] = [
+  {
+    label: "Coin Name",
+    sortable: true,
+  },
+  {
+    label: "Price",
+    sortable: true,
+  },
+  {
+    label: "CHG%",
+    sortable: true,
+  },
+  {
+    label: "CHG",
+    sortable: true,
+  },
+  {
+    label: "HIGH",
+    sortable: true,
+  },
+  {
+    label: "LOW",
+    sortable: true,
+  },
+  {
+    label: "VOL",
+    sortable: true,
+  },
+  {
+    label: "VOL 24 USD",
+    sortable: true,
+  },
+  {
+    label: "VOL 24 CHG%",
+    sortable: true,
+  },
+  {
+    label: "TR",
+    sortable: true,
+  },
+];
