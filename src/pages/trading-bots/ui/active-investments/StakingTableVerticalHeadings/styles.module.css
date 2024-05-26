@@ -179,6 +179,23 @@
   text-decoration: underline;
 }
 
+@media screen and (max-width: 600px) {
+  .search-input {
+    width: 98%;
+  }
+
+  .table-td h4 {
+    font-size: 12px !important;
+  }
+
+  .table-td {
+    &.tbodyTdWithIcon,
+    &.tableCellWithLeftIndent {
+      padding: 0.75rem 0.1rem 0.75rem 0.6rem !important;
+    }
+  }
+}
+
 @media screen and (max-width: 380px) {
   .search-input {
     width: 98%;

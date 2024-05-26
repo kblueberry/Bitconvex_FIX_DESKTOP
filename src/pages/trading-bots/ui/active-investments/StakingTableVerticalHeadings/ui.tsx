@@ -68,7 +68,7 @@ export const StakingTableVerticalHeadings = () => {
                         <Table.Td px={15} className={classes.tbodyTdWithIcon}>
                           <Group gap={rem(8)}>
                             {coin.icon}
-                            <Title c="white" order={4}>
+                            <Title c="white" order={4} className={classes.cellWithIconText}>
                               {coin.name}
                             </Title>
                           </Group>

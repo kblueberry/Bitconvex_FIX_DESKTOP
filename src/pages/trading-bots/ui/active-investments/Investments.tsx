@@ -102,11 +102,11 @@ export const INVESTMENTS_WITH_HEADINGS = [
   },
   {
     heading: "Pl",
-    coins: [200, 300, 234, 355],
+    coins: ["200$", "300$", "234$", "355$"],
   },
   {
     heading: "Earned",
-    coins: [250, 245, 267, 259],
+    coins: ["250$", "245$", "267$", "259$"],
   },
   {
     heading: "Action",
