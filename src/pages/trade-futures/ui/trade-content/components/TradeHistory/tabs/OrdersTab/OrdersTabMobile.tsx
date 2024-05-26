@@ -1,4 +1,4 @@
-import { CloseButton, Group, Table } from "@mantine/core";
+import { Button, Group, Table } from "@mantine/core";
 import clsx from "clsx";
 import { useState } from "react";
 
@@ -46,9 +46,9 @@ export const OrdersTabMobile = () => {
                 </Table.Td>
               ))}
               <Table.Td>
-                <button>
-                  <CloseButton className={classes.closeButton} />
-                </button>
+                <Button variant="radial-gradient" className={classes.openOrderBtn}>
+                  Open
+                </Button>
               </Table.Td>
             </Table.Tr>
           ))}

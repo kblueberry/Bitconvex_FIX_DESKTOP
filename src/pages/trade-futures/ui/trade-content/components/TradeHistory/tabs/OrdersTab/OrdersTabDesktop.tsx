@@ -44,7 +44,7 @@ export const OrdersTabDesktop = () => {
               </Table.Td>
             ))}
             <Table.Td>
-              <button>Cancel</button>
+              <button>Market</button>
             </Table.Td>
           </Table.Tr>
         ))}

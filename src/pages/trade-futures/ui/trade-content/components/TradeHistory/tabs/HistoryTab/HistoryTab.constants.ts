@@ -1,4 +1,4 @@
-export const headerMobile = ["Pairs", "Direction", "Filled Qty", "Filled Price"];
+export const headerMobile = ["Pairs", "Direction", "Qty", "Entry Price"];
 export const dataMobile = [
   [
     {
@@ -10,11 +10,11 @@ export const dataMobile = [
       value: "Sell",
     },
     {
-      key: "Filled Qty",
+      key: "Qty",
       value: "163.0368 BTC",
     },
     {
-      key: "Filled Price",
+      key: "Entry Price",
       value: "45550.27",
     },
   ],
@@ -28,11 +28,11 @@ export const dataMobile = [
       value: "Buy",
     },
     {
-      key: "Filled Qty",
+      key: "Qty",
       value: "163.0368 BTC",
     },
     {
-      key: "Filled Price",
+      key: "Entry Price",
       value: "45550.27",
     },
   ],
@@ -46,11 +46,11 @@ export const dataMobile = [
       value: "Sell",
     },
     {
-      key: "Filled Qty",
+      key: "Qty",
       value: "163.0368 BTC",
     },
     {
-      key: "Filled Price",
+      key: "Entry Price",
       value: "45550.27",
     },
   ],
@@ -64,11 +64,11 @@ export const dataMobile = [
       value: "Buy",
     },
     {
-      key: "Filled Qty",
+      key: "Qty",
       value: "163.0368 BTC",
     },
     {
-      key: "Filled Price",
+      key: "Entry Price",
       value: "45550.27",
     },
   ],
@@ -82,11 +82,11 @@ export const dataMobile = [
       value: "Sell",
     },
     {
-      key: "Filled Qty",
+      key: "Qty",
       value: "163.0368 BTC",
     },
     {
-      key: "Filled Price",
+      key: "Entry Price",
       value: "45550.27",
     },
   ],
@@ -100,11 +100,11 @@ export const dataMobile = [
       value: "Sell",
     },
     {
-      key: "Filled Qty",
+      key: "Qty",
       value: "163.0368 BTC",
     },
     {
-      key: "Filled Price",
+      key: "Entry Price",
       value: "45550.27",
     },
   ],
@@ -118,11 +118,11 @@ export const dataMobile = [
       value: "Sell",
     },
     {
-      key: "Filled Qty",
+      key: "Qty",
       value: "163.0368 BTC",
     },
     {
-      key: "Filled Price",
+      key: "Entry Price",
       value: "45550.27",
     },
   ],
@@ -136,16 +136,17 @@ export const dataMobile = [
       value: "Sell",
     },
     {
-      key: "Filled Qty",
+      key: "Qty",
       value: "163.0368 BTC",
     },
     {
-      key: "Filled Price",
+      key: "Entry Price",
       value: "45550.27",
     },
   ],
 ];
-export const header = ["Pairs", "Direction", "Filled Qty", "Filled Price", "Fee", "Order ID", "Filled Time"];
+
+export const header = ["Pairs", "Direction", "Qty", "Entry Price", "Exit Price", "P&L", "Fee", "Order ID", "Filled Time"];
 export const data = [
   [
     {
@@ -154,15 +155,23 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
+      value: "Short",
     },
     {
-      key: "Filled Qty",
-      value: "163.0368 BTC",
+      key: "Qty",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Filled Price",
-      value: "45550.27",
+      key: "Entry Price",
+      value: "46373.15",
+    },
+    {
+      key: "Exit Price",
+      value: "46379.15",
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
     {
       key: "Fee",
@@ -170,11 +179,11 @@ export const data = [
     },
     {
       key: "Order ID",
-      value: "29f83v9",
+      value: "66dfjs7",
     },
     {
-      key: "Filled Time",
-      value: "24.05.2024 13:25:10",
+      key: "P&L",
+      value: "24.05.2024 12:34",
     },
   ],
   [
@@ -184,15 +193,23 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Buy",
+      value: "Long",
     },
     {
-      key: "Filled Qty",
-      value: "163.0368 BTC",
+      key: "Qty",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Filled Price",
-      value: "45550.27",
+      key: "Entry Price",
+      value: "46373.15",
+    },
+    {
+      key: "Exit Price",
+      value: "46379.15",
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
     {
       key: "Fee",
@@ -200,11 +217,11 @@ export const data = [
     },
     {
       key: "Order ID",
-      value: "29f83v9",
+      value: "66dfjs7",
     },
     {
-      key: "Filled Time",
-      value: "24.05.2024 13:25:10",
+      key: "P&L",
+      value: "24.05.2024 12:34",
     },
   ],
   [
@@ -214,15 +231,23 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
+      value: "Short",
     },
     {
-      key: "Filled Qty",
-      value: "163.0368 BTC",
+      key: "Qty",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Filled Price",
-      value: "45550.27",
+      key: "Entry Price",
+      value: "46373.15",
+    },
+    {
+      key: "Exit Price",
+      value: "46379.15",
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
     {
       key: "Fee",
@@ -230,11 +255,11 @@ export const data = [
     },
     {
       key: "Order ID",
-      value: "29f83v9",
+      value: "66dfjs7",
     },
     {
-      key: "Filled Time",
-      value: "24.05.2024 13:25:10",
+      key: "P&L",
+      value: "24.05.2024 12:34",
     },
   ],
   [
@@ -244,15 +269,23 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Buy",
+      value: "Short",
     },
     {
-      key: "Filled Qty",
-      value: "163.0368 BTC",
+      key: "Qty",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Filled Price",
-      value: "45550.27",
+      key: "Entry Price",
+      value: "46373.15",
+    },
+    {
+      key: "Exit Price",
+      value: "46379.15",
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
     {
       key: "Fee",
@@ -260,11 +293,11 @@ export const data = [
     },
     {
       key: "Order ID",
-      value: "29f83v9",
+      value: "66dfjs7",
     },
     {
-      key: "Filled Time",
-      value: "24.05.2024 13:25:10",
+      key: "P&L",
+      value: "24.05.2024 12:34",
     },
   ],
   [
@@ -274,15 +307,23 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
+      value: "Short",
     },
     {
-      key: "Filled Qty",
-      value: "163.0368 BTC",
+      key: "Qty",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Filled Price",
-      value: "45550.27",
+      key: "Entry Price",
+      value: "46373.15",
+    },
+    {
+      key: "Exit Price",
+      value: "46379.15",
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
     {
       key: "Fee",
@@ -290,11 +331,11 @@ export const data = [
     },
     {
       key: "Order ID",
-      value: "29f83v9",
+      value: "66dfjs7",
     },
     {
-      key: "Filled Time",
-      value: "24.05.2024 13:25:10",
+      key: "P&L",
+      value: "24.05.2024 12:34",
     },
   ],
   [
@@ -304,15 +345,23 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
+      value: "Short",
     },
     {
-      key: "Filled Qty",
-      value: "163.0368 BTC",
+      key: "Qty",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Filled Price",
-      value: "45550.27",
+      key: "Entry Price",
+      value: "46373.15",
+    },
+    {
+      key: "Exit Price",
+      value: "46379.15",
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
     {
       key: "Fee",
@@ -320,11 +369,11 @@ export const data = [
     },
     {
       key: "Order ID",
-      value: "29f83v9",
+      value: "66dfjs7",
     },
     {
-      key: "Filled Time",
-      value: "24.05.2024 13:25:10",
+      key: "P&L",
+      value: "24.05.2024 12:34",
     },
   ],
   [
@@ -334,15 +383,23 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
+      value: "Short",
     },
     {
-      key: "Filled Qty",
-      value: "163.0368 BTC",
+      key: "Qty",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Filled Price",
-      value: "45550.27",
+      key: "Entry Price",
+      value: "46373.15",
+    },
+    {
+      key: "Exit Price",
+      value: "46379.15",
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
     {
       key: "Fee",
@@ -350,11 +407,11 @@ export const data = [
     },
     {
       key: "Order ID",
-      value: "29f83v9",
+      value: "66dfjs7",
     },
     {
-      key: "Filled Time",
-      value: "24.05.2024 13:25:10",
+      key: "P&L",
+      value: "24.05.2024 12:34",
     },
   ],
   [
@@ -364,15 +421,23 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
+      value: "Short",
     },
     {
-      key: "Filled Qty",
-      value: "163.0368 BTC",
+      key: "Qty",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Filled Price",
-      value: "45550.27",
+      key: "Entry Price",
+      value: "46373.15",
+    },
+    {
+      key: "Exit Price",
+      value: "46379.15",
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
     {
       key: "Fee",
@@ -380,11 +445,11 @@ export const data = [
     },
     {
       key: "Order ID",
-      value: "29f83v9",
+      value: "66dfjs7",
     },
     {
-      key: "Filled Time",
-      value: "24.05.2024 13:25:10",
+      key: "P&L",
+      value: "24.05.2024 12:34",
     },
   ],
 ];

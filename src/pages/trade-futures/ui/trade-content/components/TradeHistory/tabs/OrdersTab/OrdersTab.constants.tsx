@@ -1,3 +1,5 @@
+import { TPSLInput } from "@/pages/trade-futures-old/ui/trade-content/components/TradeHistory/tabs/OrdersTab/TPSLInput/TPSLInput";
+
 export const headerMobile = ["Pairs", "Direction", "Order Type", "Qty", "Action"];
 export const dataMobile = [
   [
@@ -145,7 +147,7 @@ export const dataMobile = [
     },
   ],
 ];
-export const header = ["Pairs", "Direction", "Order Type", "Qty", "Order Price", "Order ID", "Order Time", "Action"];
+export const header = ["Pairs", "Direction", "Qty", "Entry Price", "Mark Price", "Liq. Price", "TP/SL", "P&L", "Close By"];
 export const data = [
   [
     {
@@ -154,27 +156,31 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
-    },
-    {
-      key: "Order Type",
-      value: "Limit",
+      value: "Short",
     },
     {
       key: "Qty",
-      value: "1583.4739 BTC",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Order Price",
+      key: "Entry Price",
       value: "46373.15",
     },
     {
-      key: "Order ID",
-      value: "29f83v9",
+      key: "Mark Price",
+      value: "46379.15",
     },
     {
-      key: "Order Time",
-      value: "24.05.2024 13:25:10",
+      key: "Liq. Price",
+      value: "15463.734",
+    },
+    {
+      key: "TP/SL",
+      value: <TPSLInput />,
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
   ],
   [
@@ -184,27 +190,31 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Buy",
-    },
-    {
-      key: "Order Type",
-      value: "Limit",
+      value: "Long",
     },
     {
       key: "Qty",
-      value: "1583.4739 BTC",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Order Price",
+      key: "Entry Price",
       value: "46373.15",
     },
     {
-      key: "Order ID",
-      value: "29f83v9",
+      key: "Mark Price",
+      value: "46379.15",
     },
     {
-      key: "Order Time",
-      value: "24.05.2024 13:25:10",
+      key: "Liq. Price",
+      value: "15463.734",
+    },
+    {
+      key: "TP/SL",
+      value: <TPSLInput />,
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
   ],
   [
@@ -214,27 +224,31 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
-    },
-    {
-      key: "Order Type",
-      value: "Limit",
+      value: "Short",
     },
     {
       key: "Qty",
-      value: "1583.4739 BTC",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Order Price",
+      key: "Entry Price",
       value: "46373.15",
     },
     {
-      key: "Order ID",
-      value: "29f83v9",
+      key: "Mark Price",
+      value: "46379.15",
     },
     {
-      key: "Order Time",
-      value: "24.05.2024 13:25:10",
+      key: "Liq. Price",
+      value: "15463.734",
+    },
+    {
+      key: "TP/SL",
+      value: <TPSLInput />,
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
   ],
   [
@@ -244,27 +258,31 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
-    },
-    {
-      key: "Order Type",
-      value: "Limit",
+      value: "Short",
     },
     {
       key: "Qty",
-      value: "1583.4739 BTC",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Order Price",
+      key: "Entry Price",
       value: "46373.15",
     },
     {
-      key: "Order ID",
-      value: "29f83v9",
+      key: "Mark Price",
+      value: "46379.15",
     },
     {
-      key: "Order Time",
-      value: "24.05.2024 13:25:10",
+      key: "Liq. Price",
+      value: "15463.734",
+    },
+    {
+      key: "TP/SL",
+      value: <TPSLInput />,
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
   ],
   [
@@ -274,27 +292,31 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
-    },
-    {
-      key: "Order Type",
-      value: "Limit",
+      value: "Short",
     },
     {
       key: "Qty",
-      value: "1583.4739 BTC",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Order Price",
+      key: "Entry Price",
       value: "46373.15",
     },
     {
-      key: "Order ID",
-      value: "29f83v9",
+      key: "Mark Price",
+      value: "46379.15",
     },
     {
-      key: "Order Time",
-      value: "24.05.2024 13:25:10",
+      key: "Liq. Price",
+      value: "15463.734",
+    },
+    {
+      key: "TP/SL",
+      value: <TPSLInput />,
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
   ],
   [
@@ -304,27 +326,31 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
-    },
-    {
-      key: "Order Type",
-      value: "Limit",
+      value: "Short",
     },
     {
       key: "Qty",
-      value: "1583.4739 BTC",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Order Price",
+      key: "Entry Price",
       value: "46373.15",
     },
     {
-      key: "Order ID",
-      value: "29f83v9",
+      key: "Mark Price",
+      value: "46379.15",
     },
     {
-      key: "Order Time",
-      value: "24.05.2024 13:25:10",
+      key: "Liq. Price",
+      value: "15463.734",
+    },
+    {
+      key: "TP/SL",
+      value: <TPSLInput />,
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
   ],
   [
@@ -334,27 +360,31 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
-    },
-    {
-      key: "Order Type",
-      value: "Limit",
+      value: "Short",
     },
     {
       key: "Qty",
-      value: "1583.4739 BTC",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Order Price",
+      key: "Entry Price",
       value: "46373.15",
     },
     {
-      key: "Order ID",
-      value: "29f83v9",
+      key: "Mark Price",
+      value: "46379.15",
     },
     {
-      key: "Order Time",
-      value: "24.05.2024 13:25:10",
+      key: "Liq. Price",
+      value: "15463.734",
+    },
+    {
+      key: "TP/SL",
+      value: <TPSLInput />,
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
   ],
   [
@@ -364,27 +394,31 @@ export const data = [
     },
     {
       key: "Direction",
-      value: "Sell",
-    },
-    {
-      key: "Order Type",
-      value: "Limit",
+      value: "Short",
     },
     {
       key: "Qty",
-      value: "1583.4739 BTC",
+      value: "463799.4739 BTC",
     },
     {
-      key: "Order Price",
+      key: "Entry Price",
       value: "46373.15",
     },
     {
-      key: "Order ID",
-      value: "29f83v9",
+      key: "Mark Price",
+      value: "46379.15",
     },
     {
-      key: "Order Time",
-      value: "24.05.2024 13:25:10",
+      key: "Liq. Price",
+      value: "15463.734",
+    },
+    {
+      key: "TP/SL",
+      value: <TPSLInput />,
+    },
+    {
+      key: "P&L",
+      value: "5043.267",
     },
   ],
 ];
