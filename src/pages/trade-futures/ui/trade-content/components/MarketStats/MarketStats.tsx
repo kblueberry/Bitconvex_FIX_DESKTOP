@@ -19,10 +19,10 @@ export const MarketStats = () => {
 
   return (
     <div style={{ flex: 1 }}>
-      <Container className={classes.container} padding={48}>
+      <Container padding={48}>
         <Group h={"100%"} align="center">
           <div style={{ flex: 1 }}>
-            <Stack gap={"clamp(24px, 2vw, 2rem)"}>
+            <Stack gap={32}>
               <Group className={classes.headeContainer}>
                 <Group align="center">
                   <Group gap={8} align="center">
@@ -67,45 +67,45 @@ export const MarketStats = () => {
                   <Text className={classes.grayText}>High : $37,005.19</Text>
                 </Group>
               </Stack>
+              <Group className={classes.adaptive}>
+                <div className={classes.statBlockContainer}>
+                  <Group gap={4} mb={16} className={classes.statBlockHeader}>
+                    <MarketCapCurveIcon />
+                    <Text className={classes.grayText}>Market Cap</Text>
+                  </Group>
+                  <Text className={classes.statBlockText} mb={4}>
+                    $826,445,951,378
+                  </Text>
+                  <Group gap={4} className={classes.statBlockTrandWrapper}>
+                    <Text className={classes.trandText}>+2%</Text>
+                    <PositiveTrandIcon />
+                  </Group>
+                </div>
+                <div className={classes.statBlockContainer}>
+                  <Group gap={4} mb={16} className={classes.statBlockHeader}>
+                    <ClockIcon />
+                    <Text className={classes.grayText}>24 Volume</Text>
+                  </Group>
+                  <Text className={classes.statBlockText} mb={4}>
+                    $22,822,762,169
+                  </Text>
+                  <Group gap={4} className={classes.statBlockTrandWrapper}>
+                    <Text className={classes.trandText}>+2%</Text>
+                    <PositiveTrandIcon />
+                  </Group>
+                </div>
+                <div className={classes.statBlockContainer}>
+                  <Group gap={4} mb={16} className={classes.statBlockHeader}>
+                    <InfoIcon />
+                    <Text className={classes.grayText}>Circulating Supply</Text>
+                  </Group>
+                  <Text className={classes.statBlockText} mb={4}>
+                    18,958,437.00 BTC
+                  </Text>
+                  <Text className={classes.smallGrayText}>Max supply 21,000,000</Text>
+                </div>
+              </Group>
             </Stack>
-            <Group className={classes.adaptive} mt={64}>
-              <div className={classes.statBlockContainer}>
-                <Group gap={4} mb={16} className={classes.statBlockHeader}>
-                  <MarketCapCurveIcon />
-                  <Text className={classes.grayText}>Market Cap</Text>
-                </Group>
-                <Text className={classes.statBlockText} mb={4}>
-                  $826,445,951,378
-                </Text>
-                <Group gap={4} className={classes.statBlockTrandWrapper}>
-                  <Text className={classes.trandText}>+2%</Text>
-                  <PositiveTrandIcon />
-                </Group>
-              </div>
-              <div className={classes.statBlockContainer}>
-                <Group gap={4} mb={16} className={classes.statBlockHeader}>
-                  <ClockIcon />
-                  <Text className={classes.grayText}>24 Volume</Text>
-                </Group>
-                <Text className={classes.statBlockText} mb={4}>
-                  $22,822,762,169
-                </Text>
-                <Group gap={4} className={classes.statBlockTrandWrapper}>
-                  <Text className={classes.trandText}>+2%</Text>
-                  <PositiveTrandIcon />
-                </Group>
-              </div>
-              <div className={classes.statBlockContainer}>
-                <Group gap={4} mb={16} className={classes.statBlockHeader}>
-                  <InfoIcon />
-                  <Text className={classes.grayText}>Circulating Supply</Text>
-                </Group>
-                <Text className={classes.statBlockText} mb={4}>
-                  18,958,437.00 BTC
-                </Text>
-                <Text className={classes.smallGrayText}>Max supply 21,000,000</Text>
-              </div>
-            </Group>
           </div>
         </Group>
       </Container>
