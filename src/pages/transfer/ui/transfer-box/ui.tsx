@@ -5,11 +5,11 @@ import classes from "./styles.module.css";
 
 export const TransferBox = () => {
   return (
-    <Stack gap={rem(32)} className={classes.wrapper}>
+    <Stack gap={rem(32)} className={classes.wrapper} id="transferBox">
       <Text className={classes.title}>Transfer funds</Text>
 
       <Divider opacity={"0.12"} color={"white"} />
-      <Stack gap={rem('clamp(12px,2vw, 2rem)')}>
+      <Stack gap={rem("clamp(12px,2vw, 2rem)")}>
         <TextInput
           classNames={{
             input: classes.textInput,

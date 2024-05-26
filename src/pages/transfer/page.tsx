@@ -1,4 +1,5 @@
 import { Flex, Image, rem } from "@mantine/core";
+import { useState } from "react";
 import "react-circular-progressbar/dist/styles.css";
 
 import { DepositsBox } from "@/pages/deposit/ui";
@@ -9,6 +10,16 @@ import { Container, Footer, Header, Sidebar, Wrapper } from "@/shared/ui";
 import classes from "./styles.module.css";
 
 export function Page() {
+  const [selectedDeposit, setSelectedDeposit] = useState(1);
+
+  const goToTransfer = () => {
+    const transferBox = document.getElementById("transferBox");
+
+    if (!!transferBox) {
+      transferBox.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+  };
+
   return (
     <Wrapper>
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/main/1.png`} alt="main-light-1" className={classes.lightOne} />
@@ -20,7 +31,14 @@ export function Page() {
       <Container>
         <Sidebar>
           <Flex className={classes.flexContainer} gap={rem(32)}>
-            <DepositsBox height={694} />
+            <DepositsBox
+              height={694}
+              coin={selectedDeposit}
+              setCoin={(selected) => {
+                setSelectedDeposit(selected);
+                goToTransfer();
+              }}
+            />
             <TransferBox />
           </Flex>
         </Sidebar>
