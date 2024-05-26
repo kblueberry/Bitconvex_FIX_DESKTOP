@@ -156,6 +156,18 @@
       .tableBody {
         tr {
           .tableCell {
+            &.tableCellNegative:first-child {
+              .tableCellValue {
+                color: rgb(228, 34, 34) !important;
+              }
+            }
+
+            &.tableCellNegative:last-child {
+              .tableCellValue {
+                color: white !important;
+              }
+            }
+
             &:first-child {
               .tableCellValue {
                 color: rgb(14, 203, 123);

@@ -6,7 +6,7 @@ import classes from "./Container.module.css";
 export const Container = ({
   children,
   padding = 32,
-  className,
+  className = "",
   style = {},
 }: {
   children: ReactNode;

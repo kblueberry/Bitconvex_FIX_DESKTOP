@@ -20,10 +20,10 @@ export const Orders = ({ rows, isPositive, cellsOrderChanged, className = "" }: 
         <Table.Tr
           key={row.id}
           style={() => (!cellsOrderChanged ? priceFirstOrderBackgroundStyles(row, isPositive) : qtyFirstOrderBackgroundStyles(row, isPositive))}
-          className={clsx(cellsOrderChanged ? classes.stocksRowReversed : classes.stocksRow, className)}
+          className={clsx(cellsOrderChanged ? classes.stocksRowReversed : classes.stocksRow, classes[className])}
         >
           {row.cells.map((td) => (
-            <Table.Td key={td} className={classes.tableCell}>
+            <Table.Td key={td} className={clsx(classes.tableCell, !isPositive ? classes.tableCellNegative : "")}>
               <p className={classes.tableCellValue}>{td}</p>
             </Table.Td>
           ))}
