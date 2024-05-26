@@ -104,6 +104,7 @@ export const TransactionTable = () => {
     },
     [sortingDirection, sortingLabel],
   );
+
   const headers = useMemo(() => {
     return HEADERS.map((header) => {
       return (
@@ -172,6 +173,10 @@ export const TransactionTable = () => {
             <Text c="white" variant="text-3" span className={clsx(classes.status, classNamesByStatus[coin.Status])}>
               {coin.Status}
             </Text>
+            <Image
+              src={`${import.meta.env.BASE_URL}assets/statusIcons/Icon-${coin.Status.toLowerCase()}-status.svg`}
+              className={classes.statusIcon}
+            />
           </Table.Td>
         </Table.Tr>
       );
