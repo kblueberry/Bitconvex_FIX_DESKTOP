@@ -1,4 +1,4 @@
-import { Order, OrderRows } from "@/pages/trade/ui/trade-content/components/OrderBook/OrderBook.types";
+import { Order, OrderRows } from "@/shared/types/OrderBook.types";
 
 export const transformAsksAndBidsRows = (rows: OrderRows) => {
   return JSON.parse(JSON.stringify(rows)).map((row: Order) => {

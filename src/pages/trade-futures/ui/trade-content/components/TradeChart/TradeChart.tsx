@@ -3,7 +3,6 @@ import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
-import { Coins } from "@/shared/ui/Coins/Coins";
 import { TradeChartTitle } from "@/shared/ui/TradeChartTitle";
 import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { FlashMarketIcon } from "@/shared/ui/icon/FlashMarketIcon";

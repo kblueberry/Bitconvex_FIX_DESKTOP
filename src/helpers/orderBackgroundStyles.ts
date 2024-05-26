@@ -1,4 +1,4 @@
-import { Order } from "@/pages/trade/ui/trade-content/components/OrderBook/OrderBook.types";
+import { Order } from "@/shared/types/OrderBook.types";
 
 export const qtyFirstOrderBackgroundStyles = (row: Order, isPositive: boolean) => {
   return {

@@ -30,7 +30,7 @@ export const CoinsTableFixedColumn = () => {
   );
 
   const tableCoins = useMemo(() => {
-    return COINS.map((coin, index) => {
+    return COINS.map((coin) => {
       const type: RateType = match(coin.change)
         .with(
           P.when((value) => value > 0),

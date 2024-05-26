@@ -1,10 +1,10 @@
 import { transformAsksAndBidsRows } from "@/helpers/transformAsksAndBidsRows";
 import { Table } from "@mantine/core";
 
+import { OrderRows } from "@/shared/types/OrderBook.types";
 import { SortIcon } from "@/shared/ui/icon/SortIcon";
 
 import classes from "../OrderBook.module.css";
-import { OrderRows } from "../OrderBook.types";
 import { Orders } from "../Orders/Orders";
 
 interface TableProps {
