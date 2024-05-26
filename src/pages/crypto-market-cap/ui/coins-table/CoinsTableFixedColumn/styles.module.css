@@ -25,7 +25,6 @@
 
 .table-td {
   height: 1px;
-  width: rem(200);
 
   & svg {
     width: rem(22);
@@ -145,12 +144,19 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .table-td {
-    width: 12%;
+  .fixedColumn {
+    width: 34%;
+  }
 
-    &.fixedColumn {
-      width: 34%;
-    }
+  .table-td:not(.fixedColumn) {
+    width: 12%;
+    padding-left: rem(20px) !important;
+    padding-right: rem(20px) !important;
+  }
+
+  .table-head-th-sortable:not(.fixedColumn) {
+    width: 12%;
+    padding-left: rem(20px) !important;
   }
 }
 

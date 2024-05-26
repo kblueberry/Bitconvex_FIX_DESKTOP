@@ -60,7 +60,7 @@ export const CoinsTableFixedColumn = () => {
               ${coin.price}
             </Text>
           </Table.Td>
-          <Table.Td>
+          <Table.Td w={250}>
             <Group gap={rem(4)}>
               <RateIcon type={type} size={22} />
               <Text c="white" variant="text-4" span>
@@ -68,12 +68,12 @@ export const CoinsTableFixedColumn = () => {
               </Text>
             </Group>
           </Table.Td>
-          <Table.Td>
+          <Table.Td w={250}>
             <Text c="white" variant="text-4" span>
               ${coin.dayHighPrice}
             </Text>
           </Table.Td>
-          <Table.Td>
+          <Table.Td w={250}>
             <Text c="white" variant="text-4" span>
               ${coin.dayLowPrice}
             </Text>
