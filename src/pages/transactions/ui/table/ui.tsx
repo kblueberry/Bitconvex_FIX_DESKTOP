@@ -1,6 +1,7 @@
+import { getSiblings } from "@/helpers/getResponsivePaginationSiblings";
 import { Box, Combobox, Divider, Flex, Group, Image, Pagination, Stack, Table, Text, TextInput, rem, useCombobox } from "@mantine/core";
 import clsx from "clsx";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { DepositIcon, PromoIcon } from "@/pages/transactions/ui";
 
@@ -199,6 +200,20 @@ export const TransactionTable = () => {
     </Combobox.Option>
   ));
 
+  const [siblings, setSiblings] = useState(getSiblings());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSiblings(getSiblings());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Stack gap={rem(32)} className={classes.wrapper}>
       <Text className={classes.title}>Transaction history</Text>
@@ -261,7 +276,7 @@ export const TransactionTable = () => {
 
         <Group justify={"space-between"}>
           <Text className={classes.greyText}>1-6 of 300 transactions</Text>
-          <Pagination total={20} defaultValue={1}>
+          <Pagination total={20} defaultValue={1} {...{ siblings }}>
             <Group gap={rem("8px")} justify="center">
               <Pagination.Previous icon={PreviousIcon} />
               <Pagination.Items />
