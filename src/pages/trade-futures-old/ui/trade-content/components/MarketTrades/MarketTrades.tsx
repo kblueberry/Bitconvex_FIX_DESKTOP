@@ -1,13 +1,13 @@
-import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { Tabs } from "@/shared/ui/tabs";
 
+import { Container } from "../Container/Container";
 import classes from "./MarketTrades.module.css";
 import { MarketTradesTab } from "./tabs/MarketTradesTab/MarketTradesTab";
 
 export const MarketTrades = () => {
   return (
     <div className={classes.marketTradesContainer}>
-      <Container>
+      <Container className={classes.container}>
         <Tabs
           tabsControllsWidth={"fit-content"}
           tabControllPadding={"0 16px"}

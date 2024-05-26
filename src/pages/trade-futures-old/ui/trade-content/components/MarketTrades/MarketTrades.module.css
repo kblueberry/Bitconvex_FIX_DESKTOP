@@ -5,6 +5,8 @@
   overflow: hidden;
 }
 
-.marketTradesContainer > div {
-  padding: 2rem 1.5rem !important;
+@media (max-width: 1380px) {
+  .marketTradesContainer {
+    display: none;
+  }
 }

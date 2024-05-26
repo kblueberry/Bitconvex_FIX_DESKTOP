@@ -1,11 +1,12 @@
-import { Group, Text } from "@mantine/core";
+import { Group, Stack, Text } from "@mantine/core";
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
-import { Coins } from "@/shared/ui/Coins/Coins";
-import { Container } from "@/shared/ui/TradePageContainer/Container";
+import { FlashMarketIcon } from "@/shared/ui/icon/FlashMarketIcon";
 
+import { Coins } from "../Coins/Coins";
+import { Container } from "../Container/Container";
 import { Select } from "../Select/Select";
 import "./TradeChart.css";
 import classes from "./TradeChart.module.css";
@@ -265,7 +266,6 @@ const series = [
     ],
   },
 ];
-
 export const TradeChart = () => {
   const [activePeriod, setActivePeriod] = useState(1);
   const [minZoomIndex, setMinZoomIndex] = useState(0);
@@ -314,11 +314,25 @@ export const TradeChart = () => {
 
   return (
     <Container padding={48} className={classes.chartContainer}>
-      <Group gap={8}>
-        <Text className={classes.tradeChartTitle}>Bitcoin/USDT Chart</Text>
-        <Coins />
+      <Group justify="space-between">
+        <Group gap={8}>
+          <Text className={classes.tradeChartTitle}>Bitcoin/USDT Chart</Text>
+          <Coins />
+        </Group>
+        <Stack gap={4}>
+          <Text className={classes.subtitle}>Funding Rate / Countdown</Text>
+          <Group gap={2} ml={14}>
+            <FlashMarketIcon width={12} height={12} fill={"#625ff4"} />
+            <Text className={classes.subtitle} fw={700}>
+              <Text className={classes.subtitleMarked} component="span" fw={600}>
+                0.0100%
+              </Text>{" "}
+              / 03:40:34
+            </Text>
+          </Group>
+        </Stack>
       </Group>
-      <Group className={classes.buttonFlex} mt={20} mb={32}>
+      <Group mt={20} mb={32}>
         {period.map((item) => (
           <button
             key={item.value}
@@ -347,7 +361,6 @@ export const TradeChart = () => {
             },
             toolbar: {
               show: false,
-              offsetY: -10,
               autoSelected: "pan",
               tools: {
                 download: false,
