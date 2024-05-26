@@ -219,3 +219,36 @@ export const HEADERS: CoinHeader[] = [
     className: classes.chartTh,
   },
 ];
+
+export const HEADERS_MOB: CoinHeader[] = [
+  {
+    label: "Coin Name",
+    sortable: true,
+    className: classes.coinTh,
+  },
+  {
+    label: "Coin Price",
+    sortable: true,
+  },
+  {
+    label: "Change",
+    sortable: true,
+  },
+  {
+    label: "24h High Price",
+    sortable: true,
+  },
+  {
+    label: "24h Low Price",
+    sortable: true,
+  },
+  {
+    label: "Market Cap",
+    sortable: true,
+  },
+  {
+    label: "Chart",
+    sortable: false,
+    className: classes.chartTh,
+  },
+];

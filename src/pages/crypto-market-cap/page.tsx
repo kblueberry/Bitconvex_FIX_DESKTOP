@@ -1,4 +1,5 @@
 import { getSiblings } from "@/helpers/getResponsivePaginationSiblings";
+import { useResize } from "@/hooks/useResize";
 import { Box, Divider, Grid, Group, Image, Pagination, Stack, Text, UnstyledButton, rem } from "@mantine/core";
 import { useEffect, useState } from "react";
 
@@ -21,9 +22,11 @@ import { TitleWithIcon } from "@/shared/ui/titleWithIcon/ui";
 import { SELECTORS } from "./MarketCapCoinsSelectors";
 import classes from "./styles.module.css";
 import { CoinsTable, TopRate } from "./ui";
+import { CoinsTableFixedColumn } from "./ui/coins-table/CoinsTableFixedColumn";
 
 export function Page() {
   const [siblings, setSiblings] = useState(getSiblings());
+  const { isAdaptive: md } = useResize(1200);
 
   useEffect(() => {
     const handleResize = () => {
@@ -103,7 +106,7 @@ export function Page() {
                   <ShowRowsCount />
                 </Group>
                 <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
-                <CoinsTable />
+                {md ? <CoinsTableFixedColumn /> : <CoinsTable />}
               </Stack>
 
               <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
