@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
 import { Coins } from "@/shared/ui/Coins/Coins";
+import { TradeChartTitle } from "@/shared/ui/TradeChartTitle";
 import { Container } from "@/shared/ui/TradePageContainer/Container";
 import { FlashMarketIcon } from "@/shared/ui/icon/FlashMarketIcon";
 
@@ -315,10 +316,7 @@ export const TradeChart = () => {
   return (
     <Container padding={48} className={classes.chartContainer}>
       <Group justify="space-between">
-        <Group gap={8}>
-          <Text className={classes.tradeChartTitle}>Bitcoin/USDT Chart</Text>
-          <Coins />
-        </Group>
+        <TradeChartTitle />
         <Stack gap={4}>
           <Text className={classes.subtitle}>Funding Rate / Countdown</Text>
           <Group gap={2} ml={14}>

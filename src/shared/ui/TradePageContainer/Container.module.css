@@ -6,7 +6,7 @@
   height: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .container {
     padding: 32px 20px !important;
   }
@@ -17,6 +17,10 @@
 
   .ordersAll {
     flex: 1 1 25%;
+
+    &.rightSide {
+      width: calc(40% - 16px);
+    }
 
     .container {
       padding: 15px 20px !important;
@@ -30,6 +34,34 @@
           }
         }
       }
+    }
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  .ordersAll {
+    &.rightSide {
+      .container {
+        padding: 15px 20px !important;
+
+        .tableBody {
+          & tr {
+            & td {
+              .tableCellValue {
+                font-size: 0.3em !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} */
+
+@media screen and (max-width: 530px) {
+  .ordersAll {
+    &.rightSide {
+      width: 100%;
     }
   }
 }

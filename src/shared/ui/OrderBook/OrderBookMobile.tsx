@@ -20,6 +20,6 @@ export const OrderBookMobile = ({ activeTab, activeCategory }: { activeTab: stri
       {activeCategory === "Asks" && <StocksBtcFirst header={[...headerMobile].reverse()} rows={rowsMobile} isPositive={false} />}
     </div>
   ) : (
-    <OrderBookAll header={headerMobile} />
+    <OrderBookAll header={headerMobile} className={activeTab === "Trade" ? "rightSide" : ""} />
   );
 };

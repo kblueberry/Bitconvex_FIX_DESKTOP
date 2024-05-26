@@ -10,7 +10,7 @@ import containerClasses from "../TradePageContainer/Container.module.css";
 import classes from "./OrderBook.module.css";
 import { StocksPriceFirst } from "./Stocks/StocksPriceFirst";
 
-export const OrderBookAll = ({ header }: { header: Array<string> }) => {
+export const OrderBookAll = ({ header, className = "" }: { header: Array<string>; className?: string }) => {
   const [stockRows, setStockRows] = useState<OrderRows>([]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export const OrderBookAll = ({ header }: { header: Array<string> }) => {
   }, []);
 
   return (
-    <Stack className={containerClasses.ordersAll}>
+    <Stack className={clsx(containerClasses.ordersAll, containerClasses[className])}>
       <Container>
         <div className={clsx(classes.flexSpaceBetween, classes.columnDirected)}>
           <StocksPriceFirst header={header} rows={stockRows} isPositive={true} cellsOrderChanged={false} />

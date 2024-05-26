@@ -178,6 +178,20 @@
   table {
     min-width: 30% !important;
   }
+
+  /* .ordersAll {
+    &:local(.rightSide) {
+      .tableBody {
+        & tr {
+          & td {
+            .tableCellValue {
+              font-size: 11px !important;
+            }
+          }
+        }
+      }
+    }
+  } */
 }
 
 @media screen and (max-width: 450px) {
