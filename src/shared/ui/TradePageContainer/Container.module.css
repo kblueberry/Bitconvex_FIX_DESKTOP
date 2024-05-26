@@ -17,6 +17,7 @@
 
   .ordersAll {
     flex: 1 1 25%;
+    width: 100%;
 
     &.rightSide {
       width: calc(40% - 16px);
