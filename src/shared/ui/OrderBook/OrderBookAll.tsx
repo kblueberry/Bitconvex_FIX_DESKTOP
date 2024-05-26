@@ -23,9 +23,19 @@ export const OrderBookAll = ({ header, className = "" }: { header: Array<string>
     <Stack className={clsx(containerClasses.ordersAll, containerClasses[className])}>
       <Container>
         <div className={clsx(classes.flexSpaceBetween, classes.columnDirected)}>
-          <StocksPriceFirst header={header} rows={stockRows} isPositive={true} cellsOrderChanged={false} />
+          <StocksPriceFirst
+            header={header}
+            rows={window.location.hash.includes("trade-futures") ? rowsMobile : stockRows}
+            isPositive={true}
+            cellsOrderChanged={false}
+          />
           <Text className={classes.tradeOrderBookInfo}>38,555.19</Text>
-          <StocksPriceFirst header={header} rows={stockRows} isPositive={false} cellsOrderChanged={false} />
+          <StocksPriceFirst
+            header={header}
+            rows={window.location.hash.includes("trade-futures") ? rowsMobile : stockRows}
+            isPositive={false}
+            cellsOrderChanged={false}
+          />
         </div>
       </Container>
     </Stack>
