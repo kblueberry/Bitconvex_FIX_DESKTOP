@@ -28,7 +28,7 @@
 .banner-sub-title {
   z-index: 10;
   position: relative;
-  max-width: 63%;
+  width: 63% !important;
 }
 
 .banner-button {
@@ -77,7 +77,7 @@
   }
 
   .banner-sub-title {
-    max-width: 100%;
+    width: 100%;
   }
 
   .tradeActions {
@@ -116,7 +116,7 @@
     font-size: 2rem !important;
   }
 
-  .bannerSubTitle {
+  .banner-sub-title {
     padding: 0 10px;
   }
 }
